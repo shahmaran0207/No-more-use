@@ -1,0 +1,346 @@
+#항목별 데이터
+hotel_df = df[df['소비구분'] == '호텔']
+condo_df = df[df['소비구분'] == '콘도']
+camping_df = df[df['소비구분'] == '캠핑장/펜션']
+elsesleep_df = df[df['소비구분'] == '기타숙박']
+dutyfree_df = df[df['소비구분'] == '면세점']
+souvenir_df = df[df['소비구분'] == '관광기념품']
+leisure_df = df[df['소비구분'] == '레저용품쇼핑']
+hugeshop_df = df[df['소비구분'] == '대형쇼핑몰']
+amuse_df = df[df['소비구분'] == '관광유원시설']
+golf_df = df[df['소비구분'] == '골프장']
+ski_df = df[df['소비구분'] == '스키장']
+elseleisure_df = df[df['소비구분'] == '기타레저']
+culture_df = df[df['소비구분'] == '문화서비스']
+food_df = df[df['소비구분'] == '식음료']
+
+new_columns = ['강원도', '경기도', '경상남도', '경상북도', '광주광역시', '대구광역시', '대전광역시', '부산광역시', '서울특별시', '울산광역시', '인천광역시', '전라남도', '전라북도', '제주특별자치도', '충청남도', '충청북도']
+
+#항목별 데이터 행렬 변환 및 첫번째 행 제거
+hotel_df=hotel_df.transpose()
+hotel_df= hotel_df.drop(hotel_df.index[0])
+hotel_df= hotel_df.drop(hotel_df.index[0])
+hotel_df.columns = new_columns
+
+condo_df=condo_df.transpose()
+condo_df= condo_df.drop(condo_df.index[0])
+condo_df= condo_df.drop(condo_df.index[0])
+condo_df.columns = new_columns
+
+camping_df=camping_df.transpose()
+camping_df=camping_df.drop(camping_df.index[0])
+camping_df=camping_df.drop(camping_df.index[0])
+camping_df.columns = new_columns
+
+elsesleep_df=elsesleep_df.transpose()
+elsesleep_df=elsesleep_df.drop(elsesleep_df.index[0])
+elsesleep_df=elsesleep_df.drop(elsesleep_df.index[0])
+elsesleep_df.columns = new_columns
+
+dutyfree_df=dutyfree_df.transpose()
+dutyfree_df=dutyfree_df.drop(dutyfree_df.index[0])
+dutyfree_df=dutyfree_df.drop(dutyfree_df.index[0])
+dutyfree_df.columns = new_columns
+
+souvenir_df=souvenir_df.transpose()
+souvenir_df=souvenir_df.drop(souvenir_df.index[0])
+souvenir_df=souvenir_df.drop(souvenir_df.index[0])
+souvenir_df.columns = new_columns
+
+leisure_df=leisure_df.transpose()
+leisure_df=leisure_df.drop(leisure_df.index[0])
+leisure_df=leisure_df.drop(leisure_df.index[0])
+leisure_df.columns = new_columns
+
+hugeshop_df=hugeshop_df.transpose()
+hugeshop_df=hugeshop_df.drop(hugeshop_df.index[0])
+hugeshop_df=hugeshop_df.drop(hugeshop_df.index[0])
+hugeshop_df.columns = new_columns
+
+amuse_df=amuse_df.transpose()
+amuse_df=amuse_df.drop(amuse_df.index[0])
+amuse_df=amuse_df.drop(amuse_df.index[0])
+amuse_df.columns = new_columns
+
+golf_df=golf_df.transpose()
+golf_df=golf_df.drop(golf_df.index[0])
+golf_df=golf_df.drop(golf_df.index[0])
+golf_df.columns = new_columns
+
+ski_df=ski_df.transpose()
+ski_df=ski_df.drop(ski_df.index[0])
+ski_df=ski_df.drop(ski_df.index[0])
+ski_df.columns = new_columns
+
+elseleisure_df=elseleisure_df.transpose()
+elseleisure_df=elseleisure_df.drop(elseleisure_df.index[0])
+elseleisure_df=elseleisure_df.drop(elseleisure_df.index[0])
+elseleisure_df.columns = new_columns
+
+culture_df=culture_df.transpose()
+culture_df=culture_df.drop(culture_df.index[0])
+culture_df=culture_df.drop(culture_df.index[0])
+culture_df.columns = new_columns
+
+food_df=food_df.transpose()
+food_df=food_df.drop(food_df.index[0])
+food_df=food_df.drop(food_df.index[0])
+food_df.columns = new_columns
+
+visitor=visitor.transpose()
+visitor.columns = new_columns
+visitor=visitor.drop(visitor.index[0])
+hotel_df
+
+
+#도시별 호텔
+hotel_gangwon = hotel_df[['강원도']]
+hotel_gunggi = hotel_df[['경기도']]
+hotel_gyungnam = hotel_df[['경상남도']]
+hotel_gyungbuk = hotel_df[['경상북도']]
+hotel_gangju = hotel_df[['광주광역시']]
+hotel_daegu = hotel_df[['대구광역시']]
+hotel_daejeon = hotel_df[['대전광역시']]
+hotel_busan = hotel_df[['부산광역시']]
+hotel_seoul = hotel_df[['서울특별시']]
+hotel_ulsan = hotel_df[['울산광역시']]
+hotel_incheon = hotel_df[['인천광역시']]
+hotel_jeonnam = hotel_df[['전라남도']]
+hotel_jeonbuk = hotel_df[['전라북도']]
+hotel_jeju = hotel_df[['제주특별자치도']]
+hotel_chungnam = hotel_df[['충청남도']]
+hotel_chungbuk = hotel_df[['충청북도']]
+
+#도시별 콘도
+condo_gangwon = condo_df[['강원도']]
+condo_gunggi = condo_df[['경기도']]
+condo_gyungnam = condo_df[['경상남도']]
+condo_gyungbuk = condo_df[['경상북도']]
+condo_gangju = condo_df[['광주광역시']]
+condo_daegu = condo_df[['대구광역시']]
+condo_daejeon = condo_df[['대전광역시']]
+condo_busan = condo_df[['부산광역시']]
+condo_seoul = condo_df[['서울특별시']]
+condo_ulsan = condo_df[['울산광역시']]
+condo_incheon = condo_df[['인천광역시']]
+condo_jeonnam = condo_df[['전라남도']]
+condo_jeonbuk = condo_df[['전라북도']]
+condo_jeju = condo_df[['제주특별자치도']]
+condo_chungnam = condo_df[['충청남도']]
+condo_chungbuk = condo_df[['충청북도']]
+
+#도시별 캠핑장/펜션
+camping_gangwon = camping_df[['강원도']]
+camping_gunggi = camping_df[['경기도']]
+camping_gyungnam = camping_df[['경상남도']]
+camping_gyungbuk = camping_df[['경상북도']]
+camping_gangju = camping_df[['광주광역시']]
+camping_daegu = camping_df[['대구광역시']]
+camping_daejeon = camping_df[['대전광역시']]
+camping_busan = camping_df[['부산광역시']]
+camping_seoul = camping_df[['서울특별시']]
+camping_ulsan = camping_df[['울산광역시']]
+camping_incheon = camping_df[['인천광역시']]
+camping_jeonnam = camping_df[['전라남도']]
+camping_jeonbuk = camping_df[['전라북도']]
+camping_jeju = camping_df[['제주특별자치도']]
+camping_chungnam = camping_df[['충청남도']]
+camping_chungbuk = camping_df[['충청북도']]
+
+#도시별 기타숙박
+elsesleep_gangwon = elsesleep_df[['강원도']]
+elsesleep_gunggi = elsesleep_df[['경기도']]
+elsesleep_gyungnam = elsesleep_df[['경상남도']]
+elsesleep_gyungbuk = elsesleep_df[['경상북도']]
+elsesleep_gangju = elsesleep_df[['광주광역시']]
+elsesleep_daegu = elsesleep_df[['대구광역시']]
+elsesleep_daejeon = elsesleep_df[['대전광역시']]
+elsesleep_busan = elsesleep_df[['부산광역시']]
+elsesleep_seoul = elsesleep_df[['서울특별시']]
+elsesleep_ulsan = elsesleep_df[['울산광역시']]
+elsesleep_incheon = elsesleep_df[['인천광역시']]
+elsesleep_jeonnam = elsesleep_df[['전라남도']]
+elsesleep_jeonbuk = elsesleep_df[['전라북도']]
+elsesleep_jeju = elsesleep_df[['제주특별자치도']]
+elsesleep_chungnam = elsesleep_df[['충청남도']]
+elsesleep_chungbuk = elsesleep_df[['충청북도']]
+
+#도시별 면세점
+dutyfree_gangwon = dutyfree_df[['강원도']]
+dutyfree_gunggi = dutyfree_df[['경기도']]
+dutyfree_gyungnam = dutyfree_df[['경상남도']]
+dutyfree_gyungbuk = dutyfree_df[['경상북도']]
+dutyfree_gangju = dutyfree_df[['광주광역시']]
+dutyfree_daegu = dutyfree_df[['대구광역시']]
+dutyfree_daejeon = dutyfree_df[['대전광역시']]
+dutyfree_busan = dutyfree_df[['부산광역시']]
+dutyfree_seoul = dutyfree_df[['서울특별시']]
+dutyfree_ulsan = dutyfree_df[['울산광역시']]
+dutyfree_incheon = dutyfree_df[['인천광역시']]
+dutyfree_jeonnam = dutyfree_df[['전라남도']]
+dutyfree_jeonbuk = dutyfree_df[['전라북도']]
+dutyfree_jeju = dutyfree_df[['제주특별자치도']]
+dutyfree_chungnam = dutyfree_df[['충청남도']]
+dutyfree_chungbuk = dutyfree_df[['충청북도']]
+
+#도시별 관광기념품
+souvenir_gangwon = souvenir_df[['강원도']]
+souvenir_gunggi = souvenir_df[['경기도']]
+souvenir_gyungnam = souvenir_df[['경상남도']]
+souvenir_gyungbuk = souvenir_df[['경상북도']]
+souvenir_gangju = souvenir_df[['광주광역시']]
+souvenir_daegu = souvenir_df[['대구광역시']]
+souvenir_daejeon = souvenir_df[['대전광역시']]
+souvenir_busan = souvenir_df[['부산광역시']]
+souvenir_seoul = souvenir_df[['서울특별시']]
+souvenir_ulsan = souvenir_df[['울산광역시']]
+souvenir_incheon = souvenir_df[['인천광역시']]
+souvenir_jeonnam = souvenir_df[['전라남도']]
+souvenir_jeonbuk = souvenir_df[['전라북도']]
+souvenir_jeju = souvenir_df[['제주특별자치도']]
+souvenir_chungnam = souvenir_df[['충청남도']]
+souvenir_chungbuk = souvenir_df[['충청북도']]
+
+#도시별 레저용품쇼핑
+leisure_gangwon = leisure_df[['강원도']]
+leisure_gunggi = leisure_df[['경기도']]
+leisure_gyungnam = leisure_df[['경상남도']]
+leisure_gyungbuk = leisure_df[['경상북도']]
+leisure_gangju = leisure_df[['광주광역시']]
+leisure_daegu = leisure_df[['대구광역시']]
+leisure_daejeon = leisure_df[['대전광역시']]
+leisure_busan = leisure_df[['부산광역시']]
+leisure_seoul = leisure_df[['서울특별시']]
+leisure_ulsan = leisure_df[['울산광역시']]
+leisure_incheon = leisure_df[['인천광역시']]
+leisure_jeonnam = leisure_df[['전라남도']]
+leisure_jeonbuk = leisure_df[['전라북도']]
+leisure_jeju = leisure_df[['제주특별자치도']]
+leisure_chungnam = leisure_df[['충청남도']]
+leisure_chungbuk = leisure_df[['충청북도']]
+
+#도시별 대형쇼핑몰
+hugeshop_gangwon = hugeshop_df[['강원도']]
+hugeshop_gunggi = hugeshop_df[['경기도']]
+hugeshop_gyungnam = hugeshop_df[['경상남도']]
+hugeshop_gyungbuk = hugeshop_df[['경상북도']]
+hugeshop_gangju = hugeshop_df[['광주광역시']]
+hugeshop_daegu = hugeshop_df[['대구광역시']]
+hugeshop_daejeon = hugeshop_df[['대전광역시']]
+hugeshop_busan = hugeshop_df[['부산광역시']]
+hugeshop_seoul = hugeshop_df[['서울특별시']]
+hugeshop_ulsan = hugeshop_df[['울산광역시']]
+hugeshop_incheon = hugeshop_df[['인천광역시']]
+hugeshop_jeonnam = hugeshop_df[['전라남도']]
+hugeshop_jeonbuk = hugeshop_df[['전라북도']]
+hugeshop_jeju = hugeshop_df[['제주특별자치도']]
+hugeshop_chungnam = hugeshop_df[['충청남도']]
+hugeshop_chungbuk = hugeshop_df[['충청북도']]
+
+#도시별 관광유원시설
+amuse_gangwon = amuse_df[['강원도']]
+amuse_gunggi = amuse_df[['경기도']]
+amuse_gyungnam = amuse_df[['경상남도']]
+amuse_gyungbuk = amuse_df[['경상북도']]
+amuse_gangju = amuse_df[['광주광역시']]
+amuse_daegu = amuse_df[['대구광역시']]
+amuse_daejeon = amuse_df[['대전광역시']]
+amuse_busan = amuse_df[['부산광역시']]
+amuse_seoul = amuse_df[['서울특별시']]
+amuse_ulsan = amuse_df[['울산광역시']]
+amuse_incheon = amuse_df[['인천광역시']]
+amuse_jeonnam = amuse_df[['전라남도']]
+amuse_jeonbuk = amuse_df[['전라북도']]
+amuse_jeju = amuse_df[['제주특별자치도']]
+amuse_chungnam = amuse_df[['충청남도']]
+amuse_chungbuk = amuse_df[['충청북도']]
+
+#도시별 골프장
+golf_gangwon = golf_df[['강원도']]
+golf_gunggi = golf_df[['경기도']]
+golf_gyungnam = golf_df[['경상남도']]
+golf_gyungbuk = golf_df[['경상북도']]
+golf_gangju = golf_df[['광주광역시']]
+golf_daegu = golf_df[['대구광역시']]
+golf_daejeon = golf_df[['대전광역시']]
+golf_busan = golf_df[['부산광역시']]
+golf_seoul = golf_df[['서울특별시']]
+golf_ulsan = golf_df[['울산광역시']]
+golf_incheon = golf_df[['인천광역시']]
+golf_jeonnam = golf_df[['전라남도']]
+golf_jeonbuk = golf_df[['전라북도']]
+golf_jeju = golf_df[['제주특별자치도']]
+golf_chungnam = golf_df[['충청남도']]
+golf_chungbuk = golf_df[['충청북도']]
+
+#도시별 스키장
+ski_gangwon = ski_df[['강원도']]
+ski_gunggi = ski_df[['경기도']]
+ski_gyungnam = ski_df[['경상남도']]
+ski_gyungbuk = ski_df[['경상북도']]
+ski_gangju = ski_df[['광주광역시']]
+ski_daegu = ski_df[['대구광역시']]
+ski_daejeon = ski_df[['대전광역시']]
+ski_busan = ski_df[['부산광역시']]
+ski_seoul = ski_df[['서울특별시']]
+ski_ulsan = ski_df[['울산광역시']]
+ski_incheon = ski_df[['인천광역시']]
+ski_jeonnam = ski_df[['전라남도']]
+ski_jeonbuk = ski_df[['전라북도']]
+ski_jeju = ski_df[['제주특별자치도']]
+ski_chungnam = ski_df[['충청남도']]
+ski_chungbuk = ski_df[['충청북도']]
+
+#도시별 기타레저
+elseleisure_gangwon = elseleisure_df[['강원도']]
+elseleisure_gunggi = elseleisure_df[['경기도']]
+elseleisure_gyungnam = elseleisure_df[['경상남도']]
+elseleisure_gyungbuk = elseleisure_df[['경상북도']]
+elseleisure_gangju = elseleisure_df[['광주광역시']]
+elseleisure_daegu = elseleisure_df[['대구광역시']]
+elseleisure_daejeon = elseleisure_df[['대전광역시']]
+elseleisure_busan = elseleisure_df[['부산광역시']]
+elseleisure_seoul = elseleisure_df[['서울특별시']]
+elseleisure_ulsan = elseleisure_df[['울산광역시']]
+elseleisure_incheon = elseleisure_df[['인천광역시']]
+elseleisure_jeonnam = elseleisure_df[['전라남도']]
+elseleisure_jeonbuk = elseleisure_df[['전라북도']]
+elseleisure_jeju = elseleisure_df[['제주특별자치도']]
+elseleisure_chungnam = elseleisure_df[['충청남도']]
+elseleisure_chungbuk = elseleisure_df[['충청북도']]
+
+#도시별 문화서비스
+culture_gangwon = culture_df[['강원도']]
+culture_gunggi = culture_df[['경기도']]
+culture_gyungnam = culture_df[['경상남도']]
+culture_gyungbuk = culture_df[['경상북도']]
+culture_gangju = culture_df[['광주광역시']]
+culture_daegu = culture_df[['대구광역시']]
+culture_daejeon = culture_df[['대전광역시']]
+culture_busan = culture_df[['부산광역시']]
+culture_seoul = culture_df[['서울특별시']]
+culture_ulsan = culture_df[['울산광역시']]
+culture_incheon = culture_df[['인천광역시']]
+culture_jeonnam = culture_df[['전라남도']]
+culture_jeonbuk = culture_df[['전라북도']]
+culture_jeju = culture_df[['제주특별자치도']]
+culture_chungnam = culture_df[['충청남도']]
+culture_chungbuk = culture_df[['충청북도']]
+
+#도시별 식음료
+food_gangwon = food_df[['강원도']]
+food_gunggi = food_df[['경기도']]
+food_gyungnam = food_df[['경상남도']]
+food_gyungbuk = food_df[['경상북도']]
+food_gangju = food_df[['광주광역시']]
+food_daegu = food_df[['대구광역시']]
+food_daejeon = food_df[['대전광역시']]
+food_busan = food_df[['부산광역시']]
+food_seoul = food_df[['서울특별시']]
+food_ulsan = food_df[['울산광역시']]
+food_incheon = food_df[['인천광역시']]
+food_jeonnam = food_df[['전라남도']]
+food_jeonbuk = food_df[['전라북도']]
+food_jeju = food_df[['제주특별자치도']]
+food_chungnam = food_df[['충청남도']]
+food_chungbuk = food_df[['충청북도']]
