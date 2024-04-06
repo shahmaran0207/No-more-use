@@ -138,7 +138,7 @@
 				</p>
 				<select style="font-size: 20px">
 					<option>숙박일을 선택해 주세요</option>
-					<option>미정</option>
+					<option id="nonight">미정</option>
 					<option id="zeronight">0일</option>
 					<option id="onenight">1일</option>
 					<option id="twonight">2일</option>
