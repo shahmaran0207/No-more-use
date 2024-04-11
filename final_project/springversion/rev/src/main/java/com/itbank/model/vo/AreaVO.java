@@ -1,48 +1,72 @@
 package com.itbank.model.vo;
 
+
+//String area=request.getParameter("area");
+//String goal=request.getParameter("goal");
+//String month=request.getParameter("month");
+//String night=request.getParameter("night");
+//String nightplace=request.getParameter("nightplace");
+//String food=request.getParameter("food");
+
 public class AreaVO {
-    private String selectedRegion;
-    private String selectedPurpose;
-    private String selectedMonth;
-    private int selectedAccommodation;
-    private int selectedMeals;
+	private String area, goal, month, night, nightplace, food;
     
-    public AreaVO(String selectedRegion, String selectedPurpose, String selectedMonth, int selectedAccommodation, int selectedMeals) {
-    	this.selectedAccommodation=selectedAccommodation;
-    	this.selectedRegion=selectedRegion;
-    	this.selectedMonth=selectedMonth;
-    	this.selectedMeals=selectedMeals;
-    }
+	public AreaVO (String area, String goal, String month, String night, String nightplace, String food) {
+		this.area=area;
+		this.goal=goal;
+		this.month=month;
+		this.night=night;
+		this.nightplace=nightplace;
+		this.food=food;
+	}
 
+	public String getArea() {
+		return area;
+	}
 
-    public String getSelectedRegion() {
-		return selectedRegion;
+	public void setArea(String area) {
+		this.area = area;
 	}
-	public void setSelectedRegion(String selectedRegion) {
-		this.selectedRegion = selectedRegion;
+
+	public String getGoal() {
+		return goal;
 	}
-	public String getSelectedPurpose() {
-		return selectedPurpose;
+
+	public void setGoal(String goal) {
+		this.goal = goal;
 	}
-	public void setSelectedPurpose(String selectedPurpose) {
-		this.selectedPurpose = selectedPurpose;
+
+	public String getMonth() {
+		return month;
 	}
-	public String getSelectedMonth() {
-		return selectedMonth;
+
+	public void setMonth(String month) {
+		this.month = month;
 	}
-	public void setSelectedMonth(String selectedMonth) {
-		this.selectedMonth = selectedMonth;
+
+	public String getNight() {
+		return night;
 	}
-	public int getSelectedAccommodation() {
-		return selectedAccommodation;
+
+	public void setNight(String night) {
+		this.night = night;
 	}
-	public void setSelectedAccommodation(int selectedAccommodation) {
-		this.selectedAccommodation = selectedAccommodation;
+
+	public String getNightplace() {
+		return nightplace;
 	}
-	public int getSelectedMeals() {
-		return selectedMeals;
+
+	public void setNightplace(String nightplace) {
+		this.nightplace = nightplace;
 	}
-	public void setSelectedMeals(int selectedMeals) {
-		this.selectedMeals = selectedMeals;
+
+	public String getFood() {
+		return food;
 	}
+
+	public void setFood(String food) {
+		this.food = food;
+	} 
+	
+	
 }

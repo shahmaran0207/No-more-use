@@ -1,20 +1,17 @@
 package com.itbank.rev;
 
 import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
-
-import com.itbank.model.vo.AreaVO;
-
-import org.springframework.web.bind.annotation.RequestBody;
+import Service.Service;
 
 @Controller
 public class HomeController {
 	@Autowired
+	private Service se;
 
 	@GetMapping("/")
 	public String home() {
@@ -38,7 +35,10 @@ public class HomeController {
 
 
 	@PostMapping("/area")
-	public int area(HttpServletRequest request) {
+	public ModelAndView area(HttpServletRequest request) {
+		
+		ModelAndView mav=new ModelAndView();
+		
 		String area=request.getParameter("area");
 		String goal=request.getParameter("goal");
 		String month=request.getParameter("month");
@@ -46,7 +46,8 @@ public class HomeController {
 		String nightplace=request.getParameter("nightplace");
 		String food=request.getParameter("food");
 		
-		return 0;
+		
+		
+		return mav;
 	}
-
 }

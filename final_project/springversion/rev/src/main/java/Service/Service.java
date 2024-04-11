@@ -1,9 +1,11 @@
 package Service;
 
+import com.itbank.model.vo.AreaVO;
+
 @org.springframework.stereotype.Service
 
 public class Service {
-	public int money() {
+	public int money(AreaVO input) {
 		
 		return 0;
 	}
