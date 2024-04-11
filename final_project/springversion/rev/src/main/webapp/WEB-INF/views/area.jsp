@@ -145,7 +145,6 @@
 				<button>최종 제출</button>
 			</div>
 		</section>
-
 	</form>
 
 	<!-- Core theme JS-->

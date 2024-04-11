@@ -1,5 +1,7 @@
 package com.itbank.rev;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -34,16 +36,13 @@ public class HomeController {
 		return "money";
 	}
 
-	@PostMapping("/area")
-	public ModelAndView processTravelInfo(@RequestBody AreaVO areaVO) {
-		System.out.println("Received Travel Information: " + areaVO.toString());
 
-		ModelAndView mav = new ModelAndView();
-		String msg=areaVO.toString();
-		mav.addObject("msg", msg);
-		mav.setViewName("result");
+	@PostMapping("/area")
+	public int area(HttpServletRequest request) {
+		String area=request.getParameter("area");
+		String goal=request.getParameter("goal");
 		
-		return mav;
+		return 0;
 	}
 
 }
