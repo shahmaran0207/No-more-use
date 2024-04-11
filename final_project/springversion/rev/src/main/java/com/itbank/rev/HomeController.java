@@ -41,6 +41,10 @@ public class HomeController {
 	public int area(HttpServletRequest request) {
 		String area=request.getParameter("area");
 		String goal=request.getParameter("goal");
+		String month=request.getParameter("month");
+		String night=request.getParameter("night");
+		String nightplace=request.getParameter("nightplace");
+		String food=request.getParameter("food");
 		
 		return 0;
 	}
