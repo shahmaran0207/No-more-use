@@ -9,3 +9,11 @@
 https://datalab.visitkorea.or.kr/datalab/portal/bda/getMetcoAna.do#
 
  3. 다른 지역 충북 식음료와 같이 지역, 항목 모두 분리 및 결합 작업 필요
+
+-- 
+rev 진행해야 할것
+1. 기존 option 이던 것을 사용자가 텍스트로 직접 입력하게
+ -> 지금 배운걸로 충분히 받아오게 가능함
+
+2. 받아 올 수 있는 거 확인하면
+파이썬 코드 jsp로 바꿔보기
