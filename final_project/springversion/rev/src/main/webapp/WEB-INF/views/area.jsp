@@ -64,8 +64,9 @@
 						<i class="fa-solid fa-location-dot" style="color: #005eff;"></i>
 					</div>
 					<h3>지역 선택</h3>
+					<p id="areafont">(강원도, 경기도, 경상남도, 경상북도, 광주광역시, 대구광역시, 부산광역시, 서울특별시, <br>울산광역시, 인천광역시, 전라남도, 전라북도, 제주특별자치도, 충청남도, 충청북도 중)</p>
 					<p>
-						<input id="playarea" name="area" placeholder="여행지를 입력해주세요(도 단위)"
+						<input id="playarea" name="area" placeholder="여행지를 입력해주세요"
 							required>
 					</p>
 				</div>
