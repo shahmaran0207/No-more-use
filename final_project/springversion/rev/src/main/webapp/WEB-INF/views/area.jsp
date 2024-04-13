@@ -36,10 +36,11 @@
 	<header class="masthead">
 		<div class="container position-relative">
 			<div class="row justify-content-center">
-				<div class="col-xl-6">
+				<div class="col-lg-6">
 					<div class="text-center text-white">
 						<!-- 페이지 제목-->
-						<h1 class="mb-5">여행지를 선택하여 주세요~!</h1>
+						<h1 class="display-5 fw-bolder text-white mb-2" id="titlefont">여행지를
+							결정하신 분!</h1>
 						<!-- 확인 버튼만 있는 양식-->
 						<form class="form-subscribe" id="contactForm"
 							onsubmit="submitForm(event)">
@@ -64,7 +65,10 @@
 						<i class="fa-solid fa-location-dot" style="color: #005eff;"></i>
 					</div>
 					<h3>지역 선택</h3>
-					<p id="areafont">(강원도, 경기도, 경상남도, 경상북도, 광주광역시, 대구광역시, 부산광역시, 서울특별시, <br>울산광역시, 인천광역시, 전라남도, 전라북도, 제주특별자치도, 충청남도, 충청북도 중)</p>
+					<p id="areafont">
+						(강원도, 경기도, 경상남도, 경상북도, 광주광역시, 대구광역시, 부산광역시, 서울특별시, <br>울산광역시,
+						인천광역시, 전라남도, 전라북도, 제주특별자치도, 충청남도, 충청북도 중)
+					</p>
 					<p>
 						<input id="playarea" name="area" placeholder="여행지를 입력해주세요"
 							required>
@@ -137,13 +141,14 @@
 					<p class="lead mb-0">
 						식사를 몇 끼 하실지 입력해 주세요!<br>(0~15끼)
 					</p>
-					<input id="playfood" name="food"
-						placeholder="식사를 몇 끼 하실지 입력해 주세요" required>
+					<input id="playfood" name="food" placeholder="식사를 몇 끼 하실지 입력해 주세요"
+						required>
 				</div>
 			</div>
 
 			<div class="dis" style="font-size: 20px; margin-top: 23px;">
-				<button>최종 제출</button>
+				<button class="btn btn-primary btn-lg px-4 me-sm-3">최종
+					제출</button>
 			</div>
 		</section>
 	</form>
