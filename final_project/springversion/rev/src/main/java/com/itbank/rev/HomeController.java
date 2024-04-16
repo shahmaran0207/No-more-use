@@ -55,6 +55,8 @@ public class HomeController {
 		mav.setViewName("result");
 		
 		return mav;
+		
+		
 	}
 
 

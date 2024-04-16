@@ -12,6 +12,9 @@ public class Service {
         String nightplace = input.getNightplace();
         String food = input.getFood();
         
+        
         return 1;
     }
+    
+    
    }

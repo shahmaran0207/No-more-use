@@ -90,6 +90,27 @@
     scroll-behavior: smooth;
   }
 }
+#playarea {
+	text-align: center;
+	width: 600px;
+	height: 60px;
+	font-size: 35px;
+}
+
+#playgoal, #playmonth, #playnight, #playnightplace, #playfood {
+	text-align: center; 
+	align-items: center;
+	margin-left: 350px;
+	margin-top: 10px;
+	width: 600px;
+	height: 60px;
+	font-size: 35px;
+}
+
+#areafont {
+	font-size: 20px;
+	font-:light;
+}
 
 body {
   margin: 0;

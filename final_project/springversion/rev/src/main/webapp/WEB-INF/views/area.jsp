@@ -82,7 +82,7 @@
 						<i class="fa-solid fa-map-location-dot" style="color: #0d6efd;"></i>
 					</div>
 					<h3>목적 여부</h3>
-					<p class="lead mb-0">
+					<p id="areafont">
 						여행 목적을 입력해 주세요!<br>(미정, 골프, 스키, 관광유원, 스키레저)
 					</p>
 					<input id="playgoal" name="goal" placeholder="여행목적을 입력해주세요"
@@ -96,7 +96,7 @@
 						<i class="fa-solid fa-calendar-days" style="color: #0d6efd;"></i>
 					</div>
 					<h3>여행 월</h3>
-					<p class="lead mb-0">
+					<p id="areafont">
 						여행을 가고자 하는 월을 선택해주세요!<br>(1월~12월)
 					</p>
 					<input id="playmonth" name="month"
@@ -110,7 +110,7 @@
 						<i class="fa-solid fa-bed" style="color: #0d6efd;"></i>
 					</div>
 					<h3>숙박 여부</h3>
-					<p class="lead mb-0">
+					<p id="areafont">
 						숙박 선택 가능일은 0일에서 <br>최대 5일까지 입니다!
 					</p>
 					<input id="playnight" name="night"
@@ -124,7 +124,7 @@
 						<i class="fa-solid fa-bed" style="color: #0d6efd;"></i>
 					</div>
 					<h3>숙박 장소</h3>
-					<p class="lead mb-0">
+					<p id="areafont">
 						숙박하실 장소를 입력헤주세요<br>(호텔, 콘도, 캠핑장, 기타숙박)
 					</p>
 					<input id="playnightplace" name="nightplace"
@@ -138,7 +138,7 @@
 						<i class="fa-solid fa-bowl-food" style="color: #0d6efd;"></i>
 					</div>
 					<h3>식음료 장소</h3>
-					<p class="lead mb-0">
+					<p id="areafont">
 						식사를 몇 끼 하실지 입력해 주세요!<br>(0~15끼)
 					</p>
 					<input id="playfood" name="food" placeholder="식사를 몇 끼 하실지 입력해 주세요"
@@ -147,8 +147,7 @@
 			</div>
 
 			<div class="dis" style="font-size: 20px; margin-top: 23px;">
-				<button class="btn btn-primary btn-lg px-4 me-sm-3">최종
-					제출</button>
+				<button class="btn btn-primary btn-lg px-4 me-sm-3">최종 제출</button>
 			</div>
 		</section>
 	</form>

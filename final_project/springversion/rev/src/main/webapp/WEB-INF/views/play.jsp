@@ -65,212 +65,171 @@
 		</div>
 	</header>
 
-	<!-- Features section-->
-	<section class="py-5 border-bottom" id="features">
-		<div class="container px-5 my-5">
-			<div class="row gx-5">
-				<div class="col-lg-4 mb-5 mb-lg-0">
-					<div
-						class="feature bg-primary bg-gradient text-white rounded-3 mb-3">
-						<button class="scroll-button btn btn-primary"
-							onclick="scrollToFeature()">
-							<span class="material-symbols-outlined">sports_golf</span>
-						</button>
+	<form method="POST">
+		<!-- Features section-->
+		<section class="py-5 border-bottom" id="features">
+			<div class="container px-5 my-5">
+				<div class="row gx-5">
+					<div class="col-lg-4 mb-5 mb-lg-0">
+						<div
+							class="feature bg-primary bg-gradient text-white rounded-3 mb-3">
+							<button class="scroll-button btn btn-primary"
+								onclick="scrollToFeature()">
+								<span class="material-symbols-outlined">sports_golf</span>
+							</button>
+
+						</div>
+						<h2 class="h4 fw-bolder" id="golf">골프</h2>
+						<p>
+							골프를 위한 여행을 떠나고 싶으신 분!<br> 이 카테고리를 선택해 주세요
+						</p>
+					</div>
+
+					<div class="col-lg-4 mb-5 mb-lg-0">
+						<div
+							class="feature bg-primary bg-gradient text-white rounded-3 mb-3">
+							<button class="scroll-button btn btn-primary"
+								onclick="scrollToFeature()">
+								<span class="material-symbols-outlined">downhill_skiing</span>
+							</button>
+						</div>
+						<h2 class="h4 fw-bolder" id="ski">스키</h2>
+						<p>
+							스키를 위한 여행을 떠나고 싶으신 분!<br> 이 카테고리를 선택해 주세요<br>실내 스키장도 있어
+							계절 상관없이<br> 즐길 수 있는 지역도 있습니다.
+						</p>
 
 					</div>
-					<h2 class="h4 fw-bolder" id="golf">골프</h2>
-					<p>
-						골프를 위한 여행을 떠나고 싶으신 분!<br> 이 카테고리를 선택해 주세요
-					</p>
-				</div>
 
-				<div class="col-lg-4 mb-5 mb-lg-0">
-					<div
-						class="feature bg-primary bg-gradient text-white rounded-3 mb-3">
-						<button class="scroll-button btn btn-primary"
-							onclick="scrollToFeature()">
-							<span class="material-symbols-outlined">downhill_skiing</span>
-						</button>
+					<div class="col-lg-4 mb-5 mb-lg-0">
+						<div
+							class="feature bg-primary bg-gradient text-white rounded-3 mb-3">
+							<button class="scroll-button btn btn-primary"
+								onclick="scrollToFeature()">
+								<span class="material-symbols-outlined">attractions</span>
+							</button>
+						</div>
+						<h2 class="h4 fw-bolder" id="park">관광유원</h2>
+						<p>
+							관광유원을 위한 여행을 떠나고 싶으신 분!<br> 이 카테고리를 선택해주세요<br>원하시는 지역의
+							다양한 테마파크를 즐겨보세요!
+						</p>
+
 					</div>
-					<h2 class="h4 fw-bolder" id="ski">스키</h2>
-					<p>
-						스키를 위한 여행을 떠나고 싶으신 분!<br> 이 카테고리를 선택해 주세요<br>실내 스키장도 있어
-						계절 상관없이<br> 즐길 수 있는 지역도 있습니다.
-					</p>
 
-				</div>
+					<div class="col-lg-4 mb-5 mb-lg-0">
+						<div
+							class="feature bg-primary bg-gradient text-white rounded-3 mb-3">
+							<button class="scroll-button btn btn-primary"
+								onclick="scrollToFeature()">
+								<span class="material-symbols-outlined">skateboarding</span>
+							</button>
+						</div>
+						<h2 class="h4 fw-bolder" id="leisure">기타레저</h2>
+						<p>
+							골프, 스키, 관광유원 이외에<br> 다른 레저를 즐기시고 싶으신 분!<br> 이 카테고리를
+							선택해주세요
+						</p>
 
-				<div class="col-lg-4 mb-5 mb-lg-0">
-					<div
-						class="feature bg-primary bg-gradient text-white rounded-3 mb-3">
-						<button class="scroll-button btn btn-primary"
-							onclick="scrollToFeature()">
-							<span class="material-symbols-outlined">attractions</span>
-						</button>
 					</div>
-					<h2 class="h4 fw-bolder" id="park">관광유원</h2>
-					<p>
-						관광유원을 위한 여행을 떠나고 싶으신 분!<br> 이 카테고리를 선택해주세요<br>원하시는 지역의
-						다양한 테마파크를 즐겨보세요!
-					</p>
-
-				</div>
-
-				<div class="col-lg-4 mb-5 mb-lg-0">
-					<div
-						class="feature bg-primary bg-gradient text-white rounded-3 mb-3">
-						<button class="scroll-button btn btn-primary"
-							onclick="scrollToFeature()">
-							<span class="material-symbols-outlined">skateboarding</span>
-						</button>
-					</div>
-					<h2 class="h4 fw-bolder" id="leisure">기타레저</h2>
-					<p>
-						골프, 스키, 관광유원 이외에<br> 다른 레저를 즐기시고 싶으신 분!<br> 이 카테고리를
-						선택해주세요
-					</p>
-
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
 
-	<!-- Pricing section-->
-	<section class="features-icons bg-light text-center" id="feature">
-		<div class="container">
-			<div class="col-lg-4">
-				<div class="col-lg-4">
-					<i class="fa-solid fa-location-dot" style="color: #005eff;"></i>
+		<section class="features-icons bg-light text-center" id="fu">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-7">
+						<i class="fa-solid fa-location-dot" style="color: #005eff;"></i>
+					</div>
+					<h3>지역 선택</h3>
+					<p id="areafont">
+						(강원도, 경기도, 경상남도, 경상북도, 광주광역시, 대구광역시, 부산광역시, 서울특별시, <br>울산광역시,
+						인천광역시, 전라남도, 전라북도, 제주특별자치도, 충청남도, 충청북도 중)
+					</p>
+					<p>
+						<input id="playarea" name="area" placeholder="여행지를 입력해주세요"
+							required>
+					</p>
 				</div>
-				<h3>지역 선택</h3>
-				<p class="lead mb-0">
-					여행을 가고자 하는 지역을 선택해주세요!<br>
-				</p>
-				<select style="font-size: 20px">
-					<option>어디 지역에 여행을 갈지 선택해주세요</option>
-					<option id="areagangwon">강원도</option>
-					<option id="areagyeonggi">경기도</option>
-					<option id="areagyeongnam">경상남도</option>
-					<option id="areagyeongbuk">경상북도</option>
-					<option id="areagwangju">광주광역시</option>
-					<option id="areadaegu">대구광역시</option>
-					<option id="areadaejeon">대전광역시</option>
-					<option id="areabusan">부산광역시</option>
-					<option id="areaseoul">서울특별시</option>
-					<option id="areaulsan">울산광역시</option>
-					<option id="areaincheon">인천광역시</option>
-					<option id="areajeunnam">전라남도</option>
-					<option id="areajeunbuk">전라북도</option>
-					<option id="areajeju">제주특별자치도</option>
-					<option id="areachungnam">충청남도</option>
-					<option id="areachungbuk">충청북도</option>
-				</select>
 			</div>
-			<div class="row">
-				<div class="col-lg-7">
+			<!-- Icons Grid-->
+			<div class="container">
+				<div class="row">
 					<div class="col-lg-7">
 						<i class="fa-solid fa-calendar-days" style="color: #0d6efd;"></i>
 					</div>
-
 					<h3>여행 월</h3>
-					<p class="lead mb-0">
+					<p id="areafont">
 						여행을 가고자 하는 월을 선택해주세요!<br>(1월~12월)
 					</p>
-					<select style="font-size: 20px">
-						<option>몇월달에 여행을 가실지 선택해주세요</option>
-						<option id="jan">1월</option>
-						<option id="feb">2월</option>
-						<option id="mar">3월</option>
-						<option id="apr">4월</option>
-						<option id="may">5월</option>
-						<option id="jun">6월</option>
-						<option id="jul">7월</option>
-						<option id="jan">8월</option>
-						<option id="sep">9월</option>
-						<option id="oct">10월</option>
-						<option id="nov">11월</option>
-						<option id="dec">12월</option>
-					</select>
+					<input id="playmonth" name="month"
+						placeholder="여행갈 월을 입력해주세요(1~12월)" required>
 				</div>
 			</div>
 
-			<div class="col-lg-7">
-				<div class="col-lg-7">
-					<i class="fa-solid fa-bed" style="color: #0d6efd;"></i>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-7">
+						<i class="fa-solid fa-bed" style="color: #0d6efd;"></i>
+					</div>
+					<h3>숙박 여부</h3>
+					<p id="areafont">
+						숙박 선택 가능일은 0일에서 <br>최대 5일까지 입니다!
+					</p>
+					<input id="playnight" name="night"
+						placeholder="몇일동안 숙박하실지 정해주세요(0~5일)" required>
 				</div>
-				<h3>숙박 여부</h3>
-				<p class="lead mb-0">
-					숙박 선택 가능일은 0일에서 <br>최대 5일까지 입니다!
-				</p>
-				<select style="font-size: 20px">
-					<option>숙박일을 선택해 주세요
-					<option id="nonight">미정</option>
-					<option id="zeronight">0일</option>
-					<option id="onenight">1일</option>
-					<option id="twonight">2일</option>
-					<option id="threenight">3일</option>
-					<option id="fournight">4일</option>
-					<option id="fivenight">5일</option>
-				</select>
 			</div>
-		</div>
-		<div class="col-lg-7">
-			<div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-				<div class="col-lg-7">
-					<i class="fa-solid fa-bowl-food" style="color: #0d6efd;"></i>
-				</div>
-				<h3>식음료 여부</h3>
-				<p class="lead mb-0">식사를 몇 끼 하실지 선택해 주세요!</p>
-				<select style="font-size: 20px">
-					<option>식사를 몇 끼 하실지 선택해 주세요
-					<option>미정
-					<option>0끼
-					<option>1끼
-					<option>2끼
-					<option>3끼
-					<option>4끼
-					<option>5끼
-					<option>6끼
-					<option>7끼
-					<option>8끼
-					<option>9끼
-					<option>10끼
-					<option>11끼
-					<option>12끼
-					<option>13끼
-					<option>14끼
-					<option>15끼</option>
-					</option>
-					</option>
-				</select>
-			</div>
-		</div>
 
-		<div class="col-lg-7">
-			<div class="features-icons-item mx-auto mb-0 mb-lg-3">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-7">
+						<i class="fa-solid fa-bed" style="color: #0d6efd;"></i>
+					</div>
+					<h3>숙박 장소</h3>
+					<p id="areafont">
+						숙박하실 장소를 입력헤주세요<br>(호텔, 콘도, 캠핑장, 기타숙박)
+					</p>
+					<input id="playnightplace" name="nightplace"
+						placeholder="숙박하실 장소를 입력헤주세요" required>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-7">
+						<i class="fa-solid fa-bowl-food" style="color: #0d6efd;"></i>
+					</div>
+					<h3>식음료 장소</h3>
+					<p id="areafont">
+						식사를 몇 끼 하실지 입력해 주세요!<br>(0~15끼)
+					</p>
+					<input id="playfood" name="food" placeholder="식사를 몇 끼 하실지 입력해 주세요"
+						required>
+				</div>
+			</div>
+			
+			<div class="container">
+			<div class="row">
 				<div class="col-lg-7">
-					<i class="fa-solid fa-cart-shopping" style="color: #005eff;"></i>
+					<i class="fa-solid fa-map-location-dot" style="color: #0d6efd;"></i>
 				</div>
 				<h3>쇼핑 여부</h3>
-				<p class="lead mb-0">쇼핑 여부를 선택해 주세요!</p>
-				<form id="choicesForm" style="font-size: 20px; margin-top: 3px;">
-					<label><input type="checkbox" name="choices" value="미정">
-						미정</label> <label><input type="checkbox" name="choices"
-						value="면세점"> 면세점</label> <label><input type="checkbox"
-						name="choices" value="레저용품 쇼핑"> 레저용품 쇼핑</label> <label><input
-						type="checkbox" name="choices" value="대형쇼핑몰"> 대형쇼핑몰</label> <label><input
-						type="checkbox" name="choices" value="문화서비스"> 문화서비스</label>
-				</form>
+				<p id="areafont">
+					쇼핑여부를 입력해 주세요!<br>(미정, 면세점, 레저용품 쇼핑, 대형쇼핑몰, 관광유원시설, 스키장, 골프장,
+					기타레저, 문화서비스)
+				</p>
+				<input id="playgoal" name="goal" placeholder="여행목적을 입력해주세요" required>
 			</div>
 			<div class="dis" style="font-size: 20px; margin-top: 23px;">
 				<a class="btn btn-primary btn-lg px-4 me-sm-3" href="#show">최종
 					제출</a>
 			</div>
-		</div>
+	</form>
 
 
-
-		<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+	<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 </body>
 
 </html>
