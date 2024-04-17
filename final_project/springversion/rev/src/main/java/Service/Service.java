@@ -6,20 +6,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import com.itbank.model.vo.AreaVO;
 
-@requestcon 
 @org.springframework.stereotype.Service
 public class Service {
-
-	@PostMapping("/api/endpoint")
-	public String handleRequest(@RequestBody YourDataObject data) {
-		// 파이썬에서 전달된 변수들의 값을 콘솔에 출력
-		System.out.println("Variable 1: " + data.getVariable1());
-		System.out.println("Variable 2: " + data.getVariable2());
-		// 여기에 다른 변수들에 대한 출력 추가
-		// 여기에 다른 변수들에 대한 출력 추가
-
-		return "데이터 처리 완료";
-	}
 
 	public int money(AreaVO input) {
 		int result = 1;
