@@ -1,14 +1,29 @@
 package Service;
 
 import java.util.Arrays;
-
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 import com.itbank.model.vo.AreaVO;
 
+@requestcon 
 @org.springframework.stereotype.Service
 public class Service {
-	int result = 1;
+
+	@PostMapping("/api/endpoint")
+	public String handleRequest(@RequestBody YourDataObject data) {
+		// 파이썬에서 전달된 변수들의 값을 콘솔에 출력
+		System.out.println("Variable 1: " + data.getVariable1());
+		System.out.println("Variable 2: " + data.getVariable2());
+		// 여기에 다른 변수들에 대한 출력 추가
+		// 여기에 다른 변수들에 대한 출력 추가
+
+		return "데이터 처리 완료";
+	}
 
 	public int money(AreaVO input) {
+		int result = 1;
+
 		String area = input.getArea();
 		String goal = input.getGoal();
 		String month = input.getMonth();
@@ -28,16 +43,17 @@ public class Service {
 
 		String[] nights = { "0일", "1일", "2일", "3일", "4일", "5일" };
 		int index = Arrays.asList(nights).indexOf(night);
-		if (index != -1) {
+		if (index != -1)
 			result *= index;
-		}
-		
-		String[] foods = { "0끼", "1끼", "2끼", "3끼", "4끼", "5끼", "6끼", "7끼", "8끼", "9끼" , "10끼", "11끼", "12끼", "13끼", "14끼", "15끼"};
+
+		String[] foods = { "0끼", "1끼", "2끼", "3끼", "4끼", "5끼", "6끼", "7끼", "8끼", "9끼", "10끼", "11끼", "12끼", "13끼",
+				"14끼", "15끼" };
 
 		int index_f = Arrays.asList(foods).indexOf(food);
-		if (index_f != -1) {
+		if (index_f != -1)
 			result *= index_f;
-		}
+
+		// 작업 수행
 
 		return result;
 	}

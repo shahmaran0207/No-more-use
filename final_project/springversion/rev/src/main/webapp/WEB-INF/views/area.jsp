@@ -24,7 +24,6 @@
 	href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic"
 	rel="stylesheet" type="text/css" />
 <!-- Core theme CSS (includes Bootstrap)-->
-<link href="css/styles.css" rel="stylesheet" />
 <!-- Font Awesome icons (free version)-->
 <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"
 	crossorigin="anonymous"></script>
