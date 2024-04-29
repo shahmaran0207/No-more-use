@@ -1,15 +1,14 @@
 package Service;
 
 import java.util.Arrays;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import com.itbank.model.vo.AreaVO;
 
 @org.springframework.stereotype.Service
 public class Service {
-
+	
 	public int money(AreaVO input) {
+		
 		int result = 1;
 
 		String area = input.getArea();

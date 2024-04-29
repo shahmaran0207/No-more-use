@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>사용할 코드만 따로</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>사용할 코드만 따로 - 복사본</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7480,7 +7480,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -7499,7 +7499,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1">#관광 지출액 데이터</span>
@@ -7526,7 +7526,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1">#항목별 컬럼명</span>
@@ -7538,16 +7538,6 @@ a.anchor-link {
 <span class="n">gangwon_df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">new_columns</span>
 <span class="n">gangwon_df</span><span class="o">=</span><span class="n">gangwon_df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">gangwon_df</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 <span class="n">gangwon_df</span><span class="o">=</span><span class="n">gangwon_df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">gangwon_df</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-
-<span class="c1">#항목별 컬럼명</span>
-<span class="n">new_columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'호텔'</span><span class="p">,</span> <span class="s1">'콘도'</span><span class="p">,</span> <span class="s1">'캠핑장/펜션'</span><span class="p">,</span> <span class="s1">'기타숙박'</span><span class="p">,</span> <span class="s1">'면세점'</span><span class="p">,</span> <span class="s1">'관관기념품'</span><span class="p">,</span> <span class="s1">'레저용품쇼핑'</span><span class="p">,</span> <span class="s1">'대형쇼핑몰'</span><span class="p">,</span> <span class="s1">'관광유원시설'</span><span class="p">,</span> <span class="s1">'골프장'</span><span class="p">,</span><span class="s1">'스키장'</span><span class="p">,</span> <span class="s1">'기타레저'</span><span class="p">,</span> <span class="s1">'문화서비스'</span><span class="p">,</span> <span class="s1">'식음료'</span><span class="p">]</span>
-
-<span class="c1">#소비데이터 - 경기도</span>
-<span class="n">gunggi_df</span> <span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">'시도구분'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'경기도'</span><span class="p">]</span>
-<span class="n">gunggi_df</span><span class="o">=</span><span class="n">gunggi_df</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span>
-<span class="n">gunggi_df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">new_columns</span>
-<span class="n">gunggi_df</span><span class="o">=</span><span class="n">gunggi_df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">gunggi_df</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="n">gunggi_df</span><span class="o">=</span><span class="n">gunggi_df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">gunggi_df</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -7558,7 +7548,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1">#gdp 행렬 변환</span>
@@ -7588,7 +7578,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1">#방문객 데이터 전처리</span>
@@ -7622,18 +7612,13 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1">#강원 데이터 통합</span>
 <span class="n">total_gangwon</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">gangwon_df</span><span class="p">,</span> <span class="n">gdp</span><span class="p">,</span> <span class="n">cpi</span><span class="p">,</span><span class="n">expect_inflaction</span><span class="p">,</span>  <span class="n">visitor_gangwon</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">new_columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'호텔'</span><span class="p">,</span> <span class="s1">'콘도'</span><span class="p">,</span> <span class="s1">'캠핑장/펜션'</span><span class="p">,</span> <span class="s1">'기타숙박'</span><span class="p">,</span> <span class="s1">'면세점'</span><span class="p">,</span> <span class="s1">'관광기념품'</span><span class="p">,</span> <span class="s1">'레저용품쇼핑'</span><span class="p">,</span> <span class="s1">'대형쇼핑몰'</span><span class="p">,</span> <span class="s1">'관광유원시설'</span><span class="p">,</span> <span class="s1">'골프장'</span><span class="p">,</span><span class="s1">'스키장'</span><span class="p">,</span> <span class="s1">'기타레저'</span><span class="p">,</span> <span class="s1">'문화서비스'</span><span class="p">,</span> <span class="s1">'식음료'</span><span class="p">,</span> <span class="s1">'gdp'</span><span class="p">,</span><span class="s1">'CPI'</span><span class="p">,</span><span class="s1">'기대 인플레이션율'</span><span class="p">,</span>  <span class="s1">'강원도 관광객'</span><span class="p">]</span>
 <span class="n">total_gangwon</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">new_columns</span>
-
-<span class="c1">#경기 데이터 통합</span>
-<span class="n">total_gunggi</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">gunggi_df</span><span class="p">,</span> <span class="n">gdp</span><span class="p">,</span> <span class="n">cpi</span><span class="p">,</span><span class="n">expect_inflaction</span><span class="p">,</span>  <span class="n">visitor_gunggi</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">new_columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'호텔'</span><span class="p">,</span> <span class="s1">'콘도'</span><span class="p">,</span> <span class="s1">'캠핑장/펜션'</span><span class="p">,</span> <span class="s1">'기타숙박'</span><span class="p">,</span> <span class="s1">'면세점'</span><span class="p">,</span> <span class="s1">'관광기념품'</span><span class="p">,</span> <span class="s1">'레저용품쇼핑'</span><span class="p">,</span> <span class="s1">'대형쇼핑몰'</span><span class="p">,</span> <span class="s1">'관광유원시설'</span><span class="p">,</span> <span class="s1">'골프장'</span><span class="p">,</span><span class="s1">'스키장'</span><span class="p">,</span> <span class="s1">'기타레저'</span><span class="p">,</span> <span class="s1">'문화서비스'</span><span class="p">,</span> <span class="s1">'식음료'</span><span class="p">,</span> <span class="s1">'gdp'</span><span class="p">,</span><span class="s1">'CPI'</span><span class="p">,</span><span class="s1">'기대 인플레이션율'</span><span class="p">,</span>  <span class="s1">'경기도 관광객'</span><span class="p">]</span>
-<span class="n">total_gunggi</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">new_columns</span>
 </pre></div>
 </div>
 </div>
@@ -7644,7 +7629,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1">#강원도 통합 데이터에서 호텔 및 예측에 필요한 데이터만 추출</span>
@@ -7688,48 +7673,6 @@ a.anchor-link {
 
 <span class="c1">#강원도 통합 데이터에서 식음료 및 예측에 필요한 데이터만 추출</span>
 <span class="n">gangwon_food</span><span class="o">=</span><span class="n">total_gangwon</span><span class="p">[[</span><span class="s1">'식음료'</span><span class="p">,</span> <span class="s1">'gdp'</span><span class="p">,</span><span class="s1">'CPI'</span><span class="p">,</span><span class="s1">'기대 인플레이션율'</span><span class="p">,</span><span class="s1">'강원도 관광객'</span><span class="p">]]</span>
-
-<span class="c1">#경기도 통합 데이터에서 호텔 및 예측에 필요한 데이터만 추출</span>
-<span class="n">gunggi_hotel</span><span class="o">=</span><span class="n">total_gunggi</span><span class="p">[[</span><span class="s1">'호텔'</span><span class="p">,</span> <span class="s1">'gdp'</span><span class="p">,</span><span class="s1">'CPI'</span><span class="p">,</span><span class="s1">'기대 인플레이션율'</span><span class="p">,</span><span class="s1">'경기도 관광객'</span><span class="p">]]</span>
-
-<span class="c1">#경기도 통합 데이터에서 콘도 및 예측에 필요한 데이터만 추출</span>
-<span class="n">gunggi_condo</span><span class="o">=</span><span class="n">total_gunggi</span><span class="p">[[</span><span class="s1">'콘도'</span><span class="p">,</span> <span class="s1">'gdp'</span><span class="p">,</span><span class="s1">'CPI'</span><span class="p">,</span><span class="s1">'기대 인플레이션율'</span><span class="p">,</span><span class="s1">'경기도 관광객'</span><span class="p">]]</span>
-
-<span class="c1">#경기도 통합 데이터에서 캠핑장/펜션 및 예측에 필요한 데이터만 추출</span>
-<span class="n">gunggi_camping</span><span class="o">=</span><span class="n">total_gunggi</span><span class="p">[[</span><span class="s1">'캠핑장/펜션'</span><span class="p">,</span> <span class="s1">'gdp'</span><span class="p">,</span><span class="s1">'CPI'</span><span class="p">,</span><span class="s1">'기대 인플레이션율'</span><span class="p">,</span><span class="s1">'경기도 관광객'</span><span class="p">]]</span>
-
-<span class="c1">#경기도 통합 데이터에서 기타숙박 및 예측에 필요한 데이터만 추출</span>
-<span class="n">gunggi_elsesleep</span><span class="o">=</span><span class="n">total_gunggi</span><span class="p">[[</span><span class="s1">'기타숙박'</span><span class="p">,</span> <span class="s1">'gdp'</span><span class="p">,</span><span class="s1">'CPI'</span><span class="p">,</span><span class="s1">'기대 인플레이션율'</span><span class="p">,</span><span class="s1">'경기도 관광객'</span><span class="p">]]</span>
-
-<span class="c1">#경기도 통합 데이터에서 면세점 및 예측에 필요한 데이터만 추출</span>
-<span class="n">gunggi_dutyfree</span><span class="o">=</span><span class="n">total_gunggi</span><span class="p">[[</span><span class="s1">'면세점'</span><span class="p">,</span> <span class="s1">'gdp'</span><span class="p">,</span><span class="s1">'CPI'</span><span class="p">,</span><span class="s1">'기대 인플레이션율'</span><span class="p">,</span><span class="s1">'경기도 관광객'</span><span class="p">]]</span>
-
-<span class="c1">#경기도 통합 데이터에서 관광기념품 및 예측에 필요한 데이터만 추출</span>
-<span class="n">gunggi_souvenir</span><span class="o">=</span><span class="n">total_gunggi</span><span class="p">[[</span><span class="s1">'관광기념품'</span><span class="p">,</span> <span class="s1">'gdp'</span><span class="p">,</span><span class="s1">'CPI'</span><span class="p">,</span><span class="s1">'기대 인플레이션율'</span><span class="p">,</span><span class="s1">'경기도 관광객'</span><span class="p">]]</span>
-
-<span class="c1">#경기도 통합 데이터에서 레저용품쇼핑 및 예측에 필요한 데이터만 추출</span>
-<span class="n">gunggi_leisureshop</span><span class="o">=</span><span class="n">total_gunggi</span><span class="p">[[</span><span class="s1">'레저용품쇼핑'</span><span class="p">,</span> <span class="s1">'gdp'</span><span class="p">,</span><span class="s1">'CPI'</span><span class="p">,</span><span class="s1">'기대 인플레이션율'</span><span class="p">,</span><span class="s1">'경기도 관광객'</span><span class="p">]]</span>
-
-<span class="c1">#경기도 통합 데이터에서 대형쇼핑몰 및 예측에 필요한 데이터만 추출</span>
-<span class="n">gunggi_hugeshop</span><span class="o">=</span><span class="n">total_gunggi</span><span class="p">[[</span><span class="s1">'대형쇼핑몰'</span><span class="p">,</span> <span class="s1">'gdp'</span><span class="p">,</span><span class="s1">'CPI'</span><span class="p">,</span><span class="s1">'기대 인플레이션율'</span><span class="p">,</span><span class="s1">'경기도 관광객'</span><span class="p">]]</span>
-
-<span class="c1">#경기도 통합 데이터에서 관광유원시설 및 예측에 필요한 데이터만 추출</span>
-<span class="n">gunggi_amuse</span><span class="o">=</span><span class="n">total_gunggi</span><span class="p">[[</span><span class="s1">'관광유원시설'</span><span class="p">,</span> <span class="s1">'gdp'</span><span class="p">,</span><span class="s1">'CPI'</span><span class="p">,</span><span class="s1">'기대 인플레이션율'</span><span class="p">,</span><span class="s1">'경기도 관광객'</span><span class="p">]]</span>
-
-<span class="c1">#경기도 통합 데이터에서 골프장 및 예측에 필요한 데이터만 추출</span>
-<span class="n">gunggi_golf</span><span class="o">=</span><span class="n">total_gunggi</span><span class="p">[[</span><span class="s1">'골프장'</span><span class="p">,</span> <span class="s1">'gdp'</span><span class="p">,</span><span class="s1">'CPI'</span><span class="p">,</span><span class="s1">'기대 인플레이션율'</span><span class="p">,</span><span class="s1">'경기도 관광객'</span><span class="p">]]</span>
-
-<span class="c1">#경기도 통합 데이터에서 스키장 및 예측에 필요한 데이터만 추출</span>
-<span class="n">gunggi_ski</span><span class="o">=</span><span class="n">total_gunggi</span><span class="p">[[</span><span class="s1">'스키장'</span><span class="p">,</span> <span class="s1">'gdp'</span><span class="p">,</span><span class="s1">'CPI'</span><span class="p">,</span><span class="s1">'기대 인플레이션율'</span><span class="p">,</span><span class="s1">'경기도 관광객'</span><span class="p">]]</span>
-
-<span class="c1">#경기도 통합 데이터에서 기타레저 및 예측에 필요한 데이터만 추출</span>
-<span class="n">gunggi_leisure</span><span class="o">=</span><span class="n">total_gunggi</span><span class="p">[[</span><span class="s1">'기타레저'</span><span class="p">,</span> <span class="s1">'gdp'</span><span class="p">,</span><span class="s1">'CPI'</span><span class="p">,</span><span class="s1">'기대 인플레이션율'</span><span class="p">,</span><span class="s1">'경기도 관광객'</span><span class="p">]]</span>
-
-<span class="c1">#경기도 통합 데이터에서 문화서비스 및 예측에 필요한 데이터만 추출</span>
-<span class="n">gunggi_culture</span><span class="o">=</span><span class="n">total_gunggi</span><span class="p">[[</span><span class="s1">'문화서비스'</span><span class="p">,</span> <span class="s1">'gdp'</span><span class="p">,</span><span class="s1">'CPI'</span><span class="p">,</span><span class="s1">'기대 인플레이션율'</span><span class="p">,</span><span class="s1">'경기도 관광객'</span><span class="p">]]</span>
-
-<span class="c1">#경기도 통합 데이터에서 식음료 및 예측에 필요한 데이터만 추출</span>
-<span class="n">gunggi_food</span><span class="o">=</span><span class="n">total_gunggi</span><span class="p">[[</span><span class="s1">'식음료'</span><span class="p">,</span> <span class="s1">'gdp'</span><span class="p">,</span><span class="s1">'CPI'</span><span class="p">,</span><span class="s1">'기대 인플레이션율'</span><span class="p">,</span><span class="s1">'경기도 관광객'</span><span class="p">]]</span>
 </pre></div>
 </div>
 </div>
@@ -7740,7 +7683,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [24]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1">#강원도 예측</span>
@@ -7750,88 +7693,220 @@ a.anchor-link {
 <span class="n">X_gangwon_hotel_train</span> <span class="p">,</span> <span class="n">X_gangwon_hotel_test</span> <span class="p">,</span> <span class="n">y_gangwon_hotel_train</span> <span class="p">,</span> <span class="n">y_gangwon_hotel_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_gangwon_hotel</span> <span class="p">,</span> <span class="n">y_gangwon_hotel</span> <span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.2</span> <span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
 <span class="n">lr1</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">LinearRegression</span><span class="p">()</span>
 <span class="n">model1</span> <span class="o">=</span> <span class="n">lr1</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_gangwon_hotel_train</span> <span class="p">,</span> <span class="n">y_gangwon_hotel_train</span><span class="p">)</span>
-
-<span class="c1">#강원도 예측</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=41f6f7d7">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#강원도 예측</span>
 <span class="c1"># condo 예측 학습한 데이터를 다른 데이터로 평가하는 것 예측 테스트(X축에는 예측할 데이터, Y축에는 예측에 고려할 데이터)</span>
 <span class="n">X_gangwon_condo</span> <span class="o">=</span> <span class="n">gangwon_condo</span><span class="p">[</span><span class="n">gangwon_condo</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">difference</span><span class="p">([</span><span class="s1">'콘도'</span><span class="p">])]</span>
 <span class="n">y_gangwon_condo</span> <span class="o">=</span> <span class="n">gangwon_condo</span><span class="p">[</span><span class="s1">'콘도'</span><span class="p">]</span>
 <span class="n">X_gangwon_condo_train</span> <span class="p">,</span> <span class="n">X_gangwon_condo_test</span> <span class="p">,</span> <span class="n">y_gangwon_condo_train</span> <span class="p">,</span> <span class="n">y_gangwon_condo_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_gangwon_condo</span> <span class="p">,</span> <span class="n">y_gangwon_condo</span> <span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.2</span> <span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
 <span class="n">lr２</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">LinearRegression</span><span class="p">()</span>
 <span class="n">model２</span> <span class="o">=</span> <span class="n">lr２</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_gangwon_condo_train</span> <span class="p">,</span> <span class="n">y_gangwon_condo_train</span><span class="p">)</span>
-
-<span class="c1">#강원도 예측</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=d8155cf1">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#강원도 예측</span>
 <span class="c1"># camping 예측 학습한 데이터를 다른 데이터로 평가하는 것 예측 테스트(X축에는 예측할 데이터, Y축에는 예측에 고려할 데이터)</span>
 <span class="n">X_gangwon_camping</span> <span class="o">=</span> <span class="n">gangwon_camping</span><span class="p">[</span><span class="n">gangwon_camping</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">difference</span><span class="p">([</span><span class="s1">'캠핑장/펜션'</span><span class="p">])]</span>
 <span class="n">y_gangwon_camping</span> <span class="o">=</span> <span class="n">gangwon_camping</span><span class="p">[</span><span class="s1">'캠핑장/펜션'</span><span class="p">]</span>
 <span class="n">X_gangwon_camping_train</span> <span class="p">,</span> <span class="n">X_gangwon_camping_test</span> <span class="p">,</span> <span class="n">y_gangwon_camping_train</span> <span class="p">,</span> <span class="n">y_gangwon_camping_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_gangwon_camping</span> <span class="p">,</span> <span class="n">y_gangwon_camping</span> <span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.2</span> <span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
 <span class="n">lr3</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">LinearRegression</span><span class="p">()</span>
 <span class="n">model3</span> <span class="o">=</span> <span class="n">lr3</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_gangwon_camping_train</span> <span class="p">,</span> <span class="n">y_gangwon_camping_train</span><span class="p">)</span>
-
-<span class="c1">#강원도 예측</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=a30e707a">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#강원도 예측</span>
 <span class="c1"># elsesleep 예측 학습한 데이터를 다른 데이터로 평가하는 것 예측 테스트(X축에는 예측할 데이터, Y축에는 예측에 고려할 데이터)</span>
 <span class="n">X_gangwon_elsesleep</span> <span class="o">=</span> <span class="n">gangwon_elsesleep</span><span class="p">[</span><span class="n">gangwon_elsesleep</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">difference</span><span class="p">([</span><span class="s1">'기타숙박'</span><span class="p">])]</span>
 <span class="n">y_gangwon_elsesleep</span> <span class="o">=</span> <span class="n">gangwon_elsesleep</span><span class="p">[</span><span class="s1">'기타숙박'</span><span class="p">]</span>
 <span class="n">X_gangwon_elsesleep_train</span> <span class="p">,</span> <span class="n">X_gangwon_elsesleep_test</span> <span class="p">,</span> <span class="n">y_gangwon_elsesleep_train</span> <span class="p">,</span> <span class="n">y_gangwon_elsesleep_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_gangwon_elsesleep</span> <span class="p">,</span> <span class="n">y_gangwon_elsesleep</span> <span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.2</span> <span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
 <span class="n">lr4</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">LinearRegression</span><span class="p">()</span>
 <span class="n">model4</span> <span class="o">=</span> <span class="n">lr4</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_gangwon_elsesleep_train</span> <span class="p">,</span> <span class="n">y_gangwon_elsesleep_train</span><span class="p">)</span>
-
-<span class="c1">#강원도 예측</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=e62f3ebd">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#강원도 예측</span>
 <span class="c1"># dutyfree 예측 학습한 데이터를 다른 데이터로 평가하는 것 예측 테스트(X축에는 예측할 데이터, Y축에는 예측에 고려할 데이터)</span>
 <span class="n">X_gangwon_dutyfree</span> <span class="o">=</span> <span class="n">gangwon_dutyfree</span><span class="p">[</span><span class="n">gangwon_dutyfree</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">difference</span><span class="p">([</span><span class="s1">'면세점'</span><span class="p">])]</span>
 <span class="n">y_gangwon_dutyfree</span> <span class="o">=</span> <span class="n">gangwon_dutyfree</span><span class="p">[</span><span class="s1">'면세점'</span><span class="p">]</span>
 <span class="n">X_gangwon_dutyfree_train</span> <span class="p">,</span> <span class="n">X_gangwon_dutyfree_test</span> <span class="p">,</span> <span class="n">y_gangwon_dutyfree_train</span> <span class="p">,</span> <span class="n">y_gangwon_dutyfree_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_gangwon_dutyfree</span> <span class="p">,</span> <span class="n">y_gangwon_dutyfree</span> <span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.2</span> <span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
 <span class="n">lr5</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">LinearRegression</span><span class="p">()</span>
 <span class="n">model5</span> <span class="o">=</span> <span class="n">lr5</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_gangwon_dutyfree_train</span> <span class="p">,</span> <span class="n">y_gangwon_dutyfree_train</span><span class="p">)</span>
-
-<span class="c1">#강원도 예측</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=0f5a61c9">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#강원도 예측</span>
 <span class="c1"># 레저용품쇼핑 예측 학습한 데이터를 다른 데이터로 평가하는 것 예측 테스트(X축에는 예측할 데이터, Y축에는 예측에 고려할 데이터)</span>
 <span class="n">X_gangwon_leisureshop</span> <span class="o">=</span> <span class="n">gangwon_leisureshop</span><span class="p">[</span><span class="n">gangwon_leisureshop</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">difference</span><span class="p">([</span><span class="s1">'레저용품쇼핑'</span><span class="p">])]</span>
 <span class="n">y_gangwon_leisureshop</span> <span class="o">=</span> <span class="n">gangwon_leisureshop</span><span class="p">[</span><span class="s1">'레저용품쇼핑'</span><span class="p">]</span>
 <span class="n">X_gangwon_leisureshop_train</span> <span class="p">,</span> <span class="n">X_gangwon_leisureshop_test</span> <span class="p">,</span> <span class="n">y_gangwon_leisureshop_train</span> <span class="p">,</span> <span class="n">y_gangwon_leisureshop_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_gangwon_leisureshop</span> <span class="p">,</span> <span class="n">y_gangwon_leisureshop</span> <span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.2</span> <span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
 <span class="n">lr6</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">LinearRegression</span><span class="p">()</span>
 <span class="n">model6</span> <span class="o">=</span> <span class="n">lr6</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_gangwon_leisureshop_train</span> <span class="p">,</span> <span class="n">y_gangwon_leisureshop_train</span><span class="p">)</span>
-
-<span class="c1">#강원도 예측</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=531df3a1-6f5c-40bb-aa4f-17ec82733325">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#강원도 예측</span>
 <span class="c1"># hugeshop 예측 학습한 데이터를 다른 데이터로 평가하는 것 예측 테스트(X축에는 예측할 데이터, Y축에는 예측에 고려할 데이터)</span>
 <span class="n">X_gangwon_hugeshop</span> <span class="o">=</span> <span class="n">gangwon_hugeshop</span><span class="p">[</span><span class="n">gangwon_hugeshop</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">difference</span><span class="p">([</span><span class="s1">'대형쇼핑몰'</span><span class="p">])]</span>
 <span class="n">y_gangwon_hugeshop</span> <span class="o">=</span> <span class="n">gangwon_hugeshop</span><span class="p">[</span><span class="s1">'대형쇼핑몰'</span><span class="p">]</span>
 <span class="n">X_gangwon_hugeshop_train</span> <span class="p">,</span> <span class="n">X_gangwon_hugeshop_test</span> <span class="p">,</span> <span class="n">y_gangwon_hugeshop_train</span> <span class="p">,</span> <span class="n">y_gangwon_hugeshop_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_gangwon_hugeshop</span> <span class="p">,</span> <span class="n">y_gangwon_hugeshop</span> <span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.2</span> <span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
 <span class="n">lr7</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">LinearRegression</span><span class="p">()</span>
 <span class="n">model7</span> <span class="o">=</span> <span class="n">lr7</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_gangwon_hugeshop_train</span> <span class="p">,</span> <span class="n">y_gangwon_hugeshop_train</span><span class="p">)</span>
-
-<span class="c1">#강원도 예측</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=6068c2f3-4faf-4ee1-bb56-2e0aa2a58bf9">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#강원도 예측</span>
 <span class="c1"># amuse 예측 학습한 데이터를 다른 데이터로 평가하는 것 예측 테스트(X축에는 예측할 데이터, Y축에는 예측에 고려할 데이터)</span>
 <span class="n">X_gangwon_amuse</span> <span class="o">=</span> <span class="n">gangwon_amuse</span><span class="p">[</span><span class="n">gangwon_amuse</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">difference</span><span class="p">([</span><span class="s1">'관광유원시설'</span><span class="p">])]</span>
 <span class="n">y_gangwon_amuse</span> <span class="o">=</span> <span class="n">gangwon_amuse</span><span class="p">[</span><span class="s1">'관광유원시설'</span><span class="p">]</span>
 <span class="n">X_gangwon_amuse_train</span> <span class="p">,</span> <span class="n">X_gangwon_amuse_test</span> <span class="p">,</span> <span class="n">y_gangwon_amuse_train</span> <span class="p">,</span> <span class="n">y_gangwon_amuse_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_gangwon_amuse</span> <span class="p">,</span> <span class="n">y_gangwon_amuse</span> <span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.2</span> <span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
 <span class="n">lr8</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">LinearRegression</span><span class="p">()</span>
 <span class="n">model8</span> <span class="o">=</span> <span class="n">lr8</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_gangwon_amuse_train</span> <span class="p">,</span> <span class="n">y_gangwon_amuse_train</span><span class="p">)</span>
-
-<span class="c1">#강원도 예측</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=bd815178-636e-4331-8867-6483de76e7a5">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#강원도 예측</span>
 <span class="c1"># golf 예측 학습한 데이터를 다른 데이터로 평가하는 것 예측 테스트(X축에는 예측할 데이터, Y축에는 예측에 고려할 데이터)</span>
 <span class="n">X_gangwon_golf</span> <span class="o">=</span> <span class="n">gangwon_golf</span><span class="p">[</span><span class="n">gangwon_golf</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">difference</span><span class="p">([</span><span class="s1">'골프장'</span><span class="p">])]</span>
 <span class="n">y_gangwon_golf</span> <span class="o">=</span> <span class="n">gangwon_golf</span><span class="p">[</span><span class="s1">'골프장'</span><span class="p">]</span>
 <span class="n">X_gangwon_golf_train</span> <span class="p">,</span> <span class="n">X_gangwon_golf_test</span> <span class="p">,</span> <span class="n">y_gangwon_golf_train</span> <span class="p">,</span> <span class="n">y_gangwon_golf_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_gangwon_golf</span> <span class="p">,</span> <span class="n">y_gangwon_golf</span> <span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.2</span> <span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
 <span class="n">lr9</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">LinearRegression</span><span class="p">()</span>
 <span class="n">model9</span> <span class="o">=</span> <span class="n">lr9</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_gangwon_golf_train</span> <span class="p">,</span> <span class="n">y_gangwon_golf_train</span><span class="p">)</span>
-
-<span class="c1">#강원도 예측</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=5fccbc2d-2ff0-4e85-b974-e7934a49aa82">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#강원도 예측</span>
 <span class="c1"># ski 예측 학습한 데이터를 다른 데이터로 평가하는 것 예측 테스트(X축에는 예측할 데이터, Y축에는 예측에 고려할 데이터)</span>
 <span class="n">X_gangwon_ski</span> <span class="o">=</span> <span class="n">gangwon_ski</span><span class="p">[</span><span class="n">gangwon_ski</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">difference</span><span class="p">([</span><span class="s1">'스키장'</span><span class="p">])]</span>
 <span class="n">y_gangwon_ski</span> <span class="o">=</span> <span class="n">gangwon_ski</span><span class="p">[</span><span class="s1">'스키장'</span><span class="p">]</span>
 <span class="n">X_gangwon_ski_train</span> <span class="p">,</span> <span class="n">X_gangwon_ski_test</span> <span class="p">,</span> <span class="n">y_gangwon_ski_train</span> <span class="p">,</span> <span class="n">y_gangwon_ski_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_gangwon_ski</span> <span class="p">,</span> <span class="n">y_gangwon_ski</span> <span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.2</span> <span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
 <span class="n">lr10</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">LinearRegression</span><span class="p">()</span>
 <span class="n">model10</span> <span class="o">=</span> <span class="n">lr10</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_gangwon_ski_train</span> <span class="p">,</span> <span class="n">y_gangwon_ski_train</span><span class="p">)</span>
-
-<span class="c1">#강원도 예측</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=0cd71dc5-51d1-46c2-a28c-1f7113dee8b9">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#강원도 예측</span>
 <span class="c1"># culture 예측 학습한 데이터를 다른 데이터로 평가하는 것 예측 테스트(X축에는 예측할 데이터, Y축에는 예측에 고려할 데이터)</span>
 <span class="n">X_gangwon_culture</span> <span class="o">=</span> <span class="n">gangwon_culture</span><span class="p">[</span><span class="n">gangwon_culture</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">difference</span><span class="p">([</span><span class="s1">'문화서비스'</span><span class="p">])]</span>
 <span class="n">y_gangwon_culture</span> <span class="o">=</span> <span class="n">gangwon_culture</span><span class="p">[</span><span class="s1">'문화서비스'</span><span class="p">]</span>
 <span class="n">X_gangwon_culture_train</span> <span class="p">,</span> <span class="n">X_gangwon_culture_test</span> <span class="p">,</span> <span class="n">y_gangwon_culture_train</span> <span class="p">,</span> <span class="n">y_gangwon_culture_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_gangwon_culture</span> <span class="p">,</span> <span class="n">y_gangwon_culture</span> <span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.2</span> <span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
 <span class="n">lr12</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">LinearRegression</span><span class="p">()</span>
 <span class="n">model12</span> <span class="o">=</span> <span class="n">lr12</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_gangwon_culture_train</span> <span class="p">,</span> <span class="n">y_gangwon_culture_train</span><span class="p">)</span>
-
-<span class="c1">#강원도 예측</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=e5bda890-05a0-4249-8aa9-0f4f060bf6e1">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#강원도 예측</span>
 <span class="c1"># food 예측 학습한 데이터를 다른 데이터로 평가하는 것 예측 테스트(X축에는 예측할 데이터, Y축에는 예측에 고려할 데이터)</span>
 <span class="n">X_gangwon_food</span> <span class="o">=</span> <span class="n">gangwon_food</span><span class="p">[</span><span class="n">gangwon_food</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">difference</span><span class="p">([</span><span class="s1">'식음료'</span><span class="p">])]</span>
 <span class="n">y_gangwon_food</span> <span class="o">=</span> <span class="n">gangwon_food</span><span class="p">[</span><span class="s1">'식음료'</span><span class="p">]</span>
@@ -7843,12 +7918,12 @@ a.anchor-link {
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=ae07b6f7-9cbe-4c16-8920-79bb3071d688">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=ae07b6f7-9cbe-4c16-8920-79bb3071d688">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [30]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># 강원도 예측에 고려할 공통 데이터</span>
@@ -7880,7 +7955,131 @@ a.anchor-link {
 <span class="n">gangwon_practice</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">gdp_2023</span><span class="p">,</span> <span class="n">cpi_2023</span><span class="p">,</span><span class="n">expect_inflaction_2023</span><span class="p">,</span> <span class="n">visitor_gangwon_2023</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">new_columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'CPI'</span><span class="p">,</span> <span class="s1">'gdp'</span><span class="p">,</span> <span class="s1">'기대 인플레이션율'</span><span class="p">,</span> <span class="s1">'강원도 관광객'</span><span class="p">]</span>
 <span class="n">gangwon_practice</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">new_columns</span>
+<span class="n">gangwon_practice</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[20]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>CPI</th>
+<th>gdp</th>
+<th>기대 인플레이션율</th>
+<th>강원도 관광객</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>2023년 01월</th>
+<td>2267.6082</td>
+<td>128.5657</td>
+<td>2.6806</td>
+<td>41687156.52</td>
+</tr>
+<tr>
+<th>2023년 02월</th>
+<td>2267.6082</td>
+<td>128.5657</td>
+<td>2.7837</td>
+<td>35695937.52</td>
+</tr>
+<tr>
+<th>2023년 03월</th>
+<td>2267.6082</td>
+<td>128.5657</td>
+<td>2.9899</td>
+<td>39996084.96</td>
+</tr>
+<tr>
+<th>2023년 04월</th>
+<td>2267.6082</td>
+<td>128.5657</td>
+<td>3.1961</td>
+<td>41213944.8</td>
+</tr>
+<tr>
+<th>2023년 05월</th>
+<td>2267.6082</td>
+<td>128.5657</td>
+<td>3.4023</td>
+<td>46035214.92</td>
+</tr>
+<tr>
+<th>2023년 06월</th>
+<td>2267.6082</td>
+<td>128.5657</td>
+<td>4.0209</td>
+<td>44502706.8</td>
+</tr>
+<tr>
+<th>2023년 07월</th>
+<td>2267.6082</td>
+<td>128.5657</td>
+<td>4.8457</td>
+<td>49497758.64</td>
+</tr>
+<tr>
+<th>2023년 08월</th>
+<td>2267.6082</td>
+<td>128.5657</td>
+<td>4.4333</td>
+<td>50283987.84</td>
+</tr>
+<tr>
+<th>2023년 09월</th>
+<td>2267.6082</td>
+<td>128.5657</td>
+<td>4.3302</td>
+<td>45256145.04</td>
+</tr>
+<tr>
+<th>2023년 10월</th>
+<td>2267.6082</td>
+<td>128.5657</td>
+<td>4.4333</td>
+<td>48365932.68</td>
+</tr>
+<tr>
+<th>2023년 11월</th>
+<td>2267.6082</td>
+<td>128.5657</td>
+<td>4.3302</td>
+<td>43899013.8</td>
+</tr>
+<tr>
+<th>2023년 12월</th>
+<td>2267.6082</td>
+<td>128.5657</td>
+<td>3.9178</td>
+<td>42549776.28</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 </div>
 </div>
@@ -7904,6 +8103,9 @@ a.anchor-link {
 
 <span class="c1"># 스케일링된 데이터를 DataFrame으로 변환</span>
 <span class="n">gangwon_practice_scaled</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">X_practice_scaled</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">gangwon_practice</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">gangwon_practice</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+
+<span class="c1"># 스케일링된 데이터 출력</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">gangwon_practice_scaled</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -7930,20 +8132,6 @@ a.anchor-link {
 2023년 11월  4.547474e-13 -2.842171e-14   0.778868 -0.045400
 2023년 12월  4.547474e-13 -2.842171e-14   0.194717 -0.380207
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=8c403d38-16e4-40bc-9c61-03a531211d4b">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [31]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
 </div>
 </div>
 </div>
@@ -8429,12 +8617,12 @@ a.anchor-link {
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=a156e4dd-704a-41fa-a6fb-8841b32d35f3">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=a156e4dd-704a-41fa-a6fb-8841b32d35f3">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [32]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [33]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># 식음료 예측 결과치</span>
@@ -8459,346 +8647,6 @@ a.anchor-link {
 <span class="n">g_food_23_oct</span><span class="o">=</span><span class="n">predict_food</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span>
 <span class="n">g_food_23_nov</span><span class="o">=</span><span class="n">predict_food</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span>
 <span class="n">g_food_23_dec</span><span class="o">=</span><span class="n">predict_food</span><span class="p">[</span><span class="mi">11</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-intense-fg ansi-bold">In[32], line 2</span>
-<span class="ansi-green-fg">      1</span> <span style="color: rgb(95,135,135)"># 식음료 예측 결과치</span>
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 2</span> X_practice_food <span style="color: rgb(98,98,98)">=</span> X[gangwon_food<span style="color: rgb(98,98,98)">.</span>columns<span style="color: rgb(98,98,98)">.</span>difference([<span style="color: rgb(175,0,0)">'</span><span style="color: rgb(175,0,0)">식음료</span><span style="color: rgb(175,0,0)">'</span>])]
-<span class="ansi-green-fg">      3</span> predict_food <span style="color: rgb(98,98,98)">=</span> lr13<span style="color: rgb(98,98,98)">.</span>predict(X_practice_food)
-<span class="ansi-green-fg">      4</span> predict_food <span style="color: rgb(98,98,98)">=</span> np<span style="color: rgb(98,98,98)">.</span>round(predict_food, decimals<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(98,98,98)">1</span>)
-
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>: name 'X' is not defined</pre>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=4f20c53e-a479-4836-84c2-7203cf4bfec5">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [40]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#경기도 예측</span>
-<span class="c1"># 호텔 예측 학습한 데이터를 다른 데이터로 평가하는 것예측 테스트(X축에는 예측할 데이터, Y축에는 예측에 고려할 데이터)</span>
-<span class="n">X_gunggi_hotel</span> <span class="o">=</span> <span class="n">gunggi_hotel</span><span class="p">[</span><span class="n">gunggi_hotel</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">difference</span><span class="p">([</span><span class="s1">'호텔'</span><span class="p">])]</span>
-<span class="n">y_gunggi_hotel</span> <span class="o">=</span> <span class="n">gunggi_hotel</span><span class="p">[</span><span class="s1">'호텔'</span><span class="p">]</span>
-<span class="n">X_gunggi_hotel_train</span> <span class="p">,</span> <span class="n">X_gunggi_hotel_test</span> <span class="p">,</span> <span class="n">y_gunggi_hotel_train</span> <span class="p">,</span> <span class="n">y_gunggi_hotel_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_gunggi_hotel</span> <span class="p">,</span> <span class="n">y_gunggi_hotel</span> <span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.2</span> <span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
-<span class="n">lr14</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">LinearRegression</span><span class="p">()</span>
-<span class="n">model14</span> <span class="o">=</span> <span class="n">lr14</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_gunggi_hotel_train</span> <span class="p">,</span> <span class="n">y_gunggi_hotel_train</span><span class="p">)</span>
-
-<span class="c1">#경기도 예측</span>
-<span class="c1"># condo 예측 학습한 데이터를 다른 데이터로 평가하는 것 예측 테스트(X축에는 예측할 데이터, Y축에는 예측에 고려할 데이터)</span>
-<span class="n">X_gunggi_condo</span> <span class="o">=</span> <span class="n">gunggi_condo</span><span class="p">[</span><span class="n">gunggi_condo</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">difference</span><span class="p">([</span><span class="s1">'콘도'</span><span class="p">])]</span>
-<span class="n">y_gunggi_condo</span> <span class="o">=</span> <span class="n">gunggi_condo</span><span class="p">[</span><span class="s1">'콘도'</span><span class="p">]</span>
-<span class="n">X_gunggi_condo_train</span> <span class="p">,</span> <span class="n">X_gunggi_condo_test</span> <span class="p">,</span> <span class="n">y_gunggi_condo_train</span> <span class="p">,</span> <span class="n">y_gunggi_condo_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_gunggi_condo</span> <span class="p">,</span> <span class="n">y_gunggi_condo</span> <span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.2</span> <span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
-<span class="n">lr15</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">LinearRegression</span><span class="p">()</span>
-<span class="n">model15</span> <span class="o">=</span> <span class="n">lr15</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_gunggi_condo_train</span> <span class="p">,</span> <span class="n">y_gunggi_condo_train</span><span class="p">)</span>
-
-<span class="c1">#경기도 예측</span>
-<span class="c1"># camping 예측 학습한 데이터를 다른 데이터로 평가하는 것 예측 테스트(X축에는 예측할 데이터, Y축에는 예측에 고려할 데이터)</span>
-<span class="n">X_gunggi_camping</span> <span class="o">=</span> <span class="n">gunggi_camping</span><span class="p">[</span><span class="n">gunggi_camping</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">difference</span><span class="p">([</span><span class="s1">'캠핑장/펜션'</span><span class="p">])]</span>
-<span class="n">y_gunggi_camping</span> <span class="o">=</span> <span class="n">gunggi_camping</span><span class="p">[</span><span class="s1">'캠핑장/펜션'</span><span class="p">]</span>
-<span class="n">X_gunggi_camping_train</span> <span class="p">,</span> <span class="n">X_gunggi_camping_test</span> <span class="p">,</span> <span class="n">y_gunggi_camping_train</span> <span class="p">,</span> <span class="n">y_gunggi_camping_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_gunggi_camping</span> <span class="p">,</span> <span class="n">y_gunggi_camping</span> <span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.2</span> <span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
-<span class="n">lr16</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">LinearRegression</span><span class="p">()</span>
-<span class="n">model16</span> <span class="o">=</span> <span class="n">lr16</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_gunggi_camping_train</span> <span class="p">,</span> <span class="n">y_gunggi_camping_train</span><span class="p">)</span>
-
-<span class="c1">#경기도 예측</span>
-<span class="c1"># elsesleep 예측 학습한 데이터를 다른 데이터로 평가하는 것 예측 테스트(X축에는 예측할 데이터, Y축에는 예측에 고려할 데이터)</span>
-<span class="n">X_gunggi_elsesleep</span> <span class="o">=</span> <span class="n">gunggi_elsesleep</span><span class="p">[</span><span class="n">gunggi_elsesleep</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">difference</span><span class="p">([</span><span class="s1">'기타숙박'</span><span class="p">])]</span>
-<span class="n">y_gunggi_elsesleep</span> <span class="o">=</span> <span class="n">gunggi_elsesleep</span><span class="p">[</span><span class="s1">'기타숙박'</span><span class="p">]</span>
-<span class="n">X_gunggi_elsesleep_train</span> <span class="p">,</span> <span class="n">X_gunggi_elsesleep_test</span> <span class="p">,</span> <span class="n">y_gunggi_elsesleep_train</span> <span class="p">,</span> <span class="n">y_gunggi_elsesleep_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_gunggi_elsesleep</span> <span class="p">,</span> <span class="n">y_gunggi_elsesleep</span> <span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.2</span> <span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
-<span class="n">lr17</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">LinearRegression</span><span class="p">()</span>
-<span class="n">model17</span> <span class="o">=</span> <span class="n">lr17</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_gunggi_elsesleep_train</span> <span class="p">,</span> <span class="n">y_gunggi_elsesleep_train</span><span class="p">)</span>
-
-<span class="c1">#경기도 예측</span>
-<span class="c1"># dutyfree 예측 학습한 데이터를 다른 데이터로 평가하는 것 예측 테스트(X축에는 예측할 데이터, Y축에는 예측에 고려할 데이터)</span>
-<span class="n">X_gunggi_dutyfree</span> <span class="o">=</span> <span class="n">gunggi_dutyfree</span><span class="p">[</span><span class="n">gunggi_dutyfree</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">difference</span><span class="p">([</span><span class="s1">'면세점'</span><span class="p">])]</span>
-<span class="n">y_gunggi_dutyfree</span> <span class="o">=</span> <span class="n">gunggi_dutyfree</span><span class="p">[</span><span class="s1">'면세점'</span><span class="p">]</span>
-<span class="n">X_gunggi_dutyfree_train</span> <span class="p">,</span> <span class="n">X_gunggi_dutyfree_test</span> <span class="p">,</span> <span class="n">y_gunggi_dutyfree_train</span> <span class="p">,</span> <span class="n">y_gunggi_dutyfree_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_gunggi_dutyfree</span> <span class="p">,</span> <span class="n">y_gunggi_dutyfree</span> <span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.2</span> <span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
-<span class="n">lr18</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">LinearRegression</span><span class="p">()</span>
-<span class="n">model18</span> <span class="o">=</span> <span class="n">lr18</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_gunggi_dutyfree_train</span> <span class="p">,</span> <span class="n">y_gunggi_dutyfree_train</span><span class="p">)</span>
-
-<span class="c1">#경기도 예측</span>
-<span class="c1"># 레저용품쇼핑 예측 학습한 데이터를 다른 데이터로 평가하는 것 예측 테스트(X축에는 예측할 데이터, Y축에는 예측에 고려할 데이터)</span>
-<span class="n">X_gunggi_leisureshop</span> <span class="o">=</span> <span class="n">gunggi_leisureshop</span><span class="p">[</span><span class="n">gunggi_leisureshop</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">difference</span><span class="p">([</span><span class="s1">'레저용품쇼핑'</span><span class="p">])]</span>
-<span class="n">y_gunggi_leisureshop</span> <span class="o">=</span> <span class="n">gunggi_leisureshop</span><span class="p">[</span><span class="s1">'레저용품쇼핑'</span><span class="p">]</span>
-<span class="n">X_gunggi_leisureshop_train</span> <span class="p">,</span> <span class="n">X_gunggi_leisureshop_test</span> <span class="p">,</span> <span class="n">y_gunggi_leisureshop_train</span> <span class="p">,</span> <span class="n">y_gunggi_leisureshop_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_gunggi_leisureshop</span> <span class="p">,</span> <span class="n">y_gunggi_leisureshop</span> <span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.2</span> <span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
-<span class="n">lr19</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">LinearRegression</span><span class="p">()</span>
-<span class="n">model19</span> <span class="o">=</span> <span class="n">lr19</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_gunggi_leisureshop_train</span> <span class="p">,</span> <span class="n">y_gunggi_leisureshop_train</span><span class="p">)</span>
-
-<span class="c1">#경기도 예측</span>
-<span class="c1"># hugeshop 예측 학습한 데이터를 다른 데이터로 평가하는 것 예측 테스트(X축에는 예측할 데이터, Y축에는 예측에 고려할 데이터)</span>
-<span class="n">X_gunggi_hugeshop</span> <span class="o">=</span> <span class="n">gunggi_hugeshop</span><span class="p">[</span><span class="n">gunggi_hugeshop</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">difference</span><span class="p">([</span><span class="s1">'대형쇼핑몰'</span><span class="p">])]</span>
-<span class="n">y_gunggi_hugeshop</span> <span class="o">=</span> <span class="n">gunggi_hugeshop</span><span class="p">[</span><span class="s1">'대형쇼핑몰'</span><span class="p">]</span>
-<span class="n">X_gunggi_hugeshop_train</span> <span class="p">,</span> <span class="n">X_gunggi_hugeshop_test</span> <span class="p">,</span> <span class="n">y_gunggi_hugeshop_train</span> <span class="p">,</span> <span class="n">y_gunggi_hugeshop_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_gunggi_hugeshop</span> <span class="p">,</span> <span class="n">y_gunggi_hugeshop</span> <span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.2</span> <span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
-<span class="n">lr20</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">LinearRegression</span><span class="p">()</span>
-<span class="n">model20</span> <span class="o">=</span> <span class="n">lr20</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_gunggi_hugeshop_train</span> <span class="p">,</span> <span class="n">y_gunggi_hugeshop_train</span><span class="p">)</span>
-
-<span class="c1">#경기도 예측</span>
-<span class="c1"># amuse 예측 학습한 데이터를 다른 데이터로 평가하는 것 예측 테스트(X축에는 예측할 데이터, Y축에는 예측에 고려할 데이터)</span>
-<span class="n">X_gunggi_amuse</span> <span class="o">=</span> <span class="n">gunggi_amuse</span><span class="p">[</span><span class="n">gunggi_amuse</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">difference</span><span class="p">([</span><span class="s1">'관광유원시설'</span><span class="p">])]</span>
-<span class="n">y_gunggi_amuse</span> <span class="o">=</span> <span class="n">gunggi_amuse</span><span class="p">[</span><span class="s1">'관광유원시설'</span><span class="p">]</span>
-<span class="n">X_gunggi_amuse_train</span> <span class="p">,</span> <span class="n">X_gunggi_amuse_test</span> <span class="p">,</span> <span class="n">y_gunggi_amuse_train</span> <span class="p">,</span> <span class="n">y_gunggi_amuse_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_gunggi_amuse</span> <span class="p">,</span> <span class="n">y_gunggi_amuse</span> <span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.2</span> <span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
-<span class="n">lr21</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">LinearRegression</span><span class="p">()</span>
-<span class="n">model21</span> <span class="o">=</span> <span class="n">lr21</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_gunggi_amuse_train</span> <span class="p">,</span> <span class="n">y_gunggi_amuse_train</span><span class="p">)</span>
-
-<span class="c1">#경기도 예측</span>
-<span class="c1"># golf 예측 학습한 데이터를 다른 데이터로 평가하는 것 예측 테스트(X축에는 예측할 데이터, Y축에는 예측에 고려할 데이터)</span>
-<span class="n">X_gunggi_golf</span> <span class="o">=</span> <span class="n">gunggi_golf</span><span class="p">[</span><span class="n">gunggi_golf</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">difference</span><span class="p">([</span><span class="s1">'골프장'</span><span class="p">])]</span>
-<span class="n">y_gunggi_golf</span> <span class="o">=</span> <span class="n">gunggi_golf</span><span class="p">[</span><span class="s1">'골프장'</span><span class="p">]</span>
-<span class="n">X_gunggi_golf_train</span> <span class="p">,</span> <span class="n">X_gunggi_golf_test</span> <span class="p">,</span> <span class="n">y_gunggi_golf_train</span> <span class="p">,</span> <span class="n">y_gunggi_golf_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_gunggi_golf</span> <span class="p">,</span> <span class="n">y_gunggi_golf</span> <span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.2</span> <span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
-<span class="n">lr22</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">LinearRegression</span><span class="p">()</span>
-<span class="n">model22</span> <span class="o">=</span> <span class="n">lr22</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_gunggi_golf_train</span> <span class="p">,</span> <span class="n">y_gunggi_golf_train</span><span class="p">)</span>
-
-<span class="c1">#경기도 예측</span>
-<span class="c1"># ski 예측 학습한 데이터를 다른 데이터로 평가하는 것 예측 테스트(X축에는 예측할 데이터, Y축에는 예측에 고려할 데이터)</span>
-<span class="n">X_gunggi_ski</span> <span class="o">=</span> <span class="n">gunggi_ski</span><span class="p">[</span><span class="n">gunggi_ski</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">difference</span><span class="p">([</span><span class="s1">'스키장'</span><span class="p">])]</span>
-<span class="n">y_gunggi_ski</span> <span class="o">=</span> <span class="n">gunggi_ski</span><span class="p">[</span><span class="s1">'스키장'</span><span class="p">]</span>
-<span class="n">X_gunggi_ski_train</span> <span class="p">,</span> <span class="n">X_gunggi_ski_test</span> <span class="p">,</span> <span class="n">y_gunggi_ski_train</span> <span class="p">,</span> <span class="n">y_gunggi_ski_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_gunggi_ski</span> <span class="p">,</span> <span class="n">y_gunggi_ski</span> <span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.2</span> <span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
-<span class="n">lr23</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">LinearRegression</span><span class="p">()</span>
-<span class="n">model23</span> <span class="o">=</span> <span class="n">lr23</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_gunggi_ski_train</span> <span class="p">,</span> <span class="n">y_gunggi_ski_train</span><span class="p">)</span>
-
-<span class="c1">#경기도 예측</span>
-<span class="c1"># culture 예측 학습한 데이터를 다른 데이터로 평가하는 것 예측 테스트(X축에는 예측할 데이터, Y축에는 예측에 고려할 데이터)</span>
-<span class="n">X_gunggi_culture</span> <span class="o">=</span> <span class="n">gunggi_culture</span><span class="p">[</span><span class="n">gunggi_culture</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">difference</span><span class="p">([</span><span class="s1">'문화서비스'</span><span class="p">])]</span>
-<span class="n">y_gunggi_culture</span> <span class="o">=</span> <span class="n">gunggi_culture</span><span class="p">[</span><span class="s1">'문화서비스'</span><span class="p">]</span>
-<span class="n">X_gunggi_culture_train</span> <span class="p">,</span> <span class="n">X_gunggi_culture_test</span> <span class="p">,</span> <span class="n">y_gunggi_culture_train</span> <span class="p">,</span> <span class="n">y_gunggi_culture_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_gunggi_culture</span> <span class="p">,</span> <span class="n">y_gunggi_culture</span> <span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.2</span> <span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
-<span class="n">lr24</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">LinearRegression</span><span class="p">()</span>
-<span class="n">model24</span> <span class="o">=</span> <span class="n">lr24</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_gunggi_culture_train</span> <span class="p">,</span> <span class="n">y_gunggi_culture_train</span><span class="p">)</span>
-
-<span class="c1">#경기도 예측</span>
-<span class="c1"># food 예측 학습한 데이터를 다른 데이터로 평가하는 것 예측 테스트(X축에는 예측할 데이터, Y축에는 예측에 고려할 데이터)</span>
-<span class="n">X_gunggi_food</span> <span class="o">=</span> <span class="n">gunggi_food</span><span class="p">[</span><span class="n">gunggi_food</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">difference</span><span class="p">([</span><span class="s1">'식음료'</span><span class="p">])]</span>
-<span class="n">y_gunggi_food</span> <span class="o">=</span> <span class="n">gunggi_food</span><span class="p">[</span><span class="s1">'식음료'</span><span class="p">]</span>
-<span class="n">X_gunggi_food_train</span> <span class="p">,</span> <span class="n">X_gunggi_food_test</span> <span class="p">,</span> <span class="n">y_gunggi_food_train</span> <span class="p">,</span> <span class="n">y_gunggi_food_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_gunggi_food</span> <span class="p">,</span> <span class="n">y_gunggi_food</span> <span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.2</span> <span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
-<span class="n">lr25</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">LinearRegression</span><span class="p">()</span>
-<span class="n">model25</span> <span class="o">=</span> <span class="n">lr25</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_gunggi_food_train</span> <span class="p">,</span> <span class="n">y_gunggi_food_train</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=40ba4835-a03e-4176-8553-9c7e25684e90">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [41]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># 경기도 예측에 고려할 공통 데이터</span>
-<span class="c1">#GDP 상승률 1.4% 가정</span>
-<span class="n">gdp_2023</span><span class="o">=</span><span class="n">gdp</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">12</span><span class="p">:]</span>
-<span class="n">gdp_2023</span><span class="o">=</span><span class="n">gdp_2023</span><span class="o">*</span><span class="mf">1.014</span>
-<span class="n">new_columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'2023년 01월'</span><span class="p">,</span> <span class="s1">'2023년 02월'</span><span class="p">,</span> <span class="s1">'2023년 03월'</span> <span class="p">,</span> <span class="s1">'2023년 04월'</span><span class="p">,</span> <span class="s1">'2023년 05월'</span><span class="p">,</span> <span class="s1">'2023년 06월'</span><span class="p">,</span> <span class="s1">'2023년 07월'</span><span class="p">,</span> <span class="s1">'2023년 08월'</span><span class="p">,</span> <span class="s1">'2023년 09월'</span><span class="p">,</span> <span class="s1">'2023년 10월'</span><span class="p">,</span> <span class="s1">'2023년 11월'</span><span class="p">,</span> <span class="s1">'2023년 12월'</span><span class="p">]</span>
-<span class="n">gdp_2023</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">new_columns</span>
-
-<span class="c1">#CPI 상승률 3.1 가정</span>
-<span class="n">cpi_2023</span><span class="o">=</span><span class="n">cpi</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">12</span><span class="p">:]</span>
-<span class="n">cpi_2023</span><span class="o">=</span><span class="n">cpi_2023</span><span class="o">*</span><span class="mf">1.031</span>
-<span class="n">new_columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'2023년 01월'</span><span class="p">,</span> <span class="s1">'2023년 02월'</span><span class="p">,</span> <span class="s1">'2023년 03월'</span> <span class="p">,</span> <span class="s1">'2023년 04월'</span><span class="p">,</span> <span class="s1">'2023년 05월'</span><span class="p">,</span> <span class="s1">'2023년 06월'</span><span class="p">,</span> <span class="s1">'2023년 07월'</span><span class="p">,</span> <span class="s1">'2023년 08월'</span><span class="p">,</span> <span class="s1">'2023년 09월'</span><span class="p">,</span> <span class="s1">'2023년 10월'</span><span class="p">,</span> <span class="s1">'2023년 11월'</span><span class="p">,</span> <span class="s1">'2023년 12월'</span><span class="p">]</span>
-<span class="n">cpi_2023</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">new_columns</span>
-
-<span class="c1">#기대인플레이션율 상승률 2% 가정</span>
-<span class="n">expect_inflaction_2023</span><span class="o">=</span><span class="n">expect_inflaction</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">12</span><span class="p">:]</span>
-<span class="n">expect_inflaction_2023</span><span class="o">=</span><span class="n">expect_inflaction_2023</span><span class="o">*</span><span class="mf">1.031</span>
-<span class="n">new_columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'2023년 01월'</span><span class="p">,</span> <span class="s1">'2023년 02월'</span><span class="p">,</span> <span class="s1">'2023년 03월'</span> <span class="p">,</span> <span class="s1">'2023년 04월'</span><span class="p">,</span> <span class="s1">'2023년 05월'</span><span class="p">,</span> <span class="s1">'2023년 06월'</span><span class="p">,</span> <span class="s1">'2023년 07월'</span><span class="p">,</span> <span class="s1">'2023년 08월'</span><span class="p">,</span> <span class="s1">'2023년 09월'</span><span class="p">,</span> <span class="s1">'2023년 10월'</span><span class="p">,</span> <span class="s1">'2023년 11월'</span><span class="p">,</span> <span class="s1">'2023년 12월'</span><span class="p">]</span>
-<span class="n">expect_inflaction_2023</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">new_columns</span>
-
-<span class="c1">#관광객 상승률 8% 가정</span>
-<span class="n">visitor_gunggi_2023</span><span class="o">=</span><span class="n">visitor_gunggi</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">12</span><span class="p">:]</span>
-<span class="n">visitor_gunggi_2023</span><span class="o">=</span><span class="n">visitor_gunggi_2023</span><span class="o">*</span><span class="mf">1.08</span>
-<span class="n">new_columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'2023년 01월'</span><span class="p">,</span> <span class="s1">'2023년 02월'</span><span class="p">,</span> <span class="s1">'2023년 03월'</span> <span class="p">,</span> <span class="s1">'2023년 04월'</span><span class="p">,</span> <span class="s1">'2023년 05월'</span><span class="p">,</span> <span class="s1">'2023년 06월'</span><span class="p">,</span> <span class="s1">'2023년 07월'</span><span class="p">,</span> <span class="s1">'2023년 08월'</span><span class="p">,</span> <span class="s1">'2023년 09월'</span><span class="p">,</span> <span class="s1">'2023년 10월'</span><span class="p">,</span> <span class="s1">'2023년 11월'</span><span class="p">,</span> <span class="s1">'2023년 12월'</span><span class="p">]</span>
-<span class="n">visitor_gunggi_2023</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">new_columns</span>
-
-<span class="c1"># Y축 데이터 통합(경기도_호텔)</span>
-<span class="n">gunggi_practice</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">gdp_2023</span><span class="p">,</span> <span class="n">cpi_2023</span><span class="p">,</span><span class="n">expect_inflaction_2023</span><span class="p">,</span> <span class="n">visitor_gunggi_2023</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">new_columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'CPI'</span><span class="p">,</span> <span class="s1">'gdp'</span><span class="p">,</span> <span class="s1">'기대 인플레이션율'</span><span class="p">,</span> <span class="s1">'경기도 관광객'</span><span class="p">]</span>
-<span class="n">gunggi_practice</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">new_columns</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=ea4727a8-530d-4bfa-bae7-da8c0e4ee003">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [42]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># 스케일링할 데이터 선택</span>
-<span class="n">X_practice</span> <span class="o">=</span> <span class="n">gunggi_practice</span><span class="o">.</span><span class="n">values</span>
-
-<span class="c1"># 스케일러 객체 생성</span>
-<span class="n">scaler</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
-
-<span class="c1"># 스케일링 적용</span>
-<span class="n">X_practice_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X_practice</span><span class="p">)</span>
-
-<span class="c1"># 스케일링된 데이터를 DataFrame으로 변환</span>
-<span class="n">gunggi_practice_scaled</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">X_practice_scaled</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">gunggi_practice</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">gunggi_practice</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=544a4984-59a8-43b0-a011-342d094e4126">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [43]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># 호텔 예측 결과치</span>
-<span class="n">X</span> <span class="o">=</span> <span class="n">gunggi_practice_scaled</span>
-
-<span class="c1"># 학습할 때 사용한 피처 순서와 동일하게 예측할 피처를 선택</span>
-<span class="n">X_practice</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">gunggi_hotel</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">difference</span><span class="p">([</span><span class="s1">'호텔'</span><span class="p">])]</span>
-
-<span class="c1"># 호텔 소비 예측</span>
-<span class="n">predict_hotel</span> <span class="o">=</span> <span class="n">lr1</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_practice</span><span class="p">)</span>
-<span class="n">predict_hotel</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">predict_hotel</span><span class="p">,</span> <span class="n">decimals</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">predict_hotel</span><span class="p">[</span><span class="n">predict_hotel</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">predict_hotel</span><span class="p">[</span><span class="n">predict_hotel</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">]</span>
-
-<span class="c1"># 예측 결과를 DataFrame으로 변환</span>
-<span class="n">predict</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">predict_hotel</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'2023년 경기도 호텔 소비 예측치'</span><span class="p">],</span> <span class="n">index</span><span class="o">=</span><span class="n">gunggi_practice</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
-
-<span class="c1"># 결과 출력</span>
-<span class="n">predict</span>
-
-
-
-<span class="c1">#1월 ~ 12월 예측 데이터 각 변수에 저장</span>
-<span class="n">gungi_hotel_23_jan</span><span class="o">=</span><span class="n">predict_hotel</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="n">gungi_hotel_23_feb</span><span class="o">=</span><span class="n">predict_hotel</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-<span class="n">gungi_hotel_23_mar</span><span class="o">=</span><span class="n">predict_hotel</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
-<span class="n">gungi_hotel_23_apr</span><span class="o">=</span><span class="n">predict_hotel</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
-<span class="n">gungi_hotel_23_may</span><span class="o">=</span><span class="n">predict_hotel</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
-<span class="n">gungi_hotel_23_jun</span><span class="o">=</span><span class="n">predict_hotel</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
-<span class="n">gungi_hotel_23_jul</span><span class="o">=</span><span class="n">predict_hotel</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span>
-<span class="n">gungi_hotel_23_aug</span><span class="o">=</span><span class="n">predict_hotel</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span>
-<span class="n">gungi_hotel_23_sep</span><span class="o">=</span><span class="n">predict_hotel</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span>
-<span class="n">gungi_hotel_23_oct</span><span class="o">=</span><span class="n">predict_hotel</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span>
-<span class="n">gungi_hotel_23_nov</span><span class="o">=</span><span class="n">predict_hotel</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span>
-<span class="n">gungi_hotel_23_dec</span><span class="o">=</span><span class="n">predict_hotel</span><span class="p">[</span><span class="mi">11</span><span class="p">]</span>
-
-<span class="n">predict</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">ValueError</span>                                Traceback (most recent call last)
-Cell <span class="ansi-green-intense-fg ansi-bold">In[43], line 8</span>
-<span class="ansi-green-fg">      5</span> X_practice <span style="color: rgb(98,98,98)">=</span> X[gunggi_hotel<span style="color: rgb(98,98,98)">.</span>columns<span style="color: rgb(98,98,98)">.</span>difference([<span style="color: rgb(175,0,0)">'</span><span style="color: rgb(175,0,0)">호텔</span><span style="color: rgb(175,0,0)">'</span>])]
-<span class="ansi-green-fg">      7</span> <span style="color: rgb(95,135,135)"># 호텔 소비 예측</span>
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 8</span> predict_hotel <span style="color: rgb(98,98,98)">=</span> lr1<span style="color: rgb(98,98,98)">.</span>predict(X_practice)
-<span class="ansi-green-fg">      9</span> predict_hotel <span style="color: rgb(98,98,98)">=</span> np<span style="color: rgb(98,98,98)">.</span>round(predict_hotel, decimals<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(98,98,98)">1</span>)
-<span class="ansi-green-fg">     10</span> predict_hotel[predict_hotel <span style="color: rgb(98,98,98)">&lt;</span> <span style="color: rgb(98,98,98)">0</span>] <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(98,98,98)">-</span>predict_hotel[predict_hotel <span style="color: rgb(98,98,98)">&lt;</span> <span style="color: rgb(98,98,98)">0</span>]
-
-File <span class="ansi-green-intense-fg ansi-bold">~\anaconda3\Lib\site-packages\sklearn\linear_model\_base.py:354</span>, in <span class="ansi-cyan-fg">LinearModel.predict</span><span class="ansi-blue-intense-fg ansi-bold">(self, X)</span>
-<span class="ansi-green-fg">    340</span> <span class="ansi-bold" style="color: rgb(0,135,0)">def</span> <span style="color: rgb(0,0,255)">predict</span>(<span style="color: rgb(0,135,0)">self</span>, X):
-<span class="ansi-green-fg">    341</span> <span style="color: rgb(188,188,188)">    </span><span style="color: rgb(175,0,0)">"""</span>
-<span class="ansi-green-fg">    342</span> <span style="color: rgb(175,0,0)">    Predict using the linear model.</span>
-<span class="ansi-green-fg">    343</span> 
-<span class="ansi-green-intense-fg ansi-bold">   (...)</span>
-<span class="ansi-green-fg">    352</span> <span style="color: rgb(175,0,0)">        Returns predicted values.</span>
-<span class="ansi-green-fg">    353</span> <span style="color: rgb(175,0,0)">    """</span>
-<span class="ansi-green-intense-fg ansi-bold">--&gt; 354</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_decision_function(X)
-
-File <span class="ansi-green-intense-fg ansi-bold">~\anaconda3\Lib\site-packages\sklearn\linear_model\_base.py:337</span>, in <span class="ansi-cyan-fg">LinearModel._decision_function</span><span class="ansi-blue-intense-fg ansi-bold">(self, X)</span>
-<span class="ansi-green-fg">    334</span> <span class="ansi-bold" style="color: rgb(0,135,0)">def</span> <span style="color: rgb(0,0,255)">_decision_function</span>(<span style="color: rgb(0,135,0)">self</span>, X):
-<span class="ansi-green-fg">    335</span>     check_is_fitted(<span style="color: rgb(0,135,0)">self</span>)
-<span class="ansi-green-intense-fg ansi-bold">--&gt; 337</span>     X <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_validate_data(X, accept_sparse<span style="color: rgb(98,98,98)">=</span>[<span style="color: rgb(175,0,0)">"</span><span style="color: rgb(175,0,0)">csr</span><span style="color: rgb(175,0,0)">"</span>, <span style="color: rgb(175,0,0)">"</span><span style="color: rgb(175,0,0)">csc</span><span style="color: rgb(175,0,0)">"</span>, <span style="color: rgb(175,0,0)">"</span><span style="color: rgb(175,0,0)">coo</span><span style="color: rgb(175,0,0)">"</span>], reset<span style="color: rgb(98,98,98)">=</span><span class="ansi-bold" style="color: rgb(0,135,0)">False</span>)
-<span class="ansi-green-fg">    338</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> safe_sparse_dot(X, <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>coef_<span style="color: rgb(98,98,98)">.</span>T, dense_output<span style="color: rgb(98,98,98)">=</span><span class="ansi-bold" style="color: rgb(0,135,0)">True</span>) <span style="color: rgb(98,98,98)">+</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>intercept_
-
-File <span class="ansi-green-intense-fg ansi-bold">~\anaconda3\Lib\site-packages\sklearn\base.py:548</span>, in <span class="ansi-cyan-fg">BaseEstimator._validate_data</span><span class="ansi-blue-intense-fg ansi-bold">(self, X, y, reset, validate_separately, **check_params)</span>
-<span class="ansi-green-fg">    483</span> <span class="ansi-bold" style="color: rgb(0,135,0)">def</span> <span style="color: rgb(0,0,255)">_validate_data</span>(
-<span class="ansi-green-fg">    484</span>     <span style="color: rgb(0,135,0)">self</span>,
-<span class="ansi-green-fg">    485</span>     X<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(175,0,0)">"</span><span style="color: rgb(175,0,0)">no_validation</span><span style="color: rgb(175,0,0)">"</span>,
-<span class="ansi-green-intense-fg ansi-bold">   (...)</span>
-<span class="ansi-green-fg">    489</span>     <span style="color: rgb(98,98,98)">*</span><span style="color: rgb(98,98,98)">*</span>check_params,
-<span class="ansi-green-fg">    490</span> ):
-<span class="ansi-green-fg">    491</span> <span style="color: rgb(188,188,188)">    </span><span style="color: rgb(175,0,0)">"""Validate input data and set or check the `n_features_in_` attribute.</span>
-<span class="ansi-green-fg">    492</span> 
-<span class="ansi-green-fg">    493</span> <span style="color: rgb(175,0,0)">    Parameters</span>
-<span class="ansi-green-intense-fg ansi-bold">   (...)</span>
-<span class="ansi-green-fg">    546</span> <span style="color: rgb(175,0,0)">        validated.</span>
-<span class="ansi-green-fg">    547</span> <span style="color: rgb(175,0,0)">    """</span>
-<span class="ansi-green-intense-fg ansi-bold">--&gt; 548</span>     <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_check_feature_names(X, reset<span style="color: rgb(98,98,98)">=</span>reset)
-<span class="ansi-green-fg">    550</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> y <span class="ansi-bold" style="color: rgb(175,0,255)">is</span> <span class="ansi-bold" style="color: rgb(0,135,0)">None</span> <span class="ansi-bold" style="color: rgb(175,0,255)">and</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_get_tags()[<span style="color: rgb(175,0,0)">"</span><span style="color: rgb(175,0,0)">requires_y</span><span style="color: rgb(175,0,0)">"</span>]:
-<span class="ansi-green-fg">    551</span>         <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> <span class="ansi-bold" style="color: rgb(215,95,95)">ValueError</span>(
-<span class="ansi-green-fg">    552</span>             <span style="color: rgb(175,0,0)">f</span><span style="color: rgb(175,0,0)">"</span><span style="color: rgb(175,0,0)">This </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span><span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span><span style="color: rgb(0,0,135)">__class__</span><span style="color: rgb(98,98,98)">.</span><span style="color: rgb(0,0,135)">__name__</span><span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)"> estimator </span><span style="color: rgb(175,0,0)">"</span>
-<span class="ansi-green-fg">    553</span>             <span style="color: rgb(175,0,0)">"</span><span style="color: rgb(175,0,0)">requires y to be passed, but the target y is None.</span><span style="color: rgb(175,0,0)">"</span>
-<span class="ansi-green-fg">    554</span>         )
-
-File <span class="ansi-green-intense-fg ansi-bold">~\anaconda3\Lib\site-packages\sklearn\base.py:481</span>, in <span class="ansi-cyan-fg">BaseEstimator._check_feature_names</span><span class="ansi-blue-intense-fg ansi-bold">(self, X, reset)</span>
-<span class="ansi-green-fg">    476</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> <span class="ansi-bold" style="color: rgb(175,0,255)">not</span> missing_names <span class="ansi-bold" style="color: rgb(175,0,255)">and</span> <span class="ansi-bold" style="color: rgb(175,0,255)">not</span> unexpected_names:
-<span class="ansi-green-fg">    477</span>     message <span style="color: rgb(98,98,98)">+</span><span style="color: rgb(98,98,98)">=</span> (
-<span class="ansi-green-fg">    478</span>         <span style="color: rgb(175,0,0)">"</span><span style="color: rgb(175,0,0)">Feature names must be in the same order as they were in fit.</span><span class="ansi-bold" style="color: rgb(175,95,0)">\n</span><span style="color: rgb(175,0,0)">"</span>
-<span class="ansi-green-fg">    479</span>     )
-<span class="ansi-green-intense-fg ansi-bold">--&gt; 481</span> <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> <span class="ansi-bold" style="color: rgb(215,95,95)">ValueError</span>(message)
-
-<span class="ansi-red-intense-fg ansi-bold">ValueError</span>: The feature names should match those that were passed during fit.
-Feature names unseen at fit time:
-- 경기도 관광객
-Feature names seen at fit time, yet now missing:
-- 강원도 관광객
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=435cb04d-c7ea-45ee-970d-6f8a0dea4860">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=ff6514c0-fb40-41e1-85c3-c353a87b88a7">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
 </div>
