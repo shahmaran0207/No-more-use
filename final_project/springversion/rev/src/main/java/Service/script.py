@@ -243,10 +243,18 @@ g_hotel_23 = [{
     "predict_month": "2023year12monthhgangwon",
     "predict_value": g_hotel_23_dec
 },
-    
-                  
+        
 ]
-for item in g_hotel_23:
-    print(f"{item['predict_month']}: {item['predict_value']}")
 
+# print('{')
+# for item in g_hotel_23:
+#     print(f"{item['predict_month']}: {item['predict_value']}")
+# print('}')
+
+# import json
+# t2 = ''
+# json.dump(g_hotel_23, t2, ensure_ascii=False, indent=4)
+
+from pprint import pprint
+pprint(g_hotel_23.__str__().replace("'", '"'))
 

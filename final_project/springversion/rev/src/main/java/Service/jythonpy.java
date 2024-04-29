@@ -2,13 +2,9 @@ package Service;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
-
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.itbank.model.vo.predictVO;
 
@@ -33,11 +29,15 @@ public class jythonpy {
 
 		sc.close();
 		
+		result = result.replaceAll("'", "").trim();
+		result = result.subSequence(1, result.length() - 1).toString();
+		System.out.println(result);
 		
 		ObjectMapper mapper = new ObjectMapper();
 		List<predictVO> list2 = Arrays.asList(mapper.readValue(result, predictVO[].class));
+//		System.out.println(list2);
 		
-		System.out.println(list2);
+		list2.forEach(System.out::println);
 		
 
 	}

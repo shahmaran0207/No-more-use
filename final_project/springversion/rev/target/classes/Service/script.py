@@ -195,58 +195,66 @@ g_hotel_23_nov=predict_hotel[10]
 g_hotel_23_dec=predict_hotel[11]
 
 g_hotel_23 = [{
-    "predict_month": "2023_01_gangwon",
+    "predict_month": "2023year01monthhgangwon",
     "predict_value": g_hotel_23_jan
 }, {
-    "predict_month": "2023_02_gangwon",
+    "predict_month": "2023year02monthhgangwon",
     "predict_value": g_hotel_23_feb
 },
  {
-    "predict_month": "2023_03_gangwon",
+    "predict_month": "2023year03monthhgangwon",
     "predict_value": g_hotel_23_mar
 },
               
    {
-    "predict_month": "2023_04_gangwon",
+    "predict_month": "2023year04monthhgangwon",
     "predict_value": g_hotel_23_apr
 },
 {
-    "predict_month": "2023_05_gangwon",
+    "predict_month": "2023year05monthhgangwon",
     "predict_value": g_hotel_23_may
 },
  {
-    "predict_month": "2023_06_gangwon",
+    "predict_month": "2023year06monthhgangwon",
     "predict_value": g_hotel_23_jun
 },
  {
-    "predict_month": "2023_07_gangwon",
+    "predict_month": "2023year07monthhgangwon",
     "predict_value": g_hotel_23_jul
 },
 {
-    "predict_month": "2023_08_gangwon",
+    "predict_month": "2023year08monthhgangwon",
     "predict_value": g_hotel_23_aug
 },
  {
-    "predict_month": "2023_09_gangwon",
+    "predict_month": "2023year09monthhgangwon",
     "predict_value": g_hotel_23_sep
 },
 
               {
-    "predict_month": "2023_10_gangwon",
+    "predict_month": "2023year10monthhgangwon",
     "predict_value": g_hotel_23_oct
 },
 {
-    "predict_month": "2023_11_gangwon",
+    "predict_month": "2023year11monthhgangwon",
     "predict_value": g_hotel_23_nov
 },
  {
-    "predict_month": "2023_12_gangwon",
+    "predict_month": "2023year12monthhgangwon",
     "predict_value": g_hotel_23_dec
 },
-    
-                  
+        
 ]
-for item in g_hotel_23:
-    print(f"{item['predict_month']}: {item['predict_value']}")
 
+# print('{')
+# for item in g_hotel_23:
+#     print(f"{item['predict_month']}: {item['predict_value']}")
+# print('}')
+
+# import json
+# t2 = ''
+# json.dump(g_hotel_23, t2, ensure_ascii=False, indent=4)
+
+from pprint import pprint
+pprint(g_hotel_23.__str__().replace("'", '"'))
 
