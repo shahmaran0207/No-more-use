@@ -1,3 +1,0 @@
-1. anacondo prompt 관리자 권한으로 실행
-2. E:
-3. jupyter notebook
