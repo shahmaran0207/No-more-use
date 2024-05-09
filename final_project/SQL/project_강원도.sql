@@ -1,0 +1,72 @@
+create sequence gangwon_seq
+    increment by 1
+    start with 1
+    minvalue 1
+    maxvalue 999999999
+    nocache;
+
+create table gangwon_hotel_24(
+    idx                           number                DEFAULT gangwon_seq.NEXTVAL,
+    predict_month         varchar2(200),
+    predict_value           NUMBER
+);
+
+create table gangwon_condo_24(
+    idx                           number                DEFAULT gangwon_seq.NEXTVAL,
+    predict_month         varchar2(200),
+    predict_value           NUMBER
+);
+
+create table gangwon_camping_24(
+    idx                           number                DEFAULT gangwon_seq.NEXTVAL,
+    predict_month         varchar2(200),
+    predict_value           NUMBER
+);
+
+create table gangwon_elsesleep_24(
+    idx                           number                DEFAULT gangwon_seq.NEXTVAL,
+    predict_month         varchar2(200),
+    predict_value           NUMBER
+);
+
+create table gangwon_dutyfree_24(
+    idx                           number                DEFAULT gangwon_seq.NEXTVAL,
+    predict_month         varchar2(200),
+    predict_value           NUMBER
+);
+
+create table gangwon_leisureshop_24(
+    idx                           number                DEFAULT gangwon_seq.NEXTVAL,
+    predict_month         varchar2(200),
+    predict_value           NUMBER
+);
+
+create table gangwon_hugeshop_24(
+    idx                           number                DEFAULT gangwon_seq.NEXTVAL,
+    predict_month         varchar2(200),
+    predict_value           NUMBER
+);
+
+create table gangwon_golf_24(
+    idx                           number                DEFAULT gangwon_seq.NEXTVAL,
+    predict_month         varchar2(200),
+    predict_value           NUMBER
+);
+
+create table gangwon_ski_24(
+    idx                           number                DEFAULT gangwon_seq.NEXTVAL,
+    predict_month         varchar2(200),
+    predict_value           NUMBER
+);
+
+create table gangwon_culture_24(
+    idx                           number                DEFAULT gangwon_seq.NEXTVAL,
+    predict_month         varchar2(200),
+    predict_value           NUMBER
+);
+
+create table gangwon_food_24(
+    idx                           number                DEFAULT gangwon_seq.NEXTVAL,
+    predict_month         varchar2(200),
+    predict_value           NUMBER
+);
