@@ -1,12 +1,10 @@
 package Service;
 
+import java.text.DecimalFormat;
 import java.util.Arrays;
-
 import org.springframework.beans.factory.annotation.Autowired;
-
 import com.itbank.model.predictDAO;
 import com.itbank.model.vo.AreaVO;
-import com.itbank.model.vo.DataVO;
 import com.itbank.model.vo.TableVO;
 
 @org.springframework.stereotype.Service
@@ -15,10 +13,7 @@ public class Service {
 	@Autowired
 	private predictDAO dao;
 	
-	@Autowired
-	private DataVO dv;
-	
-	public int money(AreaVO input) {
+	public String money(AreaVO input) {
 		
 		int result = 0;
 		
@@ -128,10 +123,6 @@ public class Service {
 		tb_nightplace = area + "_" + nightplace + "_24";
 		
 		tv.setTable_name(tb_nightplace);
-		dv = dao.selectOne(tv.getTable_name());
-		if ((month % 12) == (dv.getIdx() % 12)) {
-			month = dv.getIdx();
-		};
 		
 		
 		tv.setMonth(month);
@@ -142,10 +133,7 @@ public class Service {
 		
 		tb_goal = area + "_" + goal + "_24";
 		tv.setTable_name(tb_goal);
-		dv = dao.selectOne(tv.getTable_name());
-		if ((month % 12) == (dv.getIdx() % 12)) {
-			month = dv.getIdx();
-		};
+
 		
 		tv.setMonth(month);
 		
@@ -155,10 +143,7 @@ public class Service {
 		
 		tb_food = area + "_food_24";
 		tv.setTable_name(tb_food);
-		dv = dao.selectOne(tv.getTable_name());
-		if ((month % 12) == (dv.getIdx() % 12)) {
-			month = dv.getIdx();
-		};
+
 		
 		tv.setMonth(month);
 		
@@ -183,8 +168,11 @@ public class Service {
 		// 총 예측값
 		result = pv_goal + pv_food + pv_np;
 		
+		// 한국 통화 단위로 포맷팅
+		DecimalFormat decimalFormat = new DecimalFormat("###,###원");
+		String formattedResult = decimalFormat.format(result);
 		
-		return result;
+		return formattedResult;
 	}
 			
 }
