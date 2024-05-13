@@ -1,6 +1,5 @@
 package com.itbank.rev;
 
-import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,12 +20,6 @@ public class HomeController {
 	public String home() {
 		return "home";
 	}
-
-	
-	@GetMapping("/play")
-	public String play() {
-		return "play";
-	}
 	
 	@GetMapping("/money")
 	public String money() {
@@ -43,24 +36,21 @@ public class HomeController {
 		
 		ModelAndView mav=new ModelAndView();
 		
-//		String area=request.getParameter("area");
-//		
-//		String goal=request.getParameter("goal");
-//		int month= Integer.parseInt(request.getParameter("month"));
-//		
-//		int night= Integer.parseInt(request.getParameter("night"));
-//		
-//		String nightplace=request.getParameter("nightplace");
-//		
-//		int food=Integer.parseInt(request.getParameter("food"));
-//		
-		
-//		AreaVO av=new AreaVO(area, goal, month, night, nightplace, food);
-		
 		mav.addObject("msg", service.money(request));
 		mav.setViewName("result");
 		
+		return mav;
+	}
+	
+	@PostMapping("/money")
+	public ModelAndView money(AreaVO request) {
+		
+		ModelAndView mav=new ModelAndView();
+		
+		mav.addObject("msg", service.money2(request));
+		mav.setViewName("result2");
 		
 		return mav;
 	}
+	
 }

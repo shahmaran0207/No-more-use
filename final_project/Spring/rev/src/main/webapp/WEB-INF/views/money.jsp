@@ -32,6 +32,9 @@
 </head>
 
 <body>
+
+
+	<form method="POST">
 	<!-- Masthead-->
 	<header class="masthead">
 		<div class="container position-relative">
@@ -41,15 +44,6 @@
 						<!-- Page heading (페이지 제목) -->
 						<h1 class="mb-5">여행 예산을 입력해주세요</h1>
 						<!-- Signup form (가입 양식) -->
-						<!-- * * * * * * * * * * * * * * *-->
-						<!-- * * SB Forms Contact Form * *-->
-						<!-- * * * * * * * * * * * * * * *-->
-						<!-- 이 양식은 SB Forms와 사전 통합되어 있습니다. -->
-						<!-- 이 양식을 활성화하려면 다음 위치에서 가입하세요 -->
-						<!-- https://startbootstrap.com/solution/contact-forms -->
-						<!-- API 토큰을 받을 수 있습니다! -->
-						<form class="form-subscribe" id="contactForm"
-							data-sb-form-api-token="API_TOKEN">
 							<!-- 여행 예산 입력 필드 -->
 							<div class="row">
 								<div class="col">
@@ -80,7 +74,6 @@
 							<div class="d-none" id="submitErrorMessage">
 								<div class="text-center text-danger mb-3">메시지 전송 중 오류 발생!</div>
 							</div>
-						</form>
 					</div>
 				</div>
 			</div>
@@ -180,13 +173,14 @@
 			</div>
 
 		
-		<div class="dis" style="font-size: 20px; margin-top: 23px;">
-			<a class="btn btn-primary btn-lg px-4 me-sm-3" href="#show">최종 제출</a>
-		</div>
+			<div class="dis" style="font-size: 20px; margin-top: 23px;">
+				<button class="btn btn-primary btn-lg px-4 me-sm-3">최종 제출</button>
+			</div>
 	</section>
 
-
+</form>
 	<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+	
 </body>
 
 </html>

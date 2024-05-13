@@ -9,17 +9,16 @@ package com.itbank.model.vo;
 //String food=request.getParameter("food");
 
 public class AreaVO {
-	private int month, food, night;
+	private int month, food, night, money;
 	private String area, goal, nightplace;
     
-//	public AreaVO (String area, String goal, int month, int night, String nightplace, int food) {
-//		this.area=area;
-//		this.goal=goal;
-//		this.month=month;
-//		this.night=night;
-//		this.nightplace=nightplace;
-//		this.food=food;
-//	}
+	public int getMoney() {
+		return money;
+	}
+
+	public void setMoney(int money) {
+		this.money = money;
+	}
 
 	public String getArea() {
 		return area;
