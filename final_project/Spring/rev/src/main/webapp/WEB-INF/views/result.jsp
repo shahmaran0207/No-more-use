@@ -32,12 +32,12 @@
 <body>
 	<!-- Masthead-->
 	<header class="masthead">
-		<div class="container position-relative">
+		<div class="container position-relative" id="boxbox">
 			<div class="row justify-content-center">
 				<div class="col-lg-6">
 					<div class="text-center text-white">
 						<!-- 페이지 제목-->
-						<h1 class="display-5 fw-bolder text-white mb-2" id="titlefont">예상금액: ${msg }원</h1>
+						<h1 class="display-5 fw-bolder text-white mb-2" id="titlefont">예상금액: ${msg }</h1>
 						<!-- 확인 버튼만 있는 양식-->
 			
 				

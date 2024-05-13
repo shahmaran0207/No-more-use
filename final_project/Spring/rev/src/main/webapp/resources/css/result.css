@@ -11516,18 +11516,23 @@ header.masthead {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    padding: 0;
 }
 
 #titlefont {
-    position: absolute;
+    position: relative;
     top: 50%;
-    left: 50%;
+    right: -100px;
     transform: translate(-50%, -50%);
-    margin-right: 200px;
+    flex: display;
+    margin-right: auto;
     margin-left: auto;
     /* 다른 스타일링을 위한 값들을 조정할 수 있습니다. */
 }
 
+#boxbox{
+	margin: 0;
+}
 /* .masthead 내부 요소에 대한 스타일 */
 .masthead .display-5 {
     text-align: center;
