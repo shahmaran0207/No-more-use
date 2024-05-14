@@ -46,7 +46,7 @@
 								<div class="col">
 									<input name="money" type="number" class="form-control form-control-lg"
 										id="emailAddress" placeholder="여행 예산 입력칸"
-										data-sb-validations="required" />
+										data-sb-validations="required"  required/>
 
 								</div>
 								<div class="col-auto">
