@@ -151,7 +151,7 @@
 					<div class="col-lg-4">
 						<i class="fa-solid fa-bowl-food" style="color: #0d6efd;"></i>
 					</div>
-					<h3>식음료 장소</h3>
+					<h3>식음료</h3>
 					<p id="areafont">
 						식사를 몇 끼 하실지 입력해 주세요!<br>(0~15끼)<br>숫자만 입력해 주세요!
 					</p>
