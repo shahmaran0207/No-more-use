@@ -255,6 +255,7 @@ public String money2(AreaVO input) {
 				}
 			}
 		}
+	
 		
 		String [] goals = {"스키장", "문화서비스", "면세점", "레저용품쇼핑", "대형쇼핑몰", "관광유원시설", "골프장" };
 		
@@ -339,7 +340,7 @@ public String money2(AreaVO input) {
 		String formattedResult = decimalFormat.format(result);
 		String formattedResult2 = decimalFormat.format(result2);
 		
-		String msg="총 예상금액: "+formattedResult+"\n 예산과의 차이: "+formattedResult2;
+		String msg="총 예상금액: "+formattedResult+"<br> 예산과의 차이: "+formattedResult2;
 		
 		return msg;
 	}

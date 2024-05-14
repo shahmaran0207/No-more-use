@@ -37,7 +37,7 @@
 				<div class="col-lg-6">
 					<div class="text-center text-white">
 						<!-- 페이지 제목-->
-						<h1 class="display-5 fw-bolder text-white mb-2" id="titlefont">예상금액: ${msg }</h1>
+						<h1 class="display-5 fw-bolder text-white mb-2" id="titlefont">${msg }</h1>
 						<!-- 확인 버튼만 있는 양식-->
 			
 				

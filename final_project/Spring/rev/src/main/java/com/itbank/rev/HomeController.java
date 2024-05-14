@@ -21,11 +21,6 @@ public class HomeController {
 		return "home";
 	}
 	
-	@GetMapping("/money")
-	public String money() {
-		return "money";
-	}
-	
 	@GetMapping("/area")
 	public String area() {
 		return "area";
@@ -40,6 +35,11 @@ public class HomeController {
 		mav.setViewName("result");
 		
 		return mav;
+	}
+	
+	@GetMapping("/money")
+	public String money() {
+		return "money";
 	}
 	
 	@PostMapping("/money")

@@ -103,6 +103,7 @@ hr {
 
 #areaPage{
 	postion: relative;
+	right: 200px;
 	margin-right: 100px;
 	margin-left: 200px;
 }

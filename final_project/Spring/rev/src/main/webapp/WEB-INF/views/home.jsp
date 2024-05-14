@@ -80,7 +80,7 @@
 					</p>
 				</div>
 				
-				<div class="col-md-4" id="areaPage">
+				<div class="col-md-4" id="areaPage2">
 					<span class="fa-stack fa-4x"> <a href="${cpath }/money">
 							<button>
 								<i class="fas fa-circle fa-stack-2x text-primary"></i> <i
