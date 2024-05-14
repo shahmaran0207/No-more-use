@@ -11527,10 +11527,12 @@ header.masthead {
     flex: display;
     margin-right: auto;
     margin-left: auto;
-    margin-top: auto ; 
+    margin-top: auto;
     margin-bottom: auto;
     text-align: center;
-    /* 다른 스타일링을 위한 값들을 조정할 수 있습니다. */
+    size: auto;
+    color: #0000ff;
+    font-size: xx-large;
 }
 
 #boxbox{
