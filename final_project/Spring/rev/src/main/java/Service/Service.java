@@ -92,7 +92,7 @@ public class Service {
 			}
 		}
 
-		String[] nps = { "호텔", "콘도", "캠핑장/펜션", "기타숙박" };
+		String[] nps = { "호텔", "콘도", "캠핑장", "기타숙박" };
 
 		for (int i = 0; i < nps.length; i++) {
 			if (nightplace.equals(nps[i])) {
@@ -290,7 +290,7 @@ public class Service {
 			}
 		}
 
-		String[] nps = { "호텔", "콘도", "캠핑장/펜션", "기타숙박" };
+		String[] nps = { "호텔", "콘도", "캠핑장", "기타숙박" };
 
 		for (int i = 0; i < nps.length; i++) {
 			if (nightplace.equals(nps[i])) {
