@@ -101,7 +101,7 @@
 					</div>
 					<h3>여행 월</h3>
 					<p id="areafont">
-						여행을 가고자 하는 월을 선택해주세요!<br>(1월~12월)
+						여행을 가고자 하는 월을 선택해주세요!<br>(1월~12월)<br>숫자만 입력해 주세요!
 					</p>
 					<input id="playmonth" name="month"
 						placeholder="여행갈 월을 입력해주세요(1~12월)" required>
@@ -115,7 +115,7 @@
 					</div>
 					<h3>숙박 여부</h3>
 					<p id="areafont">
-						숙박 선택 가능일은 0일에서 <br>최대 5일까지 입니다!
+						숙박 선택 가능일은 0일에서 <br>최대 5일까지 입니다!<br>숫자만 입력해 주세요!
 					</p>
 					<input id="playnight" name="night"
 						placeholder="몇일동안 숙박하실지 정해주세요(0~5일)" required>
@@ -143,7 +143,7 @@
 					</div>
 					<h3>식음료 장소</h3>
 					<p id="areafont">
-						식사를 몇 끼 하실지 입력해 주세요!<br>(0~15끼)
+						식사를 몇 끼 하실지 입력해 주세요!<br>(0~15끼)<br>숫자만 입력해 주세요!
 					</p>
 					<input id="playfood" name="food" placeholder="식사를 몇 끼 하실지 입력해 주세요"
 						required>
@@ -173,6 +173,7 @@
 
 	</form>
 	<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
 
 </body>
 

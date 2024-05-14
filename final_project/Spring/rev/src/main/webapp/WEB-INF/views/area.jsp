@@ -82,7 +82,7 @@
 					</div>
 					<h3>목적 여부</h3>
 					<p id="areafont">
-						여행 목적을 입력해 주세요!<br>(미정, 골프, 스키, 관광유원, 스키레저)
+						여행 목적을 입력해 주세요!<br>(스키장, 문화서비스, 면세점, 레저용품쇼핑, 대형쇼핑몰, 관광유원시설, 골프장)
 					</p>
 					<input id="playgoal" name="goal" placeholder="여행목적을 입력해주세요"
 						required>
@@ -96,7 +96,7 @@
 					</div>
 					<h3>여행 월</h3>
 					<p id="areafont">
-						여행을 가고자 하는 월을 선택해주세요!<br>(1월~12월)
+						여행을 가고자 하는 월을 선택해주세요!<br>(1월~12월)<br>숫자만 입력해 주세요!
 					</p>
 					<input id="playmonth" name="month"
 						placeholder="여행갈 월을 입력해주세요(1~12월)" required>
@@ -110,7 +110,7 @@
 					</div>
 					<h3>숙박 여부</h3>
 					<p id="areafont">
-						숙박 선택 가능일은 0일에서 <br>최대 5일까지 입니다!
+						숙박 선택 가능일은 0일에서 <br>최대 5일까지 입니다!<br>숫자만 입력해 주세요!
 					</p>
 					<input id="playnight" name="night" type="number"
 						placeholder="몇일동안 숙박하실지 정해주세요(0~5일)" required>
@@ -138,7 +138,7 @@
 					</div>
 					<h3>식음료 장소</h3>
 					<p id="areafont">
-						식사를 몇 끼 하실지 입력해 주세요!<br>(0~15끼)
+						식사를 몇 끼 하실지 입력해 주세요!<br>(0~15끼)<br>숫자만 입력해 주세요!
 					</p>
 					<input id="playfood" name="food" placeholder="식사를 몇 끼 하실지 입력해 주세요"
 						type="number" required>
