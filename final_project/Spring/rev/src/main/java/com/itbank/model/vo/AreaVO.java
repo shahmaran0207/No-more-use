@@ -10,8 +10,17 @@ package com.itbank.model.vo;
 
 public class AreaVO {
 	private int month, food, night, money;
-	private String area, goal, nightplace;
+	private String area, goal, nightplace, shop;
     
+	
+	public String getShop() {
+		return shop;
+	}
+
+	public void setShop(String shop) {
+		this.shop = shop;
+	}
+
 	public int getMoney() {
 		return money;
 	}

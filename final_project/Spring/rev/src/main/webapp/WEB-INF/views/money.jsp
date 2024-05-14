@@ -13,19 +13,14 @@
 <meta name="description" content="" />
 <meta name="author" content="" />
 <title>Money For Travel - 여행 예산을 결정하신 분!</title>
-<!-- Favicon-->
 <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-<!-- Bootstrap icons-->
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
 	rel="stylesheet" type="text/css" />
-<!-- Google fonts-->
 <link
 	href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic"
 	rel="stylesheet" type="text/css" />
-<!-- Core theme CSS (includes Bootstrap)-->
 <link href="css/styles.css" rel="stylesheet" />
-<!-- Font Awesome icons (free version)-->
 <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"
 	crossorigin="anonymous"></script>
 <script src="js/scripts.js"></script>
@@ -60,9 +55,6 @@
 									<p>아래로 내려가 다음 선택 사항을 선택해주세요.</p>
 								</div>
 							</div>
-							<!-- 제출 오류 메시지 -->
-							<!---->
-							<!-- 이것은 양식을 제출하는 중에 오류가 발생한 경우 사용자가 볼 내용입니다. -->
 							<div class="d-none" id="submitErrorMessage">
 								<div class="text-center text-danger mb-3">메시지 전송 중 오류 발생!</div>
 							</div>
@@ -72,10 +64,8 @@
 			</div>
 		</header>
 
-		<!-- 추가된 결과 표시 영역 -->
 		<div id="result" class="text-center mt-3"></div>
 
-		<!-- Icons Grid-->
 		<section class="features-icons bg-light text-center" id="fu">
 			<div class="container">
 				<div class="row">
@@ -155,16 +145,29 @@
 					<div class="col-lg-4">
 						<i class="fa-solid fa-map-location-dot" style="color: #0d6efd;"></i>
 					</div>
-					<h3>관광 여부</h3>
+					<h3>목적 여부</h3>
 					<p id="areafont">
-						관광여부를 입력해 주세요!<br>(미정, 면세점, 레저용품쇼핑, 대형쇼핑몰, 관광유원시설, 스키장, 골프장,
-						문화서비스)
+						여행 목적을 입력해 주세요!<br>(스키장, 문화서비스, 관광유원시설,
+						골프장)
 					</p>
 					<input id="playgoal" name="goal" placeholder="여행목적을 입력해주세요"
 						required>
 				</div>
 			</div>
 
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-4">
+						<i class="fa-solid fa-cart-shopping" style="color: #0d6efd;"></i>
+					</div>
+					<h3>쇼핑 여부</h3>
+					<p id="areafont">
+						쇼핑 여부를 입력해 주세요!<br>(면세점, 레저용품쇼핑, 대형쇼핑몰)
+					</p>
+					<input id="playgoal" name="shop" placeholder="쇼핑 여부를 입력해주세요"
+						required>
+				</div>
+			</div>
 
 			<div class="dis" style="font-size: 20px; margin-top: 23px;">
 				<button class="btn btn-primary btn-lg px-4 me-sm-3">최종 제출</button>

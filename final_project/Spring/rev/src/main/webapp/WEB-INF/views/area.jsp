@@ -82,9 +82,24 @@
 					</div>
 					<h3>목적 여부</h3>
 					<p id="areafont">
-						여행 목적을 입력해 주세요!<br>(스키장, 문화서비스, 면세점, 레저용품쇼핑, 대형쇼핑몰, 관광유원시설, 골프장)
+						여행 목적을 입력해 주세요!<br>(스키장, 문화서비스, 관광유원시설,
+						골프장)
 					</p>
 					<input id="playgoal" name="goal" placeholder="여행목적을 입력해주세요"
+						required>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-4">
+						<i class="fa-solid fa-cart-shopping" style="color: #0d6efd;"></i>
+					</div>
+					<h3>쇼핑 여부</h3>
+					<p id="areafont">
+						쇼핑 여부를 입력해 주세요!<br>(면세점, 레저용품쇼핑, 대형쇼핑몰)
+					</p>
+					<input id="playgoal" name="shop" placeholder="쇼핑 여부를 입력해주세요"
 						required>
 				</div>
 			</div>
