@@ -45,10 +45,10 @@ public class Service {
 					area = "gunggi";
 					break;
 				case 2:
-					area = "gyungnam";
+					area = "gungnam";
 					break;
 				case 3:
-					area = "gyungbuk";
+					area = "gungbuk";
 					break;
 				case 4:
 					area = "gangju";
@@ -243,10 +243,10 @@ public class Service {
 					area = "gunggi";
 					break;
 				case 2:
-					area = "gyungnam";
+					area = "gungnam";
 					break;
 				case 3:
-					area = "gyungbuk";
+					area = "gungbuk";
 					break;
 				case 4:
 					area = "gangju";
