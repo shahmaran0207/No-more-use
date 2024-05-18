@@ -1,0 +1,11 @@
+	public int addorders(OrdersVO ov) {
+		return od.addorders(ov);
+	}
+
+	public int addorderitems(OrderItemVo oiv) {
+		return od.addorderitems(oiv);
+	}
+
+	public int addshipments(ShipmentsVO sv) {
+		return od.addshipments(sv);
+	}
