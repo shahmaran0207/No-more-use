@@ -14,3 +14,22 @@ LEFT JOIN
     orderitems oi ON o.id = oi.order_id
 GROUP BY
     o.id, o.member_id, o.orderitems_id, o.delivery_id, o.order_date, o.status;
+
+외래키 바뀌면
+CREATE OR REPLACE VIEW cart AS
+SELECT
+    o.id AS order_id,
+    o.member_id,
+    o.orderitems_id,
+    o.delivery_id,
+    o.order_date,
+    o.status,
+    NVL(SUM(oi.order_price * oi.count), 0) AS total_order_price,
+    NVL(SUM(oi.count), 0) AS total_item_count
+FROM
+    orders o
+LEFT JOIN
+    orderitems oi ON o.orderitems_id = oi.id
+GROUP BY
+    o.id, o.member_id, o.orderitems_id, o.delivery_id, o.order_date, o.status;
+ 

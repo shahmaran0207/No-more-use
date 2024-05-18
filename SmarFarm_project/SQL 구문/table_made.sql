@@ -40,5 +40,3 @@ create table shipments(
     address         varchar2(256)        not null,
     status          varchar2(30)
 );
-
-ALTER TABLE orders ADD CONSTRAINT fk_orderitems_id FOREIGN KEY (orderitems_id) REFERENCES orderitems(id) ON DELETE CASCADE;
