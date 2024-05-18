@@ -8,4 +8,5 @@ import lombok.Setter;
 
 public class OrderItemVo {
 	private int id, order_id, orderPrice, count;
+
 }
