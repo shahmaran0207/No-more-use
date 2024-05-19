@@ -33,4 +33,14 @@ public class OrderService {
         od.deleteShipmentByOrder(orderId);
         od.deleteOrder(orderId);
 	}
+	
+	public List<OrderItemVo> selectAll() {
+		
+		return od.selectAll();
+	}
+	
+	public OrderItemVo selectOne(int id) {
+		
+		return od.selectOne(id);
+	}
 }

@@ -20,16 +20,19 @@
 			</tr>
 
 			<tr th:each="row : ${orderlist}">
-				<td th:text="${row.orderitems_id}"></td>
-				<td th:text="${row.member_id}"></td>
-				<td th:text="${row.orderitems_id}"></td>
-				<td th:text="${row.delivery_id}"></td>
-				<td th:text="${row.order_date}"></td>
-				<td th:text="${row.status}"></td>
-				<td><input name="count" type="number" th:value="${row.total_item_count}"
+        <td th:text="${row.member_name}"></td>
+        <td th:text="${row.order_id}"></td>
+        <td th:text="${row.member_email}"></td>
+        <td th:text="${row.member_address}"></td>
+        <td th:text="${row.phone}"></td>
+        <td th:text="${row.product_name}"></td>
+        <td th:text="${row.order_status}"></td>
+        <td th:text="${row.delivery_address}"></td>
+        <td th:text="${row.delivery_status}"></td>
+				<td><input name="count" type="number" th:value="${row.quantity}"
 					min="0" max="100" step="1" /></td>
 
-				<td th:text="${row.total_order_price}"></td>
+				<td th:text="${row.unit_price}"></td>
 			</tr>
 		</table>
 

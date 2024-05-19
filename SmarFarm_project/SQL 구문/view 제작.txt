@@ -1,35 +1,22 @@
-CREATE OR REPLACE VIEW cart AS
-SELECT
+CREATE VIEW cart AS
+SELECT 
     o.id AS order_id,
-    o.member_id,
-    o.orderitems_id,
-    o.delivery_id,
-    o.order_date,
-    o.status,
-    NVL(SUM(oi.order_price * oi.count), 0) AS total_order_price,
-    NVL(SUM(oi.count), 0) AS total_item_count
-FROM
+    m.id AS member_id,
+    m.name AS member_name,
+    m.email AS member_email,
+    m.address AS member_address,
+    m.phone AS member_phone,
+    oi.product_name,
+    (oi.price * oi.count) AS unit_price,
+    (oi.count) AS quantity,
+    o.status AS order_status,
+    s.address AS delivery_address,
+    s.status AS delivery_status
+FROM 
     orders o
-LEFT JOIN
-    orderitems oi ON o.id = oi.order_id
-GROUP BY
-    o.id, o.member_id, o.orderitems_id, o.delivery_id, o.order_date, o.status;
-
-외래키 바뀌면
-CREATE OR REPLACE VIEW cart AS
-SELECT
-    o.id AS order_id,
-    o.member_id,
-    o.orderitems_id,
-    o.delivery_id,
-    o.order_date,
-    o.status,
-    NVL(SUM(oi.order_price * oi.count), 0) AS total_order_price,
-    NVL(SUM(oi.count), 0) AS total_item_count
-FROM
-    orders o
-LEFT JOIN
-    orderitems oi ON o.orderitems_id = oi.id
-GROUP BY
-    o.id, o.member_id, o.orderitems_id, o.delivery_id, o.order_date, o.status;
- 
+JOIN 
+    member m ON o.member_id = m.id
+JOIN 
+    orderitem oi ON o.id = oi.order_id
+JOIN 
+    shipments s ON o.delivery_id = s.id;

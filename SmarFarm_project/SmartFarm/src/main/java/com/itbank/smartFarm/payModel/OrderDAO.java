@@ -11,16 +11,22 @@ import com.itbank.smartFarm.vo.OrderItemVo;
 
 @Mapper
 public interface OrderDAO {
+	@Select("select * from orderitem order by id desc")
+	List<OrderItemVo> selectAll();
+	
+	@Select("select * from orderitem where id = #{id}")
+	OrderItemVo selectOne(int id);
+	
 	@Select("select * from cart where member_id=#{member_id}")
 	public List<CartVO> getOrders(int membe_id);
 
 	@Select("select * from cart where order_id=#{order_id}")
 	public CartVO getOrder(int id);
 
-	@Update("UPDATE orderitems SET count = #{count} WHERE order_id = #{order_id}")
+	@Update("UPDATE orderitem SET count = #{count} WHERE order_id = #{order_id}")
 	public int order(OrderItemVo input);
 
-    @Delete("DELETE FROM orderitems WHERE order_id = #{order_id}")
+    @Delete("DELETE FROM orderitem WHERE order_id = #{order_id}")
     int deleteOrderItems(@Param("order_id") int orderId);
     
     @Delete("DELETE FROM orders WHERE id = #{order_id}")

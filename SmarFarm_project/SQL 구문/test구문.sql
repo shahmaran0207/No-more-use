@@ -1,23 +1,34 @@
+-- 테스트용 회원 데이터 삽입
 INSERT INTO member (id, name, address, email, userid, userpw, nick, phone)
-VALUES (1, 'John Doe', '123 Elm Street', 'john.doe@example.com', 'johndoe', 'password123', 'johnny', 1234567890);
+VALUES (456, 'helpme', 'helpmet', 'jhelpmee@example.com', 'johelpme', 'phelpme', 'jhelpme', 23544290);
 
+-- 테스트용 주문 데이터 삽입
+INSERT INTO orders (id, delivery_id, member_id, status)
+VALUES (256, 2112, 456, 'Shipped');
+
+-- 테스트용 배송 데이터 삽입
+INSERT INTO shipments (id, address, status)
+VALUES (2112, '101 Pine Street', 'Processing');
+
+-- 테스트용 주문 상품 데이터 삽입
+INSERT INTO orderitem (id, order_id, product_name, count, price)
+VALUES (2776, 256, 'Product1', 5, 2990.00);
+
+-- 추가 테스트용 회원 데이터 삽입
 INSERT INTO member (id, name, address, email, userid, userpw, nick, phone)
-VALUES (2, 'Jane Smith', '456 Oak Avenue', 'jane.smith@example.com', 'janesmith', 'password456', 'jane', 9876543210);
+VALUES (457, 'anotheruser', 'anotheraddress', 'another@example.com', 'anotherid', 'anotherpw', 'anothernick', 12345678);
 
+-- 추가 테스트용 주문 데이터 삽입
+INSERT INTO orders (id, delivery_id, member_id, status)
+VALUES (257, 2113, 457, 'Pending');
+
+-- 추가 테스트용 배송 데이터 삽입
 INSERT INTO shipments (id, address, status)
-VALUES (1, '789 Maple Road', 'Shipped');
+VALUES (2113, '202 Maple Street', 'Processing');
 
-INSERT INTO shipments (id, address, status)
-VALUES (2, '101 Pine Street', 'Processing');
+-- 추가 테스트용 주문 상품 데이터 삽입
+INSERT INTO orderitem (id, order_id, product_name, count, price)
+VALUES (2777, 257, 'Product2', 3, 1990.00);
 
-INSERT INTO orders (id, member_id, orderitems_id, delivery_id, status)
-VALUES (1, 1, NULL, 1, 'Pending');
-
-INSERT INTO orders (id, member_id, orderitems_id, delivery_id, status)
-VALUES (2, 2, NULL, 2, 'Shipped');
-
-INSERT INTO orderitems (id, order_id, order_price, count)
-VALUES (1, 1, 100.00, 2);
-
-INSERT INTO orderitems (id, order_id, order_price, count)
-VALUES (2, 2, 50.00, 1);
+-- 트랜잭션 커밋
+COMMIT;

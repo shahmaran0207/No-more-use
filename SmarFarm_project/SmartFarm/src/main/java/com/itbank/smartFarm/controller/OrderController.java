@@ -18,7 +18,7 @@ public class OrderController {
 	private OrderService os;
 	@GetMapping("/order")
 	public String list(Model model) {
-		model.addAttribute("orderlist", os.getOrders(456));
+		model.addAttribute("orderlist", os.getOrders(457));
 
 		return "pay/order";
 	}
@@ -63,4 +63,24 @@ public class OrderController {
 	    os.deleteOrder(id);
 	    return "pay/order";
 	}
+	
+	@GetMapping("/market")
+	public ModelAndView market() {				
+		ModelAndView mav = new ModelAndView();
+		
+		mav.addObject("list", os.selectAll());
+		mav.setViewName("/pay/market");
+		
+		return mav;
+	}
+	
+	@GetMapping("/detailPage/{id}")
+	public ModelAndView detailPage(@PathVariable("id") int id) {
+	    ModelAndView mav = new ModelAndView();
+	  
+	    mav.addObject("product", os.selectOne(id));
+	    mav.setViewName("pay/detailPage"); 
+	    
+	    return mav;
+	}	
 }

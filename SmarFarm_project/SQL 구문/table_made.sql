@@ -1,42 +1,41 @@
-create table member (
-    id      number          not null,
-    name    varchar2(30)    not null,
-    address varchar2(256)   not null,
-    email   varchar2(100)   not null,
-    userid  varchar2(50)    unique,
-    userpw  varchar2(50)    not null,
-    nick    varchar2(50)    not null,
-    phone   number          unique,
-    
-    CONSTRAINT member_pk primary key(id)   
+-- member 테이블 생성
+CREATE TABLE member (
+    id NUMBER PRIMARY KEY,
+    name VARCHAR2(100) not null,
+    email VARCHAR2(100) not null,
+    address VARCHAR2(256)   NOT NULL,
+    userid  VARCHAR2(50)    UNIQUE  not null,
+    userpw  VARCHAR2(50)    NOT NULL,
+    nick    VARCHAR2(50)    NOT NULL,
+    phone   NUMBER          UNIQUE
 );
 
-create table orders (
-    id                 number     not null    primary key,
-    member_id          number,
-    orderitems_id      number,
-    delivery_id        number    unique,
-    order_date         date                   default sysdate,
-    status             varchar2(30),
-    
-    constraint fk_member_id FOREIGN key (member_id) REFERENCES member(id) on delete set null
-    
+-- orders 테이블 생성
+CREATE TABLE orders (
+    id NUMBER PRIMARY KEY,
+    member_id NUMBER    NOT NULL,
+    delivery_id NUMBER UNIQUE    NOT NULL, -- delivery_id를 고유 키로 설정
+    orderitem_id number,
+    order_date date default sysdate,
+    status varchar2(30),
+    CONSTRAINT fk_orders_member FOREIGN KEY (member_id) REFERENCES member(id)
 );
 
-
-CREATE TABLE orderitems (
-    id            NUMBER      NOT NULL    PRIMARY KEY,
-    order_id      NUMBER      NOT NULL,
-    order_price   NUMBER      NOT NULL,
-    count         NUMBER      DEFAULT 1,
-    
-    CONSTRAINT fk_order_id FOREIGN KEY (order_id) REFERENCES orders(id) ON DELETE SET NULL
+-- orderitem 테이블 생성
+CREATE TABLE orderitem (
+    id NUMBER PRIMARY KEY,
+    order_id NUMBER    NOT NULL,
+    product_name VARCHAR2(100)    NOT NULL,
+    count NUMBER default 1,
+    price number not null,
+    CONSTRAINT fk_orderitem_orders FOREIGN KEY (order_id) REFERENCES orders(id)
 );
 
-alter table orders add constraint fk_delivery_id foreign key (delivery_id) REFERENCES shipments(id);
+-- shipments 테이블 생성
+CREATE TABLE shipments (
+    id NUMBER PRIMARY KEY,
+    address VARCHAR(255) NOT NULL,
+    status varchar2(30)  default '배송준비중',
 
-create table shipments(
-    id              number               not null        primary key,
-    address         varchar2(256)        not null,
-    status          varchar2(30)
+    CONSTRAINT fk_shipments_orders FOREIGN KEY (id) REFERENCES orders(delivery_id)
 );

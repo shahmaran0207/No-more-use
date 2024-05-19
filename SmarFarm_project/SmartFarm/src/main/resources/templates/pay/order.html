@@ -22,14 +22,17 @@
     </tr>
 
     <tr th:each="row : ${orderlist}">
+        <td th:text="${row.member_name}"></td>
         <td th:text="${row.order_id}"></td>
-        <td th:text="${row.member_id}"></td>
-        <td th:text="${row.orderitems_id}"></td>
-        <td th:text="${row.delivery_id}"></td>
-        <td th:text="${row.order_date}"></td>
-        <td th:text="${row.status}"></td>
-        <td th:text="${row.total_item_count}"></td>
-        <td th:text="${row.total_order_price}"></td>
+        <td th:text="${row.member_email}"></td>
+        <td th:text="${row.member_address}"></td>
+        <td th:text="${row.phone}"></td>
+        <td th:text="${row.product_name}"></td>
+        <td th:text="${row.quantity}"></td>
+        <td th:text="${row.unit_price}"></td>
+        <td th:text="${row.order_status}"></td>
+        <td th:text="${row.delivery_address}"></td>
+        <td th:text="${row.delivery_status}"></td>
         <td>
             <a th:href="@{'/pay/update/' + ${row.order_id}}">수정</a>
         </td>
@@ -59,16 +62,21 @@
         var selectedPayMethod = document.querySelector('input[name="pay_method"]:checked').value;
         // 상품가격 가져오기
         var totalOrderPrice = parseFloat(document.querySelector('td:nth-child(8)').innerText);
-     // 상품번호 가져오기
-        var orderitem = parseFloat(document.querySelector('td:nth-child(3)').innerText);
-
+        // 상품번호 가져오기
+        var orderItem = document.querySelector('td:nth-child(2)').innerText;
+     // 상품명 가져오기
+        var productName = document.querySelector('td:nth-child(6)').innerText;
+     
+     console.log(productName);
+     
         IMP.request_pay(
             {
                 pg: "html5_inicis",        // KG이니시스 pg파라미터 값
                 pay_method: selectedPayMethod,    // 결제 방법
-                merchant_uid: orderitem,// 주문번호
-                name: orderitem,        // 상품 명
-                amount: totalOrderPrice,            // 금액
+                merchant_uid: orderItem, // 주문번호
+                goodsname: productName,        // 상품 명
+                name: productName,        // 상품 명
+                amount: totalOrderPrice,  // 금액
                 buyer_email: "gildong@gmail.com",
                 buyer_name: "홍길동",
                 buyer_tel: "010-4242-4242",
