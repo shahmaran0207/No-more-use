@@ -2,15 +2,16 @@ CREATE VIEW cart AS
 SELECT 
     o.id AS order_id,
     m.id AS member_id,
+    s.id AS delivery_id,
     m.name AS member_name,
     m.email AS member_email,
     m.address AS member_address,
     m.phone AS member_phone,
     oi.product_name,
     (oi.price * oi.count) AS unit_price,
-    (oi.count) AS quantity,
+    (oi.count) AS count,
     o.status AS order_status,
-    s.address AS delivery_address,
+    s.address AS address,
     s.status AS delivery_status
 FROM 
     orders o

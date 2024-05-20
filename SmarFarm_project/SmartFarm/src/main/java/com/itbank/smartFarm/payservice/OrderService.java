@@ -24,14 +24,19 @@ public class OrderService {
 	}
 
 
-	public int modify(OrderItemVo input) {
+	public int modify(CartVO input) {
 		return od.order(input);
 	}
 
-	public void deleteOrder(int orderId) {
+	public int modifyaddress(CartVO input) {
+		return od.modifyaddress(input);
+	}
+
+
+	public int deleteOrder(int orderId) {
         od.deleteOrderItems(orderId);
         od.deleteShipmentByOrder(orderId);
-        od.deleteOrder(orderId);
+        return od.deleteOrder(orderId);
 	}
 	
 	public List<OrderItemVo> selectAll() {

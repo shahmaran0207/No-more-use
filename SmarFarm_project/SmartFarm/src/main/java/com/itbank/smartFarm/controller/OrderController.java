@@ -9,7 +9,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 import com.itbank.smartFarm.payservice.OrderService;
+import com.itbank.smartFarm.vo.CartVO;
 import com.itbank.smartFarm.vo.OrderItemVo;
+import com.itbank.smartFarm.vo.ShipmentsVO;
 
 @Controller
 @RequestMapping("/pay")
@@ -18,7 +20,7 @@ public class OrderController {
 	private OrderService os;
 	@GetMapping("/order")
 	public String list(Model model) {
-		model.addAttribute("orderlist", os.getOrders(457));
+		model.addAttribute("orderlist", os.getOrders(456));
 
 		return "pay/order";
 	}
@@ -36,32 +38,60 @@ public class OrderController {
 //		return mav;
 //	}
 
-	@GetMapping("/update/{orderitems_id}")
-	public ModelAndView update(@PathVariable("orderitems_id") int id) {
-		ModelAndView mav = new ModelAndView();
 
-		mav.addObject("orderlist", os.getorder(id));
-		mav.setViewName("pay/update");
 
-		return mav;
+		
+	@GetMapping("/update/{order_id}")
+	public ModelAndView update(@PathVariable("order_id") int orderId) {
+	    ModelAndView mav = new ModelAndView();
+	    mav.addObject("orderlist", os.getorder(orderId));
+	    
+	    mav.setViewName("pay/update");
+
+	    return mav;
 	}
-
+	
 	@PostMapping("/update/{order_id}")
-	public ModelAndView postupdate(OrderItemVo input) {
+	public ModelAndView postupdate(CartVO input) {
 		ModelAndView mav = new ModelAndView();
-
-		os.modify(input);
-		mav.addObject("orderlist", os.getorder(input.getOrder_id()));
-
-		mav.setViewName("pay/order");
-
+	
+		os.modify(input);  	
+		os.modifyaddress(input);
+		
+        int modifyResult = os.modify(input);
+        int modifyAddressResult = os.modifyaddress(input);
+        
+        String msg = "수정 되었습니다.";
+        if (modifyResult == 0 || modifyAddressResult == 0) {
+            msg = "수정 실패하였습니다.";
+        }
+        
+        mav.addObject("row", (modifyResult != 0 && modifyAddressResult != 0) ? 1 : 0);
+        mav.addObject("path", "/pay/order");
+        mav.addObject("msg", msg);
+	    
+	    mav.setViewName("/pay/Message");
+		
 		return mav;
 	}
 
 	@GetMapping("/delete/{order_id}")
-	public String delete(@PathVariable("order_id") int id) {
-	    os.deleteOrder(id);
-	    return "pay/order";
+	public ModelAndView delete(@PathVariable("order_id") int id) {
+		ModelAndView mav=new ModelAndView();
+	    mav.addObject("row", os.deleteOrder(id)); 
+	    
+	    int row=os.deleteOrder(id);
+	    
+	    String msg="삭제 되었습니다. ";
+	    if (row !=0 ) msg="삭제 실패하였습니다.";
+	    
+	    
+	    mav.addObject("path", "/pay/order");
+        mav.addObject("msg", msg);
+	    
+	    mav.setViewName("/pay/Message");
+	    
+	    return mav;
 	}
 	
 	@GetMapping("/market")
@@ -77,10 +107,17 @@ public class OrderController {
 	@GetMapping("/detailPage/{id}")
 	public ModelAndView detailPage(@PathVariable("id") int id) {
 	    ModelAndView mav = new ModelAndView();
-	  
+	    
 	    mav.addObject("product", os.selectOne(id));
 	    mav.setViewName("pay/detailPage"); 
 	    
 	    return mav;
 	}	
+	
+//	@GetMapping("/add/{id}")
+//	public ModelAndView addCart(@PathVariable("id") int id) {
+//		ModelAndView mav=new ModelAndView();
+//		
+//		os.add
+//	}
 }
