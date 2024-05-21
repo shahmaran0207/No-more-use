@@ -8,6 +8,7 @@
 table {
 	border-collapse: collapse;
 }
+
 th, td {
 	border: 1px solid black;
 	padding: 5px 10px;
@@ -15,14 +16,13 @@ th, td {
 }
 
 input[name="delivery_id"] {
-    visibility: hidden;
-    width: 0;
-    height: 0;
-    padding: 0;
-    border: none;
-    margin: 0;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+	padding: 0;
+	border: none;
+	margin: 0;
 }
-
 </style>
 
 </head>
@@ -42,17 +42,19 @@ input[name="delivery_id"] {
 				<th>총 가격</th>
 			</tr>
 
-	<tr th:each="row : ${orderlist}">
-    <td th:text="${row.member_name}"></td>
-    <td th:text="${row.order_id}"></td>
-    <td><input name="address" type="text" th:value="${row.address}"/></td>
-    <td th:text="${row.phone}"></td>
-    <td th:text="${row.product_name}"></td>
-    <td th:text="${row.delivery_status}"></td>
-    <td><input name="count" type="number" th:value="${row.count}" min="0" max="100" step="1" /></td>
-    <td th:text="${row.unit_price}"></td>
-    <td th:if="${row.delivery_id > 0}"><input name="delivery_id" type="hidden" th:value="${row.delivery_id}" /></td>
-</tr>
+			<tr th:each="row : ${orderlist}">
+				<td th:text="${row.member_name}"></td>
+				<td th:text="${row.order_id}"></td>
+				<td><input name="address" type="text" th:value="${row.address}" /></td>
+				<td th:text="${row.phone}"></td>
+				<td th:text="${row.product_name}"></td>
+				<td th:text="${row.delivery_status}"></td>
+				<td><input name="count" type="number" th:value="${row.count}"
+					min="0" max="100" step="1" /></td>
+				<td th:text="${row.unit_price}"></td>
+				<td th:if="${row.delivery_id > 0}"><input name="delivery_id"
+					type="hidden" th:value="${row.delivery_id}" /></td>
+			</tr>
 		</table>
 
 		<button>주문 수정</button>

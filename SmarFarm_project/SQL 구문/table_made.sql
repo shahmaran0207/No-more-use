@@ -15,20 +15,20 @@ CREATE TABLE orders (
     id NUMBER PRIMARY KEY,
     member_id NUMBER    NOT NULL,
     delivery_id NUMBER UNIQUE    NOT NULL, -- delivery_id를 고유 키로 설정
-    orderitem_id number,
+    orderitem_id number UNIQUE,
     order_date date default sysdate,
     status varchar2(30),
-    CONSTRAINT fk_orders_member FOREIGN KEY (member_id) REFERENCES member(id)
+    CONSTRAINT fk_orders_member FOREIGN KEY (member_id) REFERENCES member(id),
+      CONSTRAINT fk_orders_orders FOREIGN KEY (orderitem_id) REFERENCES orderitem(order_id)
 );
 
 -- orderitem 테이블 생성
 CREATE TABLE orderitem (
     id NUMBER PRIMARY KEY,
-    order_id NUMBER    NOT NULL,
+    order_id NUMBER  UNIQUE  NOT NULL,
     product_name VARCHAR2(100)    NOT NULL,
     count NUMBER default 1,
-    price number not null,
-    CONSTRAINT fk_orderitem_orders FOREIGN KEY (order_id) REFERENCES orders(id)
+    price number not null
 );
 
 -- shipments 테이블 생성

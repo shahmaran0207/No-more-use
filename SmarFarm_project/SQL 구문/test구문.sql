@@ -10,25 +10,18 @@ VALUES (256, 2112, 456, 'Shipped');
 INSERT INTO shipments (id, address, status)
 VALUES (2112, '101 Pine Street', 'Processing');
 
--- 테스트용 주문 상품 데이터 삽입
-INSERT INTO orderitem (id, order_id, product_name, count, price)
-VALUES (2776, 256, 'Product1', 5, 2990.00);
+-- 첫 번째 세트의 주문 정보 삽입
+INSERT INTO orders (id, member_id, delivery_id, orderitem_id, order_date, status)
+VALUES (1001, 456, 3001, 2776, SYSDATE, 'Processing');
 
--- 추가 테스트용 회원 데이터 삽입
-INSERT INTO member (id, name, address, email, userid, userpw, nick, phone)
-VALUES (457, 'anotheruser', 'anotheraddress', 'another@example.com', 'anotherid', 'anotherpw', 'anothernick', 12345678);
-
--- 추가 테스트용 주문 데이터 삽입
-INSERT INTO orders (id, delivery_id, member_id, status)
-VALUES (257, 2113, 457, 'Pending');
-
--- 추가 테스트용 배송 데이터 삽입
+-- 첫 번째 세트의 배송 정보 삽입
 INSERT INTO shipments (id, address, status)
-VALUES (2113, '202 Maple Street', 'Processing');
+VALUES (3001, 'helpmet', '배송준비중');
 
--- 추가 테스트용 주문 상품 데이터 삽입
-INSERT INTO orderitem (id, order_id, product_name, count, price)
-VALUES (2777, 257, 'Product2', 3, 1990.00);
+-- 두 번째 세트의 주문 정보 삽입
+INSERT INTO orders (id, member_id, delivery_id, orderitem_id, order_date, status)
+VALUES (1002, 456, 3002, 2776, SYSDATE, 'Processing');
 
--- 트랜잭션 커밋
-COMMIT;
+-- 두 번째 세트의 배송 정보 삽입
+INSERT INTO shipments (id, address, status)
+VALUES (3002, 'helpmet', '배송준비중');
