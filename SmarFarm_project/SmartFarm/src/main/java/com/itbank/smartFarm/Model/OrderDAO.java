@@ -1,4 +1,4 @@
-package com.itbank.smartFarm.payModel;
+package com.itbank.smartFarm.Model;
 
 import java.util.List;
 import org.apache.ibatis.annotations.Delete;
@@ -9,26 +9,24 @@ import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
 import com.itbank.smartFarm.vo.CartVO;
-import com.itbank.smartFarm.vo.MemberVO;
-import com.itbank.smartFarm.vo.OrderItemVo;
+import com.itbank.smartFarm.vo.OrderItemVO;
 import com.itbank.smartFarm.vo.OrdersVO;
-import com.itbank.smartFarm.vo.ShipmentsVO;
 
 @Mapper
 public interface OrderDAO {
 	//상품 전체
 	@Select("select * from orderitem order by id desc")
-	List<OrderItemVo> selectAll();
+	List<OrderItemVO> selectAll();
 	
 	//상품 하나
 	@Select("select * from orderitem where id = #{id}")
-	OrderItemVo selectOne(int id);
+	OrderItemVO selectOne(int id);
 	
-	//장바구니
+	//장바구니 - order 페이지
 	@Select("select * from cart where member_id=#{id}")
 	public List<CartVO> getOrders(int i);
 
-	//수정할 주문 하나
+	//수정할 주문 하나 - update 페이지
 	@Select("select * from cart where order_id=#{order_id}")
 	public CartVO getOrder(int id);
 

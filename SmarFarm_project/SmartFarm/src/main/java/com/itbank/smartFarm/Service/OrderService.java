@@ -1,16 +1,13 @@
-package com.itbank.smartFarm.payservice;
+package com.itbank.smartFarm.Service;
 
 import java.util.List;
-import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.itbank.smartFarm.payModel.OrderDAO;
+import com.itbank.smartFarm.Model.OrderDAO;
 import com.itbank.smartFarm.vo.CartVO;
-import com.itbank.smartFarm.vo.MemberVO;
-import com.itbank.smartFarm.vo.OrderItemVo;
+import com.itbank.smartFarm.vo.OrderItemVO;
 import com.itbank.smartFarm.vo.OrdersVO;
-import com.itbank.smartFarm.vo.ShipmentsVO;
 
 @Service
 public class OrderService {
@@ -33,12 +30,12 @@ public class OrderService {
 		return od.deleteOrder(id);
 	}
 
-	public List<OrderItemVo> selectAll() {
+	public List<OrderItemVO> selectAll() {
 
 		return od.selectAll();
 	}
 
-	public OrderItemVo selectOne(int id) {
+	public OrderItemVO selectOne(int id) {
 
 		return od.selectOne(id);
 	}

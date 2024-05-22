@@ -1,4 +1,4 @@
-package com.itbank.smartFarm.payModel;
+package com.itbank.smartFarm.Model;
 
 import com.itbank.smartFarm.vo.MemberVO;
 import org.apache.ibatis.annotations.*;
