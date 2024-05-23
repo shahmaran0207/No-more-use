@@ -1,0 +1,23 @@
+	window.addEventListener('load', function() {
+		if (!sessionStorage.getItem('reloaded')) {
+			sessionStorage.setItem('reloaded', 'true');
+			window.location.reload();
+		} else {
+			sessionStorage.removeItem('reloaded');
+			// 새로고침 후에 세션에서 orderToken을 제거
+			fetch('/pay/clearOrderToken', {
+				method : 'POST',
+				headers : {
+					'Content-Type' : 'application/json'
+				},
+				body : JSON.stringify({})
+			});
+		}
+	});
+
+
+	@PostMapping("/clearOrderToken")
+	public ResponseEntity<Void> clearOrderToken(HttpSession session) {
+		session.removeAttribute("orderToken");
+		return ResponseEntity.ok().build();
+	}

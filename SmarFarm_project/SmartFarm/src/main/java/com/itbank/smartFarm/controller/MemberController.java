@@ -37,7 +37,7 @@ public class MemberController {
 		}
 
 		mav.addObject("row", (user != null) ? 1 : 0);
-		mav.addObject("path", "/pay/market");
+		mav.addObject("path", "/");
 		mav.addObject("msg", msg);
 
 		mav.setViewName("/pay/Message");

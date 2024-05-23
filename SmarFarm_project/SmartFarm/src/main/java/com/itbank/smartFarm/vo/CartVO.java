@@ -8,13 +8,12 @@ import lombok.Setter;
 @Setter
 @Getter
 public class CartVO {
-	public CartVO(int orderid, int quantity) {
-		this.order_id=orderid;
-		this.count=quantity;
-	}
-	private int order_id, member_id, delivery_id, orderitems_id, phone, unit_price, count, oiorderid;
+	
+	private int order_id, member_id, delivery_id, orderitems_id, member_phone, total_price, unit_price, count, oiorderid;
 	private Date order_date;
 	private String status, member_name, member_email, member_address, product_name, order_status, address, delivery_status;
-
-
+                                
+    // 기본 생성자
+    public CartVO() {}
+	
 }
