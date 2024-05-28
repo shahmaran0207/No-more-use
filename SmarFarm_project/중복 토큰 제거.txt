@@ -1,5 +1,4 @@
-
-	window.addEventListener('load', function() {
+window.addEventListener('load', function() {
 		if (!sessionStorage.getItem('reloaded')) {
 			sessionStorage.setItem('reloaded', 'true');
 			window.location.reload();
