@@ -1,3 +1,4 @@
+//token
 window.addEventListener('load', function() {
 		if (!sessionStorage.getItem('reloaded')) {
 			sessionStorage.setItem('reloaded', 'true');
