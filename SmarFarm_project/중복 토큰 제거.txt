@@ -1,4 +1,5 @@
-	window.addEventListener('load', function() {
+//token
+window.addEventListener('load', function() {
 		if (!sessionStorage.getItem('reloaded')) {
 			sessionStorage.setItem('reloaded', 'true');
 			window.location.reload();
