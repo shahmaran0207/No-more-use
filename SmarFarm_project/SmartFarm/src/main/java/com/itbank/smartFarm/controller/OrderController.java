@@ -67,10 +67,12 @@ public class OrderController {
 
 		// 주문이 이미 존재하는지 확인 - order 페이지에만 있는지 확인
 		int existingOrderId = os.getExistingOrderId(memberId, orderItemId);
+		
 		if (existingOrderId != -1) {
 			// 주문이 이미 존재하면 수량을 업데이트
 			CartVO cartVO = new CartVO();
 			cartVO.setOrder_id(existingOrderId);
+			System.out.println(existingOrderId);
 			cartVO.setCount(quantity);
 			os.countUp(cartVO);
 		} else {
@@ -93,7 +95,6 @@ public class OrderController {
 
 		// 주문이 성공적으로 추가되거나 업데이트된 후 주문 페이지로 리다이렉트
 		mav.setViewName("redirect:/pay/order");
-
 		return mav;
 	}
 
