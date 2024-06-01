@@ -7,10 +7,31 @@ import itbank.pethub.vo.OrderVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class OrderService {
     @Autowired
     private OrderDAO od;
+
+    public List<CartVO> getCarts(int memberId) {
+        return od.getCarts(memberId);
+    }
+
+    // 상품 목록
+    public List<ItemVO> selectAll() {
+        return od.selectAll();
+    }
+
+    public ItemVO selectOne(int id) {
+        return od.selectOne(id);
+    }
+
+
+    public int getExistingOrderId(int memberId, int productId) {
+        Integer existingOrderId = od.getExistingOrderId(memberId, productId);
+        return existingOrderId != null ? existingOrderId.intValue() : -1;
+    }
 
     public String makedelivery_status() {
         return od.makedelivery_status();

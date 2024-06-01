@@ -38,8 +38,8 @@
 </head>
 <body>
 <div th:replace="~{header :: header}"></div>
-<div th:replace="~{mall/shopHeader :: search}"></div>
-<div th:replace="~{mall/shopHeader :: category}"></div>
+<div th:replace="~{order/shopHeader :: search}"></div>
+<div th:replace="~{order/shopHeader :: category}"></div>
 <main class="mx-auto max-w-[1600px] w-full">
     <div th:each="product : ${product}">
         <div class="grid grid-cols-3 gap-4 p-4 max-w-[1600px] mx-auto">
@@ -84,7 +84,10 @@
                         <img src="/placeholder.svg" alt="Product" class="aspect-square" width="100" height="100"/>
                         <div class="mt-4 text-center">
 
-                            <p class="text-sm"><a th:href="@{/mall/DetailPage/{productId}(productId=${product.id})}">Product Name</a></p>
+                            <p class="text-sm">
+                                <a th:href="@{/order/DetailPage/{productId}(productId=${product.id})}">이거 테스트용 Name</a>
+                            </p>
+
 
 
                             <p class="text-gray-600">Product Description</p>
