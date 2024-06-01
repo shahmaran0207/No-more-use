@@ -45,7 +45,7 @@ public class MemberController {
         mav.addObject("path", "/");
         mav.addObject("msg", msg);
 
-        mav.setViewName("/mall/Message");
+        mav.setViewName("/order/Message");
 
         return mav;
     }

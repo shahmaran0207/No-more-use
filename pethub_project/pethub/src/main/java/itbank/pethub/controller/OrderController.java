@@ -21,9 +21,14 @@ public class OrderController {
     public ModelAndView cart(HttpSession session) {
         ModelAndView mav = new ModelAndView();
 
+        if (session.getAttribute("user") == null) {
+            // 로그인 페이지로 리다이렉트
+            mav.setViewName("redirect:/member/login");
+            return mav;
+        }
+
         MemberVO user = (MemberVO) session.getAttribute("user");
         int memberId = user.getId();
-
         mav.addObject("list", os.getCarts(memberId));
 
         mav.setViewName("/order/cart");
@@ -36,6 +41,14 @@ public class OrderController {
 
         mav.addObject("product", os.selectAll());
         mav.setViewName("/order/Items");
+        return mav;
+    }
+
+    @GetMapping("/orderUpdate/{id}")
+    public ModelAndView updatePage(@PathVariable("id") int id) {
+        ModelAndView mav = new ModelAndView();
+        mav.addObject("list", os.selectCart(id));
+        mav.setViewName("/order/orderUpdate");
         return mav;
     }
 

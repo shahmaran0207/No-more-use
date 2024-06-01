@@ -52,7 +52,10 @@ public interface OrderDAO {
             "))")
     int countup(CartVO cartVO);
 
-    @Select("SELECT * FROM Cart WHERE order_id IN (SELECT id FROM Order WHERE member_id = #{memberId})")
+
+
+
+    @Select("SELECT * FROM Cart WHERE order_id IN (SELECT id FROM `Order` WHERE member_id = #{memberId})")
     public List<CartVO> getCarts(int memberId);
 
     @Select("select * from Item order by id desc")
@@ -64,4 +67,7 @@ public interface OrderDAO {
     @Select("SELECT id FROM Cart WHERE order_id IN (SELECT id FROM `Order` WHERE member_id=#{memberId} and order_status in (select id from Order_Status where name ='주문 접수')) AND order_item=#{id}")
     @ResultType(Integer.class)
     Integer getExistingOrderId(@Param("memberId") int memberId, @Param("id") int id);
+
+    @Select("select * from Cart where id=#{id}")
+    CartVO selectCart(int id);
 }
