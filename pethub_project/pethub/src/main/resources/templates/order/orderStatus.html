@@ -32,7 +32,7 @@
                                                                                        th:text="${row.order_id}"></span>
                                         </h3>
                                         <h3 class="text-lg font-semibold">상품 번호: <span
-                                                th:text="${row.member_id}"></span></h3>
+                                                th:text="${row.order_item}"></span></h3>
                                         <h3 class="text-lg font-semibold">상품 명: 몰라요~~ </h3>
                                         <p class="text-gray-500">합계 가격: <span
                                                 th:text="${row.order_price*row.count}"></span></p>
@@ -65,7 +65,7 @@
                                         <h3 id="customerEmail" class="text-lg font-semibold">고객 이메일: <span
                                                 th:text="${list[0].member_email}"></span></h3>
 
-                                        <h3>배송 주소:</h3>
+                                        <h3>배송 주소: 미입력시 회원가입시 기입한 주소로 배송됩니다.</h3>
                                         <form name="insert">
                                             <div class="addressInfo_input_div addressInfo_input_div_2">
                                                 <div class="grid grid-cols-2 gap-2">
@@ -139,12 +139,11 @@
                                         </form>
 
 
-                                        <a class="quantity_modify_btn" th:data-product-id="${list[0].delivery_id}">
+                                        <a class="delivery_modify_btn" th:data-product-id="${list[0].delivery_id}">
                                             배송지 수정 </a>
                                     </div>
                                 </div>
                             </li>
-                            <hr>
                         </ul>
                     </div>
                 </div>
@@ -156,17 +155,46 @@
                     <span id="subtotal">0</span>
                 </div>
                 <div class="flex justify-between mb-2">
+                    <span>쿠폰 할인</span>
+                    <span id="discount">0</span>
+                </div>
+                <div class="flex justify-between mb-2">
                     <span>배송비</span>
                     <span>2500</span>
                 </div>
+
                 <div class="flex justify-between mb-4">
                     <span class="font-semibold">합계</span>
                     <span id="total">0</span>
                 </div>
+                <button id="couponBtn"
+                        class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-orange-600 text-white hover:bg-orange-500/90 h-10 px-4 py-2 w-full"
+                        onclick="openCouponPopup()">
+                    쿠폰 적용
+                </button>
+                <!-- 쿠폰 팝업 -->
+                <div id="couponPopup" class="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center z-50 hidden">
+                    <div class="bg-white p-6 rounded-lg shadow-lg w-96">
+                        <h2 class="text-2xl font-semibold mb-4">쿠폰 목록</h2>
+                        <ul id="couponList" class="space-y-4">
+                            <!-- 쿠폰 목록 표시 -->
+                        </ul>
+                        <div class="flex justify-end space-x-4 mt-4">
+                            <button onclick="closeCouponPopup()" class="bg-gray-300 px-4 py-2 rounded-md">취소</button>
+                            <button onclick="applyCoupon()" class="bg-orange-600 text-white px-4 py-2 rounded-md">적용</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- 결제 옵션 및 버튼 -->
+                <div class="payment-options">
+                    <label><input type="radio" name="pay_method" value="card" checked>신용카드</label>
+                    <label><input type="radio" name="pay_method" value="trans">실시간 계좌이체</label>
+                    <label><input type="radio" name="pay_method" value="phone">휴대폰 소액결제</label>
+                </div>
                 <button id="checkoutBtn"
                         class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-orange-600 text-white hover:bg-orange-500/90 h-10 px-4 py-2 w-full"
                         onclick="requestPay()">
-                    카드 결제
+                    결제 하기
                 </button>
             </div>
         </div>
@@ -176,6 +204,45 @@
 
 <!-- JavaScript to calculate subtotal and total -->
 <script>
+    function openCouponPopup() {
+        // 서버에서 쿠폰 데이터를 받아옵니다.
+        fetch('/coupon/discount')
+            .then(response => response.json())
+            .then(data => {
+                const couponList = document.getElementById('couponList');
+                couponList.innerHTML = '';
+
+                data.forEach(coupon => {
+                    const listItem = document.createElement('li');
+                    listItem.className = 'flex justify-between items-center';
+                    listItem.innerHTML = `
+                    <span>${coupon.code} - ${coupon.discount}% 할인</span>
+                    <input type="radio" name="selectedCoupon" value="${coupon.id}" data-discount="${coupon.discount}">
+                `;
+                    couponList.appendChild(listItem);
+                });
+            })
+            .catch(error => console.error('Error:', error));
+
+        document.getElementById('couponPopup').classList.remove('hidden');
+    }
+
+    function closeCouponPopup() {
+        document.getElementById('couponPopup').classList.add('hidden');
+    }
+
+    function applyCoupon() {
+        const selectedCoupon = document.querySelector('input[name="selectedCoupon"]:checked');
+        if (selectedCoupon) {
+            const discount = parseFloat(selectedCoupon.getAttribute('data-discount'));
+            const subtotal = calculateSubtotal();
+            const discountAmount = subtotal * (discount / 100);
+            document.getElementById('discount').textContent = discountAmount;
+            updateSummary();
+        }
+        closeCouponPopup();
+    }
+
     function calculateSubtotal() {
         let subtotal = 0;
         document.querySelectorAll('.text-gray-500 > span').forEach((element) => {
@@ -187,7 +254,8 @@
     function updateSummary() {
         const subtotal = calculateSubtotal();
         const shippingFee = 2500;
-        const total = (parseFloat(subtotal) + shippingFee);
+        const discount = parseFloat(document.getElementById('discount').textContent) || 0;
+        const total = subtotal + shippingFee - discount;
 
         document.getElementById('subtotal').textContent = subtotal;
         document.getElementById('total').textContent = total;
@@ -213,7 +281,7 @@
     IMP.init("imp01786831");
 
     function requestPay() {
-        var selectedPayMethod = 'vbank';
+        var selectedPayMethod = document.querySelector('input[name="pay_method"]:checked').value;
         var totalOrderPrice = parseFloat(document.getElementById('total').textContent);
         if (isNaN(totalOrderPrice) || totalOrderPrice <= 0) {
             alert("총 주문 가격이 올바르지 않습니다.");
@@ -259,13 +327,13 @@
         }, function (rsp) {
             if (rsp.success) {
                 // 결제가 성공했을 때만 AJAX 요청을 보냄
-                orderItems.forEach(function(orderItem) {
+                orderItems.forEach(function (orderItem) {
                     var xhr = new XMLHttpRequest();
 
                     xhr.open("POST", "/order/updateDeliveryInfo", true);
 
                     xhr.setRequestHeader("Content-Type", "application/json");
-                    xhr.onreadystatechange = function() {
+                    xhr.onreadystatechange = function () {
                         if (xhr.readyState === 4 && xhr.status === 200) {
                             alert("배송 정보가 업데이트되었습니다.");
 
@@ -284,31 +352,14 @@
 
 
 </script>
+
+
 <script>
 
     // Call updateSummary function when the page loads
-    window.onload = updateSummary;
-
     document.addEventListener('DOMContentLoaded', (event) => {
-        const plusButtons = document.querySelectorAll('.plus_btn');
-        const minusButtons = document.querySelectorAll('.minus_btn');
-        const modifyButtons = document.querySelectorAll('.quantity_modify_btn');
+        const modifyButtons = document.querySelectorAll('.delivery_modify_btn');
 
-        plusButtons.forEach(button => {
-            button.addEventListener('click', (e) => {
-                const input = e.target.previousElementSibling;
-                input.value = parseInt(input.value) + 1;
-            });
-        });
-
-        minusButtons.forEach(button => {
-            button.addEventListener('click', (e) => {
-                const input = e.target.nextElementSibling;
-                if (input.value > 1) {
-                    input.value = parseInt(input.value) - 1;
-                }
-            });
-        });
 
         modifyButtons.forEach(button => {
             button.addEventListener('click', (e) => {

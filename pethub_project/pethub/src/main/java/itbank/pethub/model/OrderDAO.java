@@ -4,12 +4,10 @@ import itbank.pethub.vo.*;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;
+import java.util.Map;
 
 @Mapper
 public interface OrderDAO {
-    @Select("SELECT id FROM delivery_status ORDER BY id DESC LIMIT 1")
-    int getdelivery_status_id();
-
     @Insert("Insert into delivery(address, post, status_id) values (#{address}, #{post},1)")
     int makedelivery(DeliveryVO dsv);
 
@@ -32,7 +30,7 @@ public interface OrderDAO {
             "WHERE o.order_status = (SELECT os.id FROM order_status os WHERE os.name = '주문 접수'))")
     int countup(CartVO cartVO);
 
-    @Select("SELECT * FROM cart WHERE order_id IN (SELECT id FROM `order` WHERE member_id = #{memberId})")
+    @Select("SELECT c.* FROM cart c INNER JOIN `order` o ON c.order_id = o.id WHERE o.member_id = #{memberId} AND o.order_status = 1")
     public List<CartVO> getCarts(int memberId);
 
     @Select("select * from item order by id desc")
@@ -40,6 +38,7 @@ public interface OrderDAO {
 
     @Select("select * from item where id = #{id}")
     ItemVO selectOne(int id);
+
 
     @Select("SELECT id FROM cart WHERE order_id IN (SELECT id FROM `order` WHERE member_id=#{memberId} and order_status in (select id from order_status where name ='주문 접수')) AND order_item=#{id}")
     @ResultType(Integer.class)
@@ -54,16 +53,12 @@ public interface OrderDAO {
     @Select("select delivery_id from `order` where id=#{order_id}")
     int getDeli_id(int order_id);
 
-
-
     @Delete("DELETE from `order` where id=#{orderId}")
     int deleteOrder(int orderId);
 
     @Update("UPDATE cart SET count = #{count} WHERE id = #{id}")
     void updateCart(@Param("count") int count, @Param("id") int id);
 
-    @Update("UPDATE member SET email = #{email} WHERE id = #{id}")
-    int emailupdate(MemberVO user);
 
     @Delete("DELETE from delivery where id=#{dId}")
     int deleteDelivery(int dId);
@@ -77,12 +72,6 @@ public interface OrderDAO {
 
     @Update("UPDATE delivery SET address = #{delivery_address}, post = #{delivery_post} WHERE id = #{delivery_id}")
     int addressupdate(MODCVO user);
-
-    @Update("update delivery set status_id=2 where id=#{dId}")
-    int updatedelivery(int dId);
-
-    @Select("select delivery_id from `order` where id=#{orderId}")
-    int getd_id(int orderId);
 
     @Select("select * from modc where member_id=#{memberId} and order_status != '주문 접수'")
     List<MODCVO> selectAfterpay(int memberId);
