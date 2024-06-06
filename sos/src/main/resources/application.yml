@@ -1,9 +1,9 @@
 spring:
   datasource: #항상 여기 주석 처리 해야 함
-#    driver-class-name: com.mysql.cj.jdbc.Driver
-#    url: jdbc:mysql://database-demo.cp0mag4s6790.us-east-2.rds.amazonaws.com:3306/travel_sos?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
-#    username: admin
-#    password: Since2018
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://database-demo.cp0mag4s6790.us-east-2.rds.amazonaws.com:3306/travel_sos?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: admin
+    password: Since2018
   thymeleaf:
     prefix: classpath:/templates/
 

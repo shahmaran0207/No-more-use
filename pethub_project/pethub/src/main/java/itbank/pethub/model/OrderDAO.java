@@ -3,6 +3,7 @@ package itbank.pethub.model;
 import itbank.pethub.vo.*;
 import org.apache.ibatis.annotations.*;
 import java.util.List;
+import java.util.Map;
 
 @Mapper
 public interface OrderDAO {
@@ -77,6 +78,5 @@ public interface OrderDAO {
     @Update("update `order` set order_status=2 where id=#{orderId}")
     int updateorder(int orderId);
 
-    @Select("SELECT * FROM modc WHERE member_id = #{memberId} ORDER BY id DESC LIMIT 1")
-    MODCVO selectonebuy(int memberId);
+
 }
