@@ -72,7 +72,7 @@ public class ShopController {
     @PostMapping("/deleteReview/{id}")
     public ModelAndView deleteReview(@PathVariable int id, @RequestParam("item_id") int itemId) {
         ModelAndView mav = new ModelAndView();
-            rs.deleteReview(id);
+        rs.deleteReview(id);
         mav.setViewName("redirect:/shop/DetailPage/" + itemId);
 
         return mav;
