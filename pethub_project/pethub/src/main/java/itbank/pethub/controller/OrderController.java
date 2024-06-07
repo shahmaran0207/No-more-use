@@ -63,18 +63,9 @@ public class OrderController {
 
     //결제 페이지로 이동
     @PostMapping("/cart")
-    public ModelAndView orderStatuss(HttpSession session) {
-        ModelAndView mav= new ModelAndView();
-        if (session.getAttribute("user") == null) {
-            // 로그인 페이지로 리다이렉트
-            mav.setViewName("redirect:/member/login");
-            return mav;
-        }
+    public ModelAndView orderStatus() {
+        ModelAndView mav = new ModelAndView();
 
-        MemberVO user = (MemberVO) session.getAttribute("user");
-        int member_id=user.getId();
-
-        mav.addObject("list", os.selectMODC(member_id));
         mav.setViewName("redirect:/order/orderStatus");
         return mav;
     }
