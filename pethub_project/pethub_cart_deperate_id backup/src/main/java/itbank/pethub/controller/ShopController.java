@@ -221,7 +221,20 @@ public class ShopController {
             cv.setOrder_price(iv.getPrice());
             cv.setCount(quantity);
             cv.setOrigin_price(iv.getPrice());
-            os.makeCart(cv);
+
+
+            int existingcartid=os.getexistingcartid(memberId);
+
+
+            if (existingcartid != 0){
+                MODCVO cartid=os.getcartid(memberId);
+                System.out.println(cartid.getCdi());
+                cv.setCart_deperate_id(cartid.getCdi());
+                os.makeCartid(cv);
+            }
+            else{
+                os.makeCart(cv);
+            }
         }
         String msg = "추가 되었습니다. ";
         mav.addObject("path", "/order/cart");
