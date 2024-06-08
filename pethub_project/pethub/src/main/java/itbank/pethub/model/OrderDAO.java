@@ -89,4 +89,14 @@ public interface OrderDAO {
 
     @Select("select count(*) from modc where member_id=#{memberid} and order_status='주문 접수'")
     int getexistingcartid(int memberId);
+
+    @Delete("DELETE FROM cart WHERE cart_deperate_id = #{cartItemId}")
+    int deleteAllCart(int cartItemId);
+
+    @Select("SELECT order_id FROM cart WHERE cart_deperate_id = #{cartItemId} GROUP BY order_id")
+    List<Integer> getOrderIds(int cartItemId);
+
+
+    @Select("SELECT order_id FROM cart WHERE cart_deperate_id = #{cartItemId} bGROUP BY order_id")
+    int getorder_id(int cartItemId);
 }

@@ -120,4 +120,17 @@ public class OrderService {
     public int getexistingcartid(int memberId) {
         return od.getexistingcartid(memberId);
     }
+
+    public int deleteallcart(int cartItemId) {
+        return od.deleteAllCart(cartItemId);
+    }
+
+    public List<Integer> getOrderIds(int cartItemId) {
+        return od.getOrderIds(cartItemId);
+    }
+
+
+    public int getorder_id(int cartItemId) {
+        return od.getorder_id(cartItemId);
+    }
 }
