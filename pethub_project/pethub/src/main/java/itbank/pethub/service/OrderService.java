@@ -20,6 +20,10 @@ public class OrderService {
         return od.selectAll();
     }
 
+    public List<ItemVO> category(int category, int type) {
+        return od.category(category, type);
+    }
+
     public ItemVO selectOne(int id) {
         return od.selectOne(id);
     }

@@ -118,6 +118,24 @@ public class OrderController {
         return mav;
     }
 
+    @GetMapping("/cartdelete/{cdi}")
+    public ModelAndView deleteCartItem(@PathVariable("cdi") String cartItemId) {
+
+        ModelAndView mav = new ModelAndView();
+       // int row =os.deleteallcart(cartItemId);
+
+
+
+        String msg = "삭제 되었습니다. ";
+//        if (row != 1)
+//            msg = "삭제 실패하였습니다.";
+
+        mav.addObject("path", "/order/AfterPay");
+        mav.addObject("msg", msg);
+
+        mav.setViewName("/order/Message");
+        return mav;
+    }
 
 
     //결제 성공 시 배송정보 업데이트

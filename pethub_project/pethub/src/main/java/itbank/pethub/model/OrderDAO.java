@@ -35,6 +35,9 @@ public interface OrderDAO {
     @Select("select * from item order by id desc")
     List<ItemVO> selectAll();
 
+    @Select("SELECT * FROM item WHERE type = #{type} AND category  = #{category} ORDER BY id DESC")
+    List<ItemVO> category(int category, int type);
+
     @Select("select * from item where id = #{id}")
     ItemVO selectOne(int id);
 
