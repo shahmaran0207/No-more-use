@@ -1,10 +1,10 @@
-package com.itbank.smartFarm.Service;
+package com.itbank.smartFarm.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.itbank.smartFarm.Model.OrderDAO;
+import com.itbank.smartFarm.model.OrderDAO;
 import com.itbank.smartFarm.vo.CartVO;
 import com.itbank.smartFarm.vo.OrderItemVO;
 import com.itbank.smartFarm.vo.OrdersVO;
@@ -80,13 +80,15 @@ public class OrderService {
 		return od.deliveryid(delivery_id);
 
 	}
-
-	public List<CartVO> getOrders(int i) {
-		return od.getOrders(i);
+	
+	// 주문 정보
+	
+	public List<CartVO> getOrders(int id) {
+		return od.getOrders(id);
 	}
 
-	public List<CartVO> afterPay(int memberid) {
-		return od.afterPay(memberid);
+	public List<CartVO> afterPay(int id) {
+		return od.afterPay(id);
 	}
 
 	public int getExistingOrderId(int memberId, int orderItemId) {

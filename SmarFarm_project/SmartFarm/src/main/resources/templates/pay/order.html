@@ -95,7 +95,7 @@ button:hover {
 
 </head>
 <body>
-	<h3>장바구니(결제 전)</h3>
+	<h3>장바구니</h3>
 
 	<table>
 		<tr>
@@ -107,8 +107,6 @@ button:hover {
 			<th>상품 개수</th>
 			<th>단위 가격</th>
 			<th>총 가격</th>
-			<th>운송장 번호</th>
-			<th>배송 현황</th>
 			<th>주문수정</th>
 			<th>주문삭제</th>
 		</tr>
@@ -122,8 +120,6 @@ button:hover {
 			<td th:text="${row.count}"></td>
 			<td th:text="${row.unit_price}"></td>
 			<td th:text="${row.total_price}"></td>
-			<td th:text="${row.delivery_id}"></td>
-			<td th:text="${row.delivery_status}"></td>
 			<td><a th:href="@{'/pay/update/' + ${row.order_id}}">주문 수정</a></td>
 			<td><a th:href="@{'/pay/delete/' + ${row.order_id}}">주문 삭제</a></td>
 		</tr>
@@ -136,13 +132,14 @@ button:hover {
 
 	<!-- 결제 옵션 및 버튼 -->
 	<div class="payment-options">
-		<label><input type="radio" name="pay_method" value="card"
-			checked>신용카드</label> <label><input type="radio"
-			name="pay_method" value="trans">실시간 계좌이체</label> <label><input
-			type="radio" name="pay_method" value="vbank">가상계좌</label> <label><input
-			type="radio" name="pay_method" value="phone">휴대폰 소액결제</label>
+		<label><input type="radio" name="pay_method" value="card" checked>신용카드</label>
+		<label><input type="radio" name="pay_method" value="trans">실시간 계좌이체</label>
+		<label><input type="radio" name="pay_method" value="vbank">가상계좌</label>
+		<label><input type="radio" name="pay_method" value="phone">휴대폰 소액결제</label>
 	</div>
 	<button onclick="requestPay()">결제하기</button>
+
+
 
 	<!-- jQuery -->
 	<script type="text/javascript"
@@ -212,8 +209,6 @@ button:hover {
 		        }
 		    });
 		}
-
-
 	</script>
 
 	<!-- 총 주문 가격 계산 스크립트 -->

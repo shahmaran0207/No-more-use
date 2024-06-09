@@ -60,7 +60,6 @@
 			<th>No</th>
 			<th>상품명</th>
 			<th>상품가격</th>
-			<th>갯수</th>
 		</tr>
 		</thead>
 		
@@ -69,7 +68,6 @@
 				<td><a th:href="'detailPage/' + ${row.id}" th:text="${row.id}"></a></td>
 				<td th:text="${row.product_name }"></td>
 				<td th:text="${row.price }"></td>
-				<td th:text="${row.count }"></td>
 			</tr>	
 		</tbody>
 	</table>
