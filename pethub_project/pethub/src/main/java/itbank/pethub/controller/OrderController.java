@@ -1,6 +1,5 @@
 package itbank.pethub.controller;
 
-import itbank.pethub.service.MemberService;
 import itbank.pethub.service.OrderService;
 import itbank.pethub.vo.*;
 import jakarta.servlet.http.HttpSession;
