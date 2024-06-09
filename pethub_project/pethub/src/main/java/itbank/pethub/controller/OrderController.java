@@ -17,8 +17,10 @@ import java.util.Map;
 @Controller
 @RequestMapping("/order")
 public class OrderController {
+
     private final OrderService os;
     private final MemberService ms;
+
     //장바구니 - 결제전 물건 가져오기
     @GetMapping("/cart")
     public ModelAndView cart(HttpSession session) {
@@ -32,6 +34,7 @@ public class OrderController {
 
         MemberVO user = (MemberVO) session.getAttribute("user");
         int memberId = user.getId();
+
         mav.addObject("list", os.getCarts(memberId));
 
         mav.setViewName("/order/cart");
@@ -140,10 +143,6 @@ public class OrderController {
             os.deleteCart(o_id);
         }
 
-
-
-
-
         String msg = "삭제 되었습니다. ";
         if (row != 1)
             msg = "삭제 실패하였습니다.";
@@ -162,8 +161,10 @@ public class OrderController {
 
         ModelAndView mav = new ModelAndView();
         int order_id=deliveryInfo.getOrder_id();
+        System.out.println(order_id);
 
         os.updateorder(order_id);
+
         mav.setViewName("redirect:/order/cart");
         return mav;
     }
@@ -186,7 +187,7 @@ public class OrderController {
         return mav;
     }
 
-    //주문 현황 페이지
+    // 결제 완료 후 1회용 확인 페이지
     @GetMapping("/ordercheck")
     public ModelAndView ordercheck(HttpSession session) {
         ModelAndView mav= new ModelAndView();
@@ -204,7 +205,7 @@ public class OrderController {
         return mav;
     }
 
-/*    @GetMapping("/coupon")
+    @GetMapping("/coupon")
     @ResponseBody
     public List<CouponVO> getCoupons(HttpSession session) {
 
@@ -212,6 +213,6 @@ public class OrderController {
         int member_id=user.getId();
 
         return ms.couponFindbyId(member_id);
-    }*/
+    }
 
 }
