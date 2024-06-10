@@ -30,6 +30,7 @@ spring:
         required: true
 
 
+
 #server port 변경
 server:
   port: 8081
