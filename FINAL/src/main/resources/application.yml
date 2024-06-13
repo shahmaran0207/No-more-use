@@ -1,0 +1,17 @@
+spring:
+  datasource: #항상 여기 주석 처리 해야 함
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://database.cp0mag4s6790.us-east-2.rds.amazonaws.com:3306/predict_money?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: root
+    password: 123456789
+  thymeleaf:
+    prefix: classpath:/templates/
+
+server:
+  port: 8083
+  mvc:
+    view:
+      suffix: .html
+
+  application:
+    name: FINAL
