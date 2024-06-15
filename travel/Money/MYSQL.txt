@@ -4,6 +4,7 @@ CREATE TABLE gangwon_hotel_24 (
     predict_value DECIMAL(65,2)
 );
 
+
 CREATE TABLE gangwon_amuse_24 (
     idx INT AUTO_INCREMENT PRIMARY KEY,
     predict_month VARCHAR(200),
