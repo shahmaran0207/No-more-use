@@ -15,7 +15,6 @@ spring:
           auto: create
     database-platform: org.hibernate.dialect.MYSQL8Dialect
 
-
 server:
   port: 8085
   mvc:
