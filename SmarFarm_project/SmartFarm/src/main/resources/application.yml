@@ -24,3 +24,6 @@ spring:
 # 파일 다운로드 디렉토리 설정
 file:
   download-dir: /app/static/download
+
+server:
+  port: 8099

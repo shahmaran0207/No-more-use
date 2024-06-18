@@ -10,5 +10,5 @@ public interface predictDAO {
 
 	@Select("SELECT predict_value FROM ${table_name} WHERE idx = #{month}")
 	int search(TableVO tv);
-	
+
 }

@@ -112,6 +112,8 @@ public class OrderController {
 
 		int modifyResult = os.modify(input);
 		int modifyAddressResult = os.modifyaddress(input);
+		System.out.println(input.getDelivery_id());
+		System.out.println(input.getAddress());
 
 		String msg = "수정 실패.";
 		if (modifyResult == 0 || modifyAddressResult == 0) {
