@@ -1,7 +1,17 @@
 spring:
+  datasource: #항상 여기 주석 처리 해야 함
 
   thymeleaf:
     prefix: classpath:/templates/
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        default_schema: travel-project # 여기에 스키마 이름을 지정
+    database-platform: org.hibernate.dialect.MySQLDialect
 
 server:
   port: 8083
@@ -10,8 +20,7 @@ server:
       suffix: .html
 
   application:
-    name: FINAL
-
+    name: travel
 
 logging:
   level:
