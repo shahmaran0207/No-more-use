@@ -37,7 +37,7 @@ public class Item {
     @Enumerated(EnumType.STRING)
     private ItemSellStatus itemSellStatus;
 
-    private LocalDate regTime;
+    private LocalDateTime regTime;
     private LocalDateTime updatetime;
     private String Itempic;
 }
