@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface ItemRepository extends JpaRepository<Item, Integer> {
     List<Item> findByItemNm(String name);
+
+    List<Item> findByItemNmOrItemDetail(String itemNm, String itemDetail);
 }
