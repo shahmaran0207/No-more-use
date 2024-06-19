@@ -38,7 +38,7 @@ class ItemRepositoryTest {
             Item item = new Item();
             item.setItemNm("테스트 상품" + i);
             item.setPrice(1000 + i);
-            item.setItemDetail("테스트 상품 설명" + i);
+            item.setItemDetail("테스트 상품 상세 설명" + i);
             item.setItemSellStatus(ItemSellStatus.SELL);
             item.setStockNumber(100);
             item.setRegTime(LocalDateTime.now());
@@ -66,6 +66,52 @@ class ItemRepositoryTest {
                 itemreposirtory.findByItemNmOrItemDetail("테스트 상품1", "테스트 상품 상세 설명5");
 
         for(Item item:itemList){
+            System.out.println(item.toString());
+        }
+    }
+
+    @Test
+    @DisplayName("가격 LessThan 테스트")
+    public void findByPriceLessThanTest(){
+        this.creatItemList();
+        List<Item> itemList=itemreposirtory.findByPriceLessThan(1005);
+
+        for(Item item:itemList){
+            System.out.println(item.toString());
+        }
+    }
+
+    @Test
+    @DisplayName("가격 내림차순 조회 테스트")
+    public void findByPriceLessThanOrderByPriceDesc(){
+        this.creatItemList();
+        List<Item> itemList=
+                itemreposirtory.findByPriceLessThanOrderByPrice(1005);
+
+        for(Item item:itemList){
+            System.out.println(item.toString());
+        }
+    }
+    
+    @Test
+    @DisplayName("@Query를 이용한 상품 조회 테스트")
+    public void findByItemDetailTest(){
+        this.creatItemList();
+        List<Item> itemList=itemreposirtory.findByItemDetail("테스트 상품 상세 설명");
+
+        for(Item item:itemList){
+            System.out.println(item.toString());
+        }
+    }
+
+    @Test
+    @DisplayName("nativeQurey 속성을 이용한 상품 조회 테스트")
+    public void findByItemDetailByNative(){
+        this.creatItemList();
+        List<Item> itemList=
+                itemreposirtory.findByDetailByNative("테스트 상품 상세 설명");
+
+        for(Item item: itemList){
             System.out.println(item.toString());
         }
     }
