@@ -4,10 +4,13 @@ import com.travel.travel.Entity.Item;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.querydsl.QuerydslPredicateExecutor;
+import org.springframework.data.querydsl.binding.QuerydslPredicate;
 
 import java.util.List;
 
-public interface ItemRepository extends JpaRepository<Item, Integer> {
+public interface ItemRepository extends JpaRepository<Item, Integer> ,
+        QuerydslPredicateExecutor<Item> {
     List<Item> findByItemNm(String name);
 
     List<Item> findByItemNmOrItemDetail(String itemNm, String itemDetail);
