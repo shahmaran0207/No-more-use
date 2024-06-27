@@ -11,8 +11,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @EnableWebSecurity
 public class SecurityConfig {
 
-    @Override
-    protected void coinfigure (HttpSecurity http) throws Exception{}
+//    @Override
+//    protected void coinfigure (HttpSecurity http) throws Exception{}
 
     @Bean
     public PasswordEncoder passwordEncoder(){
