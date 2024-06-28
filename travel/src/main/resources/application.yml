@@ -1,6 +1,7 @@
   spring:
     datasource: #항상 여기 주석 처리 해야함
 
+
     thymeleaf:
       prefix: classpath:/templates/
       cache: false
