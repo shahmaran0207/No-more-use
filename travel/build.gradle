@@ -46,6 +46,8 @@ dependencies {
 	// 스프링 부트 3.0 이상
 	implementation 'com.querydsl:querydsl-jpa:5.0.0:jakarta'
 	annotationProcessor "com.querydsl:querydsl-apt:${dependencyManagement.importedProperties['querydsl.version']}:jakarta"
+// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-validation
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-validation', version: '3.3.0'
 
 
 	implementation "com.querydsl:querydsl-core"
