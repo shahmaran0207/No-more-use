@@ -1,6 +1,6 @@
   spring:
     datasource: #항상 여기 주석 처리 해야함
-      driver-class-name: com.mysql.cj.jdbc.Driver
+
 
     thymeleaf:
       prefix: classpath:/templates/
