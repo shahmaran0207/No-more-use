@@ -21,14 +21,14 @@ public class MemberController {
     private final MemberService ms;
     private final PasswordEncoder pe;
 
-    @GetMapping(value="/new")
+    @GetMapping(value = "/new")
     public String newMember(Model model) {
         model.addAttribute("memberFormDTO", new MemberFormDTO());
         return "Member/MemberForm";
     }
 
-    @PostMapping(value="/new")
-    public String MemberForm(@Valid MemberFormDTO mfd, BindingResult br, Model model){
+    @PostMapping(value = "/new")
+    public String MemberForm(@Valid MemberFormDTO mfd, BindingResult br, Model model) {
         if (br.hasErrors()) {
             return "Member/MemberForm";
         }
@@ -42,5 +42,16 @@ public class MemberController {
         }
 
         return "redirect:/";
+    }
+
+    @GetMapping(value="/Login")
+    public String login(){
+        return "/Member/Login";
+    }
+
+    @GetMapping(value="/Login/error")
+    public String loginError(Model model){
+        model.addAttribute("loginErrorMsg", "아이디 혹은 비밀번호를 확인해주세요");
+        return "/Member/Login";
     }
 }
